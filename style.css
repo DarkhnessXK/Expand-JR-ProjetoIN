@@ -1,0 +1,13 @@
+/*
+Theme Name: Expand Jr. Theme
+Theme URI: https://injunior.com.br/
+Author: [Nome do Grupo]
+Description: Tema do site da EJ Expand Jr.
+*/
+
+* {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
