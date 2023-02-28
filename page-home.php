@@ -52,8 +52,24 @@ get_header();
     </div>
 </section>
 
-<section>
+<section class="section-4-success-cases">
+    <div class="title-h2-div">
+        <h2>Cases de Sucesso</h2>
+    </div>
+    <div class="slide">
+        <p>lorem ipsum</p>
+    </div>
 </section>
+
+<section class="section-5-partnerships">
+    <div class="title-h2-div">
+        <h2>Nossos Parceiros</h2>
+    </div>
+    <div class="slide">
+        <p>lorem ipsum</p>
+    </div>
+</section>
+
 <?php
 get_footer();
 ?>
