@@ -1,26 +1,48 @@
-var slideIndex = 1;
-showDivs(slideIndex);
+let section = document.querySelectorAll(".mySlides")
+let indice = 1
+let limite = 2
+let rightArrow = document.querySelector("#right-arrow")
+let leftArrow = document.querySelector("#left-arrow")
+window.addEventListener("load", slider)
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+
+function slider() {
+  section[indice].style.display = "block"
+
 }
 
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
+function next() {
+  if (indice < limite) {
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+    section[indice].style.display = "none"
+    indice++
+    section[indice].style.display = "block"
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
+  else if (indice = limite) {
+    section[indice].style.display = "none"
+    indice = 0
+    section[indice].style.display = "block"
   }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
 }
+
+rightArrow.addEventListener("click", next)
+
+
+function left() {
+  if (indice > 0) {
+
+    section[indice].style.display = "none"
+    indice--
+    section[indice].style.display = "block"
+  }
+  else if (indice == 0) {
+    section[indice].style.display = "none"
+    indice = 2
+    section[indice].style.display = "block"
+  }
+}
+
+leftArrow.addEventListener("click", left)
+
+
+

@@ -18,69 +18,103 @@ Description: Tema do site da EJ Expand Jr.
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    color:#0076C1;
-    
+    color: #0076C1;
+
 }
 
-.title-h2-div{
+.title-h2-div {
     font-size: 2rem;
     padding: 2rem;
     color: #0076C1;
 }
 
-.section-2-services{
+.section-2-services {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.services-div{
+.services-div {
     display: flex;
-    align-items: flex-start;
-    
+    justify-content: center;
+
 }
 
-.services-p{
+.services-p {
     font-size: 1.3rem;
+    text-align: center;
 }
 
-.for-you-div{
+.for-you-div {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid black;
+    gap: 2rem;
+}
+
+.card-div-service{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width:50% ;
+}
+
+.for-your-company-div {
     display: flex;
     padding-left: 2rem;
+    width: 50%;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    border-left: 1px solid black;
+    gap: 2rem;
 }
-.for-your-company-div{
+
+.double-cards-service{
     display: flex;
-    padding-left: 2rem;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
 }
-.img-services{
-    height: 5%;
-    width: 5%;
+
+.img-services {
+    height: 100%;
     border-radius: 6px;
     border-color: black;
 }
 
-.middle-line-div{
+.middle-line-div {
     border-left: 3px solid black;
     height: 25rem;
-    
+
 }
 
-.w3-display-container{
+.section-2-services a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #E9EAEC;
+    border-radius: 50%;
+    padding: 0.1rem;
+
+}
+
+.w3-display-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.w3-display-bottommiddle{
+.w3-display-bottommiddle {
     display: flex;
-    justify-content: center
+    justify-content: center;
+    gap: 50px;
 }
+
 .mySlides {
     display: none
 }
@@ -97,7 +131,7 @@ Description: Tema do site da EJ Expand Jr.
     padding: 0
 }
 
-.section-5-partnerships{
+.section-5-partnerships {
     display: flex;
     flex-direction: column;
     align-items: center;
