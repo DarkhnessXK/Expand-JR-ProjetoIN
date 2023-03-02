@@ -61,9 +61,9 @@ get_header();
             itaque, repellat repudiandae laborum sed velit enim quasi quibusdam harum architecto? Hic accusamus culpa
             minima fuga?</p>
         <div class="colaborator">
-            <img src="../images/marcio-racca.jpeg">
+            <img src="../assets/Design-sem-nome-12.png">
             <cite>
-                <span>Marcio Raca</span>
+                <span>Sem nome</span>
             </cite>
         </div>
     </div>
