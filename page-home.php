@@ -17,11 +17,11 @@ get_header();
                 <h2>Para Você</h2>
             </div>
             <div class="services-left-cards-div">
-                <img class="services-card-img">
+                <img class="services-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-12.png' ); ?>">
                 <p class="services-card-description">Dupla Cidadania Portuguesa</p>
             </div>
             <div class="services-left-cards-div">
-                <img class="services-card-img">
+                <img class="services-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-12.png' ); ?>">
                 <p class="services-card-description">Assessoria para Emissão de Passaporte Brasileiro</p>
             </div>
         </div>
@@ -33,21 +33,21 @@ get_header();
             <div class="services-right-cards-div">
                 <div class="services-right-upper-cards">
                     <div class="services-right-upper-cards-div">
-                        <img class="services-card-img">
+                        <img class="services-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-6-169x300.png' ); ?>">
                         <p class="services-card-description">Análise Burocrática</p>
                     </div>
                     <div class="services-right-upper-cards-div">
-                        <img class="services-card-img">
+                        <img class="services-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-6-169x300.png' ); ?>">
                         <p class="services-card-description">Estudo e Análise de Mercado</p>
                     </div>
                 </div>
                 <div class="services-right-lower-cards">
                     <div class="services-right-lower-cards-div">
-                        <img class="services-card-img">
+                        <img class="services-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-6-169x300.png' ); ?>">
                         <p class="services-card-description">Planejamento Logístico</p>
                     </div>
                     <div class="services-right-lower-cards-div">
-                        <img class="services-card-img">
+                        <img class="services-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-6-169x300.png' ); ?>">
                         <p class="services-card-description">Prospecção Internacional</p>
                     </div>
                 </div>
@@ -63,22 +63,22 @@ get_header();
     </div>
     <div class="results-cards-div">
         <div class="card-1">
-            <img src="https://expandjr.com.br/wp-content/uploads/2022/08/calendar-150x150.png">
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/calendar-150x150.png' ); ?>">
             <p class="results-card-counter" data-count="6">0</p>
             <p><strong>Anos no Mercado</strong></p>
         </div>
         <div class="card-2">
-            <img src="https://expandjr.com.br/wp-content/uploads/2022/08/presentation-150x150.png">
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/presentation-150x150.png' ); ?>">
             <p class="results-card-counter" data-count="70">0</p>
             <p><strong>Realizados</strong></p>
         </div>
         <div class="card-3">
-            <img src="https://expandjr.com.br/wp-content/uploads/2022/08/graduated-150x150.png">
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/graduated-150x150.png' ); ?>">
             <p class="results-card-counter" data-count="100">0</p>
             <p><strong>Estudantes Impactados</strong></p>
         </div>
         <div class="card-4">
-            <img src="https://expandjr.com.br/wp-content/uploads/2022/08/review-150x150.png">
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/review-150x150.png' ); ?>">
             <p class="results-card-counter" data-count="80">0</p>
             <p><strong>Satisfação dos Clientes</strong></p>
         </div>

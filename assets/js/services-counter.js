@@ -1,5 +1,5 @@
 let countersDisplay = document.querySelectorAll(".results-card-counter")
-let interval = 5000
+let interval = 8000
 
 countersDisplay.forEach((counterDisplay) => {
     let counterstart = parseInt(counterDisplay.textContent)
