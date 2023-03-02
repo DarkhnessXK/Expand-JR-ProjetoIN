@@ -28,6 +28,49 @@ Description: Tema do site da EJ Expand Jr.
     color: #0076C1;
 }
 
+.section-2-services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-div{
+    display: flex;
+    align-items: flex-start;
+    
+}
+
+.services-p{
+    font-size: 1.3rem;
+}
+
+.for-you-div{
+    display: flex;
+    padding-left: 2rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+.for-your-company-div{
+    display: flex;
+    padding-left: 2rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+.img-services{
+    height: 5%;
+    width: 5%;
+    border-radius: 6px;
+    border-color: black;
+}
+
+.middle-line-div{
+    border-left: 3px solid black;
+    height: 25rem;
+    
+}
+
 .w3-display-container{
     display: flex;
     flex-direction: column;

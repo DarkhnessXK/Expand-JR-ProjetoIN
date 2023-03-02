@@ -9,20 +9,30 @@ get_header();
 </section>
 <section class="section-2-services">
     <div class="title-h2-div">
-        <h2>Prestamos Serviços Para</h2>
+        <h2>Nossos Serviços</h2>
     </div>
-    <div class="services-cards-div">
-        <div class="card-1">
-            <img>
-            <p>Pessoas Físicas</p>
+    <div class="services-div">
+        <div class="for-you-div">
+            <h2 class="title-h2-div">Para Você</h2>
+            <a href=""><img src="<?php echo IMAGES_DIR.'/Pessoa-Fisica.png'?>" class="img-services"></a>
+            <p class="services-p">Dupla Cidadania Portuguesa</p>
+            <a href=""><img src="<?php echo IMAGES_DIR.'/Pessoa-Fisica.png'?>" class="img-services"></a>
+            <p class="services-p">Assessoria para Emissão de Passaporte Brasileiro</p>
         </div>
-        <div class="card-2">
-            <img>
-            <p>ONG's</p>
+        <div class="middle-line-div">
         </div>
-        <div class="card-3">
-            <img>
-            <p>Pessoas Jurídicas</p>
+        <div class="for-your-company-div">
+            <h2 class="title-h2-div">Para Sua Empresa</h2>
+
+            <a href=""><img src="<?php echo IMAGES_DIR.'/Pessoa-Fisica.png'?>" class="img-services"></a>
+            <p class="services-p">Analise Burocratica</p>
+            <a href=""><img src="<?php echo IMAGES_DIR.'/Pessoa-Fisica.png'?>" class="img-services"></a>
+            <p class="services-p">Estudo e Analise de Mercado</p>
+            <a href=""><img src="<?php echo IMAGES_DIR.'/Pessoa-Fisica.png'?>" class="img-services"></a>
+            <p class="services-p">Planejamento Logistico</p>
+            <a href=""><img src="<?php echo IMAGES_DIR.'/Pessoa-Fisica.png'?>" class="img-services"></a>
+            <p class="services-p">Prospecção Internacional</p>
+
         </div>
     </div>
 
@@ -103,13 +113,13 @@ get_header();
     </div>
     <div class="w3-content w3-display-container">
         <div class="mySlides">
-            <img src="assets/images/1-1-150x150.png" alt="teste 1">  
+            <img src="assets/images/1-1-150x150.png" alt="teste 1">
         </div>
         <div class="mySlides">
-            <img src="" alt="teste 2"> 
+            <img src="" alt="teste 2">
         </div>
         <div class="mySlides">
-            <img src="" alt="teste 3"> 
+            <img src="" alt="teste 3">
         </div>
         <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle">
             <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
