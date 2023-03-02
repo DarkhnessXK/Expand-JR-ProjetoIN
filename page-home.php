@@ -1,7 +1,28 @@
 <?php
 get_header();
 ?>
-
+<div class="popup">
+    <div><button id="close">&times;</button></div>
+    <div class="register-newsletter">
+        <div class="register-newsletter-div"><h3>Cadastre-se na newsletter e fique por dentro de todas as novidades e promoções!</h3></div>
+        <div class="register-newsletter-div">
+            <form class="register-newsletter-form">
+                <div class="register-newsletter-form-field">
+                    <label for="register-newsletter-form-name-field">Seu nome:</label>
+                    <input type="text" class="register-newsletter-form-name-field" required="required">
+                </div>
+                <div class="register-newsletter-form-field">
+                    <label for="register-newsletter-form-email-field">Seu email:</label>
+                    <input type="text" class="register-newsletter-form-email-field" required="required">
+                </div>
+                <div class="register-newsletter-form-button">
+                    <input type="button" class="register-newsletter-submit-button" value="Cadastrar">
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</div>
 <section class="section-1-home">
     <h1 class="section-1-home-title">Expanda seus Horizontes</h1>
     <h2 class="section-1-home-subtitle">através das nossas soluções internacionais de alto impacto.</h2>
