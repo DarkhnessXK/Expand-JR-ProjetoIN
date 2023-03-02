@@ -56,17 +56,18 @@ get_header();
     <div class="title-h2-div">
         <h2>Cases de Sucesso</h2>
     </div>
-    <div class="slide">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa minima accusamus, laudantium eos consectetur
-            itaque, repellat repudiandae laborum sed velit enim quasi quibusdam harum architecto? Hic accusamus culpa
-            minima fuga?</p>
-        <div class="colaborator">
-            <img src="../assets/Design-sem-nome-12.png">
-            <cite>
-                <span>Sem nome</span>
-            </cite>
-        </div>
-    </div>
+    <div class="w3-content w3-display-container" style="max-width:800px">
+  <img class="mySlides" src="img_nature_wide.jpg" style="width:100%">
+  <img class="mySlides" src="img_snow_wide.jpg" style="width:100%">
+  <img class="mySlides" src="img_mountains_wide.jpg" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
 </section>
 
 <section class="section-5-partnerships">
