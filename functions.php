@@ -4,20 +4,11 @@
 define('ROOT_DIR', get_theme_file_path());
 define('STYLES_DIR', get_template_directory_uri() . '/assets/css');
 define('IMAGES_DIR', get_template_directory_uri() . '/assets/images');
+define('SCRIPTS_DIR', get_template_directory_uri() . '/assets/js');
+define('INCLUDES_DIR', ROOT_DIR . '/includes');
 
-//Adição dos Widgets para a página de Contato
-function contato_widgets()
-{
+include_once(INCLUDES_DIR . '/enqueue.php');
 
-    $args = [
-        'name' => 'Mapa e Texto',
-        'id' => 'map-text',
-        'description' => 'adição de texto e mapa'
-    ];
-
-    register_sidebar($args);
-
-}
-add_action('widgets_init', 'contato_widgets');
+add_action('wp_enqueue_scripts', 'enqueue_expandjr_styles');
 
 ?>
