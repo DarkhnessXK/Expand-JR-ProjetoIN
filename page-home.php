@@ -57,7 +57,15 @@ get_header();
         <h2>Cases de Sucesso</h2>
     </div>
     <div class="slide">
-        <p>lorem ipsum</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa minima accusamus, laudantium eos consectetur
+            itaque, repellat repudiandae laborum sed velit enim quasi quibusdam harum architecto? Hic accusamus culpa
+            minima fuga?</p>
+        <div class="colaborator">
+            <img src="../images/marcio-racca.jpeg">
+            <cite>
+                <span>Marcio Raca</span>
+            </cite>
+        </div>
     </div>
 </section>
 
