@@ -84,8 +84,8 @@ get_header();
         <div class="mySlides">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, deserunt nulla. Assumenda, similique quos
             fugiat, minima eius est incidunt tempore at nam quisquam eos eum doloribus sunt velit deleniti consequuntur?
-            <div>
-                <img>
+            <div class="sucess-people-div">
+                <img src="<?php echo IMAGES_DIR . '/graduado.png' ?>" class="case-image">
                 <cite>
                     <span>Sem nome 1</span>
                 </cite>
@@ -94,18 +94,20 @@ get_header();
         <div class="mySlides">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, deserunt nulla. Assumenda, similique quos
             fugiat, minima eius est incidunt tempore at nam quisquam eos eum doloribus sunt velit deleniti consequuntur?
-            <div>
-                <img>
+            <div class="sucess-people-div">
+                <img src="<?php echo IMAGES_DIR . '/graduado.png' ?>" class="case-image">
                 <cite>
                     <span>Sem nome 2</span>
                 </cite>
             </div>
         </div>
         <div class="mySlides">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, deserunt nulla. Assumenda, similique quos
-            fugiat, minima eius est incidunt tempore at nam quisquam eos eum doloribus sunt velit deleniti consequuntur?
-            <div>
-                <img>
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, deserunt nulla. Assumenda, similique
+            quos
+            fugiat, minima eius est incidunt tempore at nam quisquam eos eum doloribus sunt velit deleniti
+            consequuntur?"
+            <div class="sucess-people-div">
+                <img src="<?php echo IMAGES_DIR . '/graduado.png' ?>" class="case-image">
                 <cite>
                     <span>Sem nome 3</span>
                 </cite>

@@ -55,13 +55,13 @@ Description: Tema do site da EJ Expand Jr.
     gap: 2rem;
 }
 
-.card-div-service{
-    display:flex;
+.card-div-service {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     align-content: center;
-    width:50% ;
+    width: 50%;
 }
 
 .for-your-company-div {
@@ -75,14 +75,25 @@ Description: Tema do site da EJ Expand Jr.
     gap: 2rem;
 }
 
-.double-cards-service{
+.double-cards-service {
     display: flex;
 }
 
 .img-services {
     height: 100%;
-    border-radius: 6px;
-    border-color: black;
+}
+
+.sucess-people-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.case-image {
+    height: 80px;
+    margin-top: 2rem;
+    border-radius: 80%;
 }
 
 
@@ -107,14 +118,15 @@ Description: Tema do site da EJ Expand Jr.
 .w3-display-bottommiddle {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 50rem;
+    margin-bottom: 2rem;
 }
 
 .mySlides {
     display: none
 }
 
-.mySlides2{
+.mySlides2 {
     display: none;
 }
 
