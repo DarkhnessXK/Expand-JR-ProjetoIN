@@ -124,20 +124,20 @@ get_header();
     </div>
     <div class="w3-content w3-display-container">
         <div class="mySlides2">
-            <img src="assets/images/1-1-150x150.png" alt="teste 1">
+            <img src="<?php echo IMAGES_DIR . '/Emp_IEG.png' ?>" alt="teste 1">
+            <img src="<?php echo IMAGES_DIR . '/EMP_Ambev.png' ?>" alt="teste 1">
         </div>
         <div class="mySlides2">
-            <img src="" alt="teste 2">
+            <img src="<?php echo IMAGES_DIR . '/Emp_Estudar.png' ?>" alt="teste 2">
+            <img src="<?php echo IMAGES_DIR . '/EMP_Aveiro.png' ?>" alt="teste 2">
         </div>
         <div class="mySlides2">
-            <img src="" alt="teste 3">
+            <img src="<?php echo IMAGES_DIR . '/EMP_Atuar.png' ?>" alt="teste 2">
+            <img src="<?php echo IMAGES_DIR . '/EMP_Abraco_cultural.png' ?>" alt="teste 2">
         </div>
         <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle">
-            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+            <div class="w3-left w3-hover-text-khaki" id="left-arrow2">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki" id="right-arrow2">&#10095;</div>
         </div>
     </div>
 </section>

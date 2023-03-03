@@ -85,11 +85,6 @@ Description: Tema do site da EJ Expand Jr.
     border-color: black;
 }
 
-.middle-line-div {
-    border-left: 3px solid black;
-    height: 25rem;
-
-}
 
 .section-2-services a {
     display: flex;
@@ -119,6 +114,10 @@ Description: Tema do site da EJ Expand Jr.
     display: none
 }
 
+.mySlides2{
+    display: none;
+}
+
 .w3-left,
 .w3-right,
 .w3-badge {
@@ -135,4 +134,5 @@ Description: Tema do site da EJ Expand Jr.
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #0076C1;
 }
