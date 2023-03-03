@@ -10,4 +10,5 @@ window.addEventListener("load", () => {
 
 document.querySelector("#close").addEventListener("click", () => {
     document.querySelector(".popup").style.display = "none";
+    document.querySelector(".popup-background-shadow-box").style.display = "none";
 });

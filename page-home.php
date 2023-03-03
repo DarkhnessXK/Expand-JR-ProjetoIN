@@ -1,6 +1,7 @@
 <?php
 get_header();
 ?>
+<div class="popup-background-shadow-box"></div>
 <div class="popup">
     <div><button id="close">&times;</button></div>
     <div class="register-newsletter">
