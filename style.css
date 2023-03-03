@@ -115,7 +115,7 @@ Description: Tema do site da EJ Expand Jr.
     align-items: center;
 }
 
-.w3-display-bottommiddle {
+.w3-display-bottommiddle {  /**botão de passar pro lado**/
     display: flex;
     justify-content: center;
     gap: 50rem;
@@ -128,6 +128,11 @@ Description: Tema do site da EJ Expand Jr.
 
 .mySlides2 {
     display: none;
+}
+
+.img-partnerships{
+    margin-right: 5rem;
+    margin-left: 5rem;
 }
 
 .w3-left,

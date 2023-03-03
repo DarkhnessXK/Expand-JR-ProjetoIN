@@ -82,8 +82,10 @@ get_header();
     </div>
     <div class="w3-content w3-display-container">
         <div class="mySlides">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, deserunt nulla. Assumenda, similique quos
-            fugiat, minima eius est incidunt tempore at nam quisquam eos eum doloribus sunt velit deleniti consequuntur?
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, deserunt nulla. Assumenda, similique
+            quos
+            fugiat, minima eius est incidunt tempore at nam quisquam eos eum doloribus sunt velit deleniti
+            consequuntur?"
             <div class="sucess-people-div">
                 <img src="<?php echo IMAGES_DIR . '/graduado.png' ?>" class="case-image">
                 <cite>
@@ -92,8 +94,10 @@ get_header();
             </div>
         </div>
         <div class="mySlides">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, deserunt nulla. Assumenda, similique quos
-            fugiat, minima eius est incidunt tempore at nam quisquam eos eum doloribus sunt velit deleniti consequuntur?
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, deserunt nulla. Assumenda, similique
+            quos
+            fugiat, minima eius est incidunt tempore at nam quisquam eos eum doloribus sunt velit deleniti
+            consequuntur?"
             <div class="sucess-people-div">
                 <img src="<?php echo IMAGES_DIR . '/graduado.png' ?>" class="case-image">
                 <cite>
@@ -126,16 +130,16 @@ get_header();
     </div>
     <div class="w3-content w3-display-container">
         <div class="mySlides2">
-            <img src="<?php echo IMAGES_DIR . '/Emp_IEG.png' ?>" alt="teste 1">
-            <img src="<?php echo IMAGES_DIR . '/EMP_Ambev.png' ?>" alt="teste 1">
+            <img src="<?php echo IMAGES_DIR . '/Emp_IEG.png' ?>" alt="teste 1" class="img-partnerships">
+            <img src="<?php echo IMAGES_DIR . '/EMP_Ambev.png' ?>" alt="teste 1" class="img-partnerships">
         </div>
         <div class="mySlides2">
-            <img src="<?php echo IMAGES_DIR . '/Emp_Estudar.png' ?>" alt="teste 2">
-            <img src="<?php echo IMAGES_DIR . '/EMP_Aveiro.png' ?>" alt="teste 2">
+            <img src="<?php echo IMAGES_DIR . '/Emp_Estudar.png' ?>" alt="teste 2" class="img-partnerships">
+            <img src="<?php echo IMAGES_DIR . '/EMP_Aveiro.png' ?>" alt="teste 2" class="img-partnerships">
         </div>
         <div class="mySlides2">
-            <img src="<?php echo IMAGES_DIR . '/EMP_Atuar.png' ?>" alt="teste 2">
-            <img src="<?php echo IMAGES_DIR . '/EMP_Abraco_cultural.png' ?>" alt="teste 2">
+            <img src="<?php echo IMAGES_DIR . '/EMP_Atuar.png' ?>" alt="teste 2" class="img-partnerships">
+            <img src="<?php echo IMAGES_DIR . '/EMP_Abraco_cultural.png' ?>" alt="teste 2" class="img-partnerships">
         </div>
         <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle">
             <div class="w3-left w3-hover-text-khaki" id="left-arrow2">&#10094;</div>
