@@ -27,7 +27,7 @@ get_header();
 <section class="section-1-home">
     <h1 class="section-1-home-title">Expanda seus Horizontes</h1>
     <h2 class="section-1-home-subtitle">através das nossas soluções internacionais de alto impacto.</h2>
-    <a href=""><button class="section-1-home-redirect-button">Fale com um especialista</button></a>
+    <a href="<?php echo get_permalink(get_page_by_path('contato')); ?>"><button class="section-1-home-redirect-button">Fale com um especialista</button></a>
 </section>
 <section class="section-2-services">
     <div class="title-h2-div">
@@ -85,43 +85,25 @@ get_header();
     </div>
     <div class="results-cards-div">
         <div class="card-1">
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/calendar-150x150.png' ); ?>">
+            <img class="results-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/calendar-150x150.png' ); ?>">
             <p class="results-card-counter" data-count="6">0</p>
             <p><strong>Anos no Mercado</strong></p>
         </div>
         <div class="card-2">
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/presentation-150x150.png' ); ?>">
+            <img class="results-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/presentation-150x150.png' ); ?>">
             <p class="results-card-counter" data-count="70">0</p>
-            <p><strong>Realizados</strong></p>
+            <p><strong>Projetos Realizados</strong></p>
         </div>
         <div class="card-3">
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/graduated-150x150.png' ); ?>">
+            <img class="results-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/graduated-150x150.png' ); ?>">
             <p class="results-card-counter" data-count="100">0</p>
             <p><strong>Estudantes Impactados</strong></p>
         </div>
         <div class="card-4">
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/review-150x150.png' ); ?>">
+            <img class="results-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/review-150x150.png' ); ?>">
             <p class="results-card-counter" data-count="80">0</p>
             <p><strong>Satisfação dos Clientes</strong></p>
         </div>
-    </div>
-</section>
-
-<section class="section-4-success-cases">
-    <div class="title-h2-div">
-        <h2>Cases de Sucesso</h2>
-    </div>
-    <div class="slide">
-        <p>lorem ipsum</p>
-    </div>
-</section>
-
-<section class="section-5-partnerships">
-    <div class="title-h2-div">
-        <h2>Nossos Parceiros</h2>
-    </div>
-    <div class="slide">
-        <p>lorem ipsum</p>
     </div>
 </section>
 

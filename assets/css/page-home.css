@@ -210,7 +210,7 @@ p{
 .services-cards{
     display: flex;
     gap: 4.5em;
-    margin-left: 8.5em;
+    margin-left: 10.5em;
 }
 
 .services-left-cards{
@@ -227,12 +227,12 @@ p{
 
 .services-right-upper-cards{
     display: flex;
-    gap: 2.5em;
+    gap: 4.5em;
 }
 
 .services-right-lower-cards{
     display: flex;
-    gap: 2.5em;
+    gap: 4.5em;
 }
 
 .services-card-description{
@@ -242,8 +242,8 @@ p{
 }
 
 .services-card-img {
-    width: 8.5em;
-    height: 14.5em;
+    width: auto;
+    height: 12.5em;
     transition: all .2s ease-in-out;
 }
 
@@ -295,7 +295,7 @@ p{
 
 .results-cards-div{
     display: flex;
-    gap: 5.5em;
+    gap: 7.5em;
 }
 
 .card-1, .card-2, .card-3, .card-4{
@@ -303,6 +303,7 @@ p{
     flex-direction: column;
     align-items: center;
     gap: 1.25em;
+    min-width: 300px;
 }
 
 .card-2 > .results-card-counter:before{
@@ -341,6 +342,11 @@ p{
     font-weight: 700;
     font-size: 64px;
     line-height: 75px;
+}
+
+.results-card-img{
+    width: 150px;
+    height: 150px;
 }
 
 @media (max-width: 820px) {
