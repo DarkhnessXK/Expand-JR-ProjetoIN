@@ -4,24 +4,22 @@ get_header();
 <div class="popup-background-shadow-box"></div>
 <div class="popup">
     <div><button id="close">&times;</button></div>
-    <div class="register-newsletter">
+    <div class="tnp tnp-subscription register-newsletter">
         <div class="register-newsletter-div"><h3>Cadastre-se na newsletter e fique por dentro de todas as novidades e promoções!</h3></div>
         <div class="register-newsletter-div">
-            <form class="register-newsletter-form">
-                <div class="register-newsletter-form-field">
-                    <label for="register-newsletter-form-name-field">Seu nome:</label>
-                    <input type="text" class="register-newsletter-form-name-field" required="required">
-                </div>
-                <div class="register-newsletter-form-field">
-                    <label for="register-newsletter-form-email-field">Seu email:</label>
-                    <input type="text" class="register-newsletter-form-email-field" required="required">
-                </div>
-                <div class="register-newsletter-form-button">
-                    <input type="button" class="register-newsletter-submit-button" value="Cadastrar">
+            <form method="post" action="http://expandjr.local/?na=s" class="register-newsletter-form" 
+            onsubmit="
+            sessionStorage.setItem('alreadyShow','already shown');
+            alert('Cadastro realizado com sucesso!');
+            ">
+                <input type="hidden" name="nlang" value=""><div class="tnp-field tnp-field-firstname register-newsletter-form-field"><label for="tnp-1">Seu nome:</label>
+                <input class="tnp-name register-newsletter-form-name-field" type="text" name="nn" id="tnp-1" value=""></div>
+                <div class="tnp-field tnp-field-email register-newsletter-form-field"><label for="tnp-2">Seu email:</label>
+                <input class="tnp-email register-newsletter-form-email-field" type="email" name="ne" id="tnp-2" value="" required></div>
+                <div class="tnp-field tnp-privacy-field register-newsletter-form-field"><label><input type="checkbox" name="ny" required class="tnp-privacy"> Li e aceito as políticas de privacidade e termos de uso</label></div><div class="tnp-field tnp-field-button register-newsletter-form-button"><input class="tnp-submit register-newsletter-submit-button" type="submit" value="Cadastrar">
                 </div>
             </form>
         </div>
-        
     </div>
 </div>
 <section class="section-1-home">
