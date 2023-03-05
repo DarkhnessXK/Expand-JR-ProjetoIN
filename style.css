@@ -11,3 +11,7 @@ Description: Tema do site da EJ Expand Jr.
     margin: 0;
     box-sizing: border-box;
 }
+
+a {
+    color: inherit;
+}
