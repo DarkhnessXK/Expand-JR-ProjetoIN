@@ -1,0 +1,71 @@
+main {
+    font-family: 'Roboto', sans-serif;
+    padding: 1rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.main_aside2_section {
+    display: flex;
+    gap: 3rem;
+}
+
+.main_aside2_section > img {
+    /* object-fit: cover;
+    width: 583px;
+    height: 371px; */
+    
+    width: 54%;
+    max-width: 583px;
+    /* align-self: center; */
+    height: 30%;
+}
+
+.main_aside2_text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.main_aside2_text > h2 {
+    font-size: 32px;
+}
+
+.main_aside2_text > p {
+    line-height: 28px;
+}
+
+
+
+
+.aside2_section {
+    /* display: flex; */
+    flex-direction: row-reverse;
+    /* gap: 3rem; */
+}
+
+/* .aside2_section > img {
+    width: 583px;
+    height: 371px;
+}
+
+.aside2_section_text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.aside2_section_text > h2 {
+    font-size: 32px;
+}
+
+.aside2_section_text > p {
+    line-height: 28px;
+} */
+
+.teste1_img {
+    object-fit: cover;
+    width: 583px;
+    height: 371px;
+}

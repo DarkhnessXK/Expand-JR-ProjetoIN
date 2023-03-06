@@ -11,3 +11,148 @@ Description: Tema do site da EJ Expand Jr.
     margin: 0;
     box-sizing: border-box;
 }
+
+.section-4-success-cases {
+    background-color: #E9EAEC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    color: #0076C1;
+
+}
+
+.title-h2-div {
+    font-size: 2rem;
+    padding: 2rem;
+    color: #0076C1;
+}
+
+.section-2-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-div {
+    display: flex;
+    justify-content: center;
+
+}
+
+.services-p {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.for-you-div {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid black;
+    gap: 2rem;
+}
+
+.card-div-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+}
+
+.for-your-company-div {
+    display: flex;
+    padding-left: 2rem;
+    width: 50%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid black;
+    gap: 2rem;
+}
+
+.double-cards-service {
+    display: flex;
+}
+
+.img-services {
+    height: 100%;
+}
+
+.sucess-people-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.case-image {
+    height: 80px;
+    margin-top: 2rem;
+    border-radius: 80%;
+}
+
+
+.section-2-services a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #E9EAEC;
+    border-radius: 50%;
+    padding: 0.1rem;
+
+}
+
+.w3-display-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.w3-display-bottommiddle {  /**botão de passar pro lado**/
+    display: flex;
+    justify-content: center;
+    gap: 50rem;
+    margin-bottom: 2rem;
+}
+
+.mySlides {
+    display: none
+}
+
+.mySlides2 {
+    display: none;
+}
+
+.img-partnerships{
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+.w3-left,
+.w3-right,
+.w3-badge {
+    cursor: pointer
+}
+
+.w3-badge {
+    height: 13px;
+    width: 13px;
+    padding: 0
+}
+
+.section-5-partnerships {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0076C1;
+}
+a {
+    color: inherit;
+}
