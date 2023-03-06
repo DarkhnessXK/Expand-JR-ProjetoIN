@@ -7,9 +7,11 @@ get_header();
     <div class="tnp tnp-subscription register-newsletter">
         <div class="register-newsletter-div"><h3>Cadastre-se na newsletter e fique por dentro de todas as novidades e promoções!</h3></div>
         <div class="register-newsletter-div">
-            <form method="post" action="http://expandjr.local/?na=s" class="register-newsletter-form" 
+            <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+            <form method="post" action="http://expandjr.local/?na=s" target="dummyframe" class="register-newsletter-form" 
             onsubmit="
-            sessionStorage.setItem('alreadyShow','already shown');
+            document.querySelector('.popup').style.display = 'none';
+            document.querySelector('.popup-background-shadow-box').style.display = 'none';
             alert('Cadastro realizado com sucesso!');
             ">
                 <input type="hidden" name="nlang" value=""><div class="tnp-field tnp-field-firstname register-newsletter-form-field"><label for="tnp-1">Seu nome:</label>
