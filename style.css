@@ -152,4 +152,6 @@ Description: Tema do site da EJ Expand Jr.
     flex-direction: column;
     align-items: center;
     color: #0076C1;
+a {
+    color: inherit;
 }
