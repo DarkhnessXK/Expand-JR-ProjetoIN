@@ -8,6 +8,7 @@ function enqueue_expandjr_styles() {
     wp_register_style('header', STYLES_DIR . '/header.css', [], '1.0.0', false);
     wp_register_script('header-script', SCRIPTS_DIR . '/header.js', [], '1.0.0', false);
     wp_register_style('footer', STYLES_DIR . '/footer.css', [], '1.0.0', false);
+    wp_register_style('quem-somos', STYLES_DIR . '/quem-somos.css', [], '1.0.0', false);
 
 
     wp_enqueue_style('style');
@@ -17,6 +18,7 @@ function enqueue_expandjr_styles() {
     wp_enqueue_style('header');
     wp_enqueue_script('header-script');
     wp_enqueue_style('footer');
+    wp_enqueue_style('quem-somos');
 }
 
 ?>
