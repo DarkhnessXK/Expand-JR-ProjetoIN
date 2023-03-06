@@ -5,7 +5,7 @@
                     <p>Postagens Populares</p>
                     <div>
                         <?php
-                        $popular_posts = array();
+                        /* $popular_posts = array();
                         if (function_exists( 'stats_get_csv' )) {
                             $popular_posts = stats_get_csv( 'postviews', '&days=-1&limit=-1&summarize' );
                         }
@@ -17,7 +17,26 @@
                                 $post_permalink = get_permalink( $post_id );
                                 echo "<a href='$post_permalink'>$post_title</a>";
                             }
-                        }
+                        } */
+                        $args = array( 
+                            'posts_per_page' => 1, 
+                            'meta_key' => 'wpp_post_views_count', 
+                            'orderby' => 'meta_value_num', 
+                            'order' => 'DESC',
+                            'post_type' => 'post',
+                            'post_status' => 'publish' );
+                        
+                        $popularpost = new WP_Query( $args );
+                        echo '<pre>';
+                        print_r($popularpost);
+                        echo '</pre>';
+                        if ( $popularpost->have_posts() ) :
+                            while ( $popularpost->have_posts() ) : $popularpost->the_post(); ?>
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            <?php endwhile;
+                        endif;
+                        wp_reset_query();
+
                         ?>
                     </div>
                 </div>
