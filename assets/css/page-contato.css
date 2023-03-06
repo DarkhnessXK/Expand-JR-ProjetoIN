@@ -1,16 +1,8 @@
 main{
- 
    margin-top: 30px;
-   height: 30rem;
-   
-   	
+   height: 30rem; 	
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .step-wizard {
     background-color: #ffff;
@@ -146,7 +138,7 @@ main{
    
 }
 /* !---- Dados do formulário ---- !  */
-input{
+.dados > input{
     height: 50px;
     width: 600px;
     margin-top: 10px;
