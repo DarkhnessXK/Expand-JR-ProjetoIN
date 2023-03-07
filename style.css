@@ -153,6 +153,11 @@ Description: Tema do site da EJ Expand Jr.
     align-items: center;
     color: #0076C1;
 }
+
+.quantity-images{
+   display: none;
+}
+
 a {
     color: inherit;
 }

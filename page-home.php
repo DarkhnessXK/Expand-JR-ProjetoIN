@@ -159,19 +159,25 @@ get_header();
     <div class="title-h2-div">
         <h2>Nossos Parceiros</h2>
     </div>
-    <div class="w3-content w3-display-container">
-        <div class="mySlides2">
-            <img src="<?php echo IMAGES_DIR . '/Emp_IEG.png' ?>" alt="teste 1" class="img-partnerships">
-            <img src="<?php echo IMAGES_DIR . '/EMP_Ambev.png' ?>" alt="teste 1" class="img-partnerships">
-        </div>
-        <div class="mySlides2">
-            <img src="<?php echo IMAGES_DIR . '/Emp_Estudar.png' ?>" alt="teste 2" class="img-partnerships">
-            <img src="<?php echo IMAGES_DIR . '/EMP_Aveiro.png' ?>" alt="teste 2" class="img-partnerships">
-        </div>
-        <div class="mySlides2">
-            <img src="<?php echo IMAGES_DIR . '/EMP_Atuar.png' ?>" alt="teste 2" class="img-partnerships">
-            <img src="<?php echo IMAGES_DIR . '/EMP_Abraco_cultural.png' ?>" alt="teste 2" class="img-partnerships">
-        </div>
+    <?php
+    $contador_imagens = get_field('Partnership-images');
+        if (have_rows('Partnership-images')):
+            ?>
+            <?php
+            while (have_rows('Partnership-images')):
+                
+                ?>
+
+                <div class="mySlides2">
+
+                    <?php
+                    echo '<img class="img-partnerships" src="' . the_row()['full_image_url'] . '"alt="">';
+                    
+                    ?>
+                    <div class="quantity-images"><?php echo count($contador_imagens);?></div>
+                </div>
+            <?php endwhile ?>
+        <?php endif ?>
         <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle">
             <div class="w3-left w3-hover-text-khaki" id="left-arrow2">&#10094;</div>
             <div class="w3-right w3-hover-text-khaki" id="right-arrow2">&#10095;</div>
