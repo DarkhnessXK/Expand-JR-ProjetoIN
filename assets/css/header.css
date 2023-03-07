@@ -2,6 +2,11 @@ body {
     background-color: white;
 }
 
+header {
+    position: absolute;
+    width: 100%;
+}
+
 .header_nav {
     display: flex;
     justify-content: space-between;

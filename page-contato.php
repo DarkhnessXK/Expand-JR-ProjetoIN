@@ -87,8 +87,8 @@ Id quia enim qui minima voluptatem et maiores expedita ad provident quod eos per
   </div>
 </main>
 <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=<?php echo $cel; ?>" target_blank="_blank">
-<i class="fa fa-whatsapp"></i>
- </a>
+  <img src="<?php echo IMAGES_DIR . '/icon-whatsapp-48.png'; ?>" alt="Ícone do Whatsapp">
+</a>
 
 <?php 
 get_footer();
