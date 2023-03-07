@@ -90,7 +90,6 @@ window.addEventListener("load", slider2)
 
 function left2(){
   if(ultima_imagem >4 && contador2>0){
-    console.log("to no if da left", ultima_imagem, contador2 )
     contador2--
     section2[ultima_imagem-1].style.display = "none"
     ultima_imagem--
