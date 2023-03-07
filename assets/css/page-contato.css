@@ -157,7 +157,7 @@ textarea{
     padding-left: 15px;
     padding-top: 10px;
 }
-button{ 
+.dados > button{ 
     height: 50px;
     width: 600px;
    margin-top: 10px; 

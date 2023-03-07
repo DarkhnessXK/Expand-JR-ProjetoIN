@@ -61,7 +61,7 @@
                     <img src="<?php echo IMAGES_DIR . '/expandjr-logo-210.png' ?>" alt="Logo da Expand Jr">
                     <p>CNPJ: 11.111.111/0000-00</p>
                 </div>
-                <form class='footer_form' action="">
+                <!-- <form class='footer_form' action="">
                     <label for="footer_email">Cadastre-se em nossa newsletter!</label>
                     <input type="text" id='footer_email' name='footer_email' placeholder='Digite seu email'>
                     <div>
@@ -69,7 +69,18 @@
                         <label for="politica_priv">Li e aceito as politicas de privacidade e termos de uso</label>
                     </div>
                     <input type="submit" value="Cadastrar">
+                </form> -->
+                <form class='footer_form' method="post" action="http://expand-jr.local/?na=s">
+                    <input type="hidden" name="nlang" value="">
+                    <label for="tnp-1">Cadastre-se em nossa newsletter!</label>
+                    <input class="footer_email" type="email" name="ne" id="tnp-1" placeholder='Digite seu email' required>
+                    <div class="tnp-field tnp-privacy-field">
+                        <input type="checkbox" id='politica_priv' name="ny" required class="tnp-privacy">
+                        <label for="politica_priv">Li e aceito as politicas de privacidade e termos de uso</label>
+                    </div>
+                    <input class="tnp-submit" type="submit" value="Cadastrar" >
                 </form>
+            
                 <div>
                     <div>
                         <p>Av. Exemplo, 111 - Niterói, Rio de Janeiro</p>

@@ -26,8 +26,11 @@ footer > div:nth-child(1) {
 }
 
 .footer_columns > p {
+    color: white;
     font-size: 24px;
     font-weight: 700;
+    font-family: 'Barlow', sans-serif;
+    line-height: default;
 }
 
 .footer_columns > div {
@@ -58,8 +61,10 @@ footer > div:nth-child(1) {
 }
 
 .footer_bottom > div:nth-child(1) p:nth-child(2) {
+    color: white;
     font-size: 18px;
     font-weight: 500;
+    font-family: 'Barlow', sans-serif;
 }
 
 
@@ -70,12 +75,12 @@ footer > div:nth-child(1) {
     gap: 6px;
 }
 
-.footer_form > label:nth-of-type(1) {
+.footer_form > label:nth-of-type(2) {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
 
-#footer_email {
+.footer_email {
     width: 300px;
     height: 40px;
     padding-left: 1rem;
@@ -91,7 +96,7 @@ footer > div:nth-child(1) {
     white-space: nowrap;
 }
 
-.footer_form > input:nth-child(4) {
+.footer_form > input:nth-child(5) {
     width: 100px;
     height: 30px;
 }
@@ -110,6 +115,14 @@ footer > div:nth-child(1) {
     flex-direction: column;
     align-items: center;
     gap: 6px;
+}
+
+.footer_bottom div:nth-child(3) > div:nth-child(1) > p {
+    color: white;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
 }
 
 .footer_bottom div:nth-child(3) > div:nth-child(2) {
