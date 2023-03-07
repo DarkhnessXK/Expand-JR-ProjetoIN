@@ -1,6 +1,13 @@
-<?php 
-get_header();
-?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <?php bloginfo('name') ?> - <?php the_title(); ?> </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css">
+    <?php wp_head(); ?>
+</head>
 <?php
 $endereco_completo = get_option('erjr_cadastro_telefone')  . '</br>' .get_option('erjr_cadastro_email') . '</br>' . get_option('erjr_cadastro_endereco');
 $endereco = urlencode(get_option('erjr_cadastro_endereco'));
@@ -89,7 +96,6 @@ Id quia enim qui minima voluptatem et maiores expedita ad provident quod eos per
 <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=<?php echo $cel; ?>" target_blank="_blank">
 <i class="fa fa-whatsapp"></i>
  </a>
-
-<?php 
+<?php
 get_footer();
 ?>
