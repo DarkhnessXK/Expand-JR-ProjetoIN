@@ -8,7 +8,7 @@
                         $args = array(
                             'limit' => 3, 
                             'range' => 'all',
-                            'post_type' => 'page',
+                            'post_type' => 'post',
                             'stats_views' => '0',
                             'stats_comments' => '0',
                             'stats_author' => '0',
@@ -59,11 +59,11 @@
                 <div class='footer_columns links_column'>
                     <p>Links</p>
                     <div>
-                        <a href="">Serviços</a>
-                        <a href="">Quem somos</a>
-                        <a href="">Blog</a>
-                        <a href="">Política de privacidade</a>
-                        <a href="">Termos de uso</a>
+                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('servicos') ) ); ?>">Serviços</a>
+                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('quem-somos') ) ); ?>">Quem somos</a>
+                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('blog') ) ); ?>">Blog</a>
+                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('') ) ); ?>">Política de privacidade</a>
+                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('') ) ); ?>">Termos de uso</a>
                     </div>
                 </div>
             </div>
