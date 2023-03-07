@@ -8,12 +8,11 @@ function enqueue_expandjr_styles() {
     wp_register_style('inter-font', "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
     wp_register_style('barlow-font', "https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap");
     wp_register_style('header', STYLES_DIR . '/header.css', [], '1.0.0', false);
+    wp_register_style('footer', STYLES_DIR . '/footer.css', [], '1.0.0', false);
     wp_register_script('header-script', SCRIPTS_DIR . '/header.js', [], '1.0.0', false);
-    
     wp_register_style('whatsapp', STYLES_DIR . '/whatsapp.css', [], '1.0.0', false);
+
     
-
-
     wp_enqueue_style('style');
     wp_enqueue_style('final-header');
     wp_enqueue_style('final-main');
@@ -21,8 +20,8 @@ function enqueue_expandjr_styles() {
     wp_enqueue_style('inter-font');
     wp_enqueue_style('barlow-font');
     wp_enqueue_style('header');
+    wp_enqueue_style('footer');
     wp_enqueue_script('header-script');
-    
     wp_enqueue_style('whatsapp');
     
     
@@ -48,11 +47,7 @@ function enqueue_expandjr_styles() {
     if (is_page('contato')) {
         wp_register_style('contato', STYLES_DIR . '/page-contato.css', [], '1.0.0', false);
         wp_enqueue_style('contato');
-    }
-
-    wp_register_style('footer', STYLES_DIR . '/footer.css', [], '1.0.0', false);
-
-    wp_enqueue_style('footer');
+    }  
 }
 
 ?>

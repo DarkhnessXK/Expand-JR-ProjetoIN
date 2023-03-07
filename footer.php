@@ -5,19 +5,31 @@
                     <p>Postagens Populares</p>
                     <div>
                         <?php
-                        /* $popular_posts = array();
-                        if (function_exists( 'stats_get_csv' )) {
-                            $popular_posts = stats_get_csv( 'postviews', '&days=-1&limit=-1&summarize' );
-                        }
-
-                        if ( ! empty( $popular_posts ) ) {
-                            foreach ( $popular_posts as $post ) {
-                                $post_id = $post['post_id'];
-                                $post_title = get_the_title( $post_id );
-                                $post_permalink = get_permalink( $post_id );
-                                echo "<a href='$post_permalink'>$post_title</a>";
+                        $args = array(
+                            'limit' => 3, 
+                            'range' => 'all',
+                            'post_type' => 'page',
+                            'stats_views' => '0',
+                            'stats_comments' => '0',
+                            'stats_author' => '0',
+                            'stats_date' => '0'
+                        );
+                        $popular_posts = wpp_get_mostpopular($args);
+                        echo '<pre>';
+                        print_r($popular_posts);
+                        echo '</pre>';
+                        
+                        if($popular_posts) {
+                            echo '<div>';
+                            foreach($popular_posts as $post) {
+                                setup_postdata($post);
+                                ?>
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <?php
                             }
-                        } */
+                            wp_reset_postdata();
+                            echo '</div>';
+                        }
                         ?>
                     </div>
                 </div>
@@ -58,7 +70,8 @@
 
             <div class='footer_bottom'>
                 <div>
-                    <img src="<?php echo IMAGES_DIR . '/expandjr-logo-210.png' ?>" alt="Logo da Expand Jr">
+                    <?php the_custom_logo(); ?>
+                    <!-- <img src="<?php echo IMAGES_DIR . '/expandjr-logo-210.png' ?>" alt="Logo da Expand Jr"> -->
                     <p>CNPJ: 11.111.111/0000-00</p>
                 </div>
                 <!-- <form class='footer_form' action="">
@@ -98,6 +111,11 @@
         <div class='footer_copyright'>
             <p>Copyright ⒸExpand JR 2023</p>
         </div>
+        <?php
+        echo '<pre>';
+        print_r($popular_posts);
+        echo '</pre>';
+        ?>
         
     </footer>
 <?php wp_footer(); ?>

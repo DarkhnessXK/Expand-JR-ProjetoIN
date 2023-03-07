@@ -45,6 +45,12 @@ footer > div:nth-child(1) {
     font-weight: 500;
 }
 
+.wpp-post-title {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .footer_bottom {
     display: flex;
     justify-content: center;

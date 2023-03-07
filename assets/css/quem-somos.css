@@ -4,6 +4,9 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+
+    margin-top: 0;
+    height: auto;
 }
 
 .main_aside2_section {
