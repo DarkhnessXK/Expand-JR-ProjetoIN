@@ -166,6 +166,10 @@ body {
     .header_nav {
         padding: 5px 1rem 0 1rem;
     }
+
+    .menu_list {
+        right: -17px;
+    }
 }
 
 @media screen and (max-width: 385px) {
@@ -175,5 +179,9 @@ body {
 
     .hamburger_div {
         align-self: flex-end;
+    }
+
+    .menu_list {
+        top: 44px;
     }
 }
