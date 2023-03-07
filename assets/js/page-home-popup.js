@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
             document.querySelector(".popup-background-shadow-box").style.display = "block";
         },
         1000
-    )
+    );
 });
 
 document.querySelector("#close").addEventListener("click", () => {

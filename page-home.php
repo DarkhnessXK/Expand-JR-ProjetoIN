@@ -25,6 +25,12 @@ get_header();
         </div>
     </div>
 </div>
+<div class="services-modal-container">
+    <div><button id="close-modal">&times;</button></div> 
+    <div class="service-modal"></div>
+    <div><a href="<?php echo get_permalink(get_page_by_path('contato')); ?>"><button class="service-modal-redirect-button">Diagnóstico Gratuito</button></a></div>
+</div>
+
 <section class="section-1-home">
     <h1 class="section-1-home-title">Expanda seus Horizontes</h1>
     <h2 class="section-1-home-subtitle">através das nossas soluções internacionais de alto impacto.</h2>
@@ -39,13 +45,15 @@ get_header();
             <div class="services-left-cards-div">
                 <h2>Para Você</h2>
             </div>
-            <div class="services-left-cards-div">
-                <img class="services-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-12.png' ); ?>">
-                <p class="services-card-description">Dupla Cidadania Portuguesa</p>
+            <div class="services-left-cards-div" id="services-cards-open-modal">
+                <img class="services-card-img services-card-img-hover" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-12.png' ); ?>">
+                <p class="services-card-title">Dupla Cidadania Portuguesa</p>
+                <p class="services-card-description hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum minima dolorum fuga voluptas quod, dolorem repellendus ipsa asperiores neque sed nulla? Sit a asperiores tempora cum molestiae laborum suscipit possimus.Eos voluptate, dolore autem iusto deserunt perspiciatis debitis consequatur placeat eius, voluptates at repudiandae et, qui enim? Eaque, culpa aliquam animi delectus pariatur officiis quibusdam corrupti quaerat tempora rerum et.</p>
             </div>
-            <div class="services-left-cards-div">
-                <img class="services-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-12.png' ); ?>">
-                <p class="services-card-description">Assessoria para Emissão de Passaporte Brasileiro</p>
+            <div class="services-left-cards-div" id="services-cards-open-modal">
+                <img class="services-card-img services-card-img-hover" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-12.png' ); ?>">
+                <p class="services-card-title">Assessoria para Emissão de Passaporte Brasileiro</p>
+                <p class="services-card-description hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum minima dolorum fuga voluptas quod, dolorem repellendus ipsa asperiores neque sed nulla? Sit a asperiores tempora cum molestiae laborum suscipit possimus.Eos voluptate, dolore autem iusto deserunt perspiciatis debitis consequatur placeat eius, voluptates at repudiandae et, qui enim? Eaque, culpa aliquam animi delectus pariatur officiis quibusdam corrupti quaerat tempora rerum et.</p>
             </div>
         </div>
         <div class="cards-divisor"></div>
@@ -55,23 +63,31 @@ get_header();
             </div>
             <div class="services-right-cards-div">
                 <div class="services-right-upper-cards">
-                    <div class="services-right-upper-cards-div">
-                        <img class="services-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-6-169x300.png' ); ?>">
-                        <p class="services-card-description">Análise Burocrática</p>
+                    <div class="services-right-upper-cards-div" id="services-cards-open-modal">
+                        <img class="services-card-img services-card-img-hover" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-6-169x300.png' ); ?>">
+                        <p class="services-card-title">Análise Burocrática</p>
+                        <p class="services-card-description hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum minima dolorum fuga voluptas quod, dolorem repellendus ipsa asperiores neque sed nulla? Sit a asperiores tempora cum molestiae laborum suscipit possimus.
+                        Eos voluptate, dolore autem iusto deserunt perspiciatis debitis consequatur placeat eius, voluptates at repudiandae et, qui enim? Eaque, culpa aliquam animi delectus pariatur officiis quibusdam corrupti quaerat tempora rerum et.</p>
                     </div>
-                    <div class="services-right-upper-cards-div">
-                        <img class="services-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-6-169x300.png' ); ?>">
-                        <p class="services-card-description">Estudo e Análise de Mercado</p>
+                    <div class="services-right-upper-cards-div" id="services-cards-open-modal">
+                        <img class="services-card-img services-card-img-hover" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-6-169x300.png' ); ?>">
+                        <p class="services-card-title">Estudo e Análise de Mercado</p>
+                        <p class="services-card-description hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum minima dolorum fuga voluptas quod, dolorem repellendus ipsa asperiores neque sed nulla? Sit a asperiores tempora cum molestiae laborum suscipit possimus.
+                        Eos voluptate, dolore autem iusto deserunt perspiciatis debitis consequatur placeat eius, voluptates at repudiandae et, qui enim? Eaque, culpa aliquam animi delectus pariatur officiis quibusdam corrupti quaerat tempora rerum et.</p>
                     </div>
                 </div>
                 <div class="services-right-lower-cards">
-                    <div class="services-right-lower-cards-div">
-                        <img class="services-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-6-169x300.png' ); ?>">
-                        <p class="services-card-description">Planejamento Logístico</p>
+                    <div class="services-right-lower-cards-div" id="services-cards-open-modal">
+                        <img class="services-card-img services-card-img-hover" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-6-169x300.png' ); ?>">
+                        <p class="services-card-title">Planejamento Logístico</p>
+                        <p class="services-card-description hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum minima dolorum fuga voluptas quod, dolorem repellendus ipsa asperiores neque sed nulla? Sit a asperiores tempora cum molestiae laborum suscipit possimus.
+                        Eos voluptate, dolore autem iusto deserunt perspiciatis debitis consequatur placeat eius, voluptates at repudiandae et, qui enim? Eaque, culpa aliquam animi delectus pariatur officiis quibusdam corrupti quaerat tempora rerum et.</p>
                     </div>
-                    <div class="services-right-lower-cards-div">
-                        <img class="services-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-6-169x300.png' ); ?>">
-                        <p class="services-card-description">Prospecção Internacional</p>
+                    <div class="services-right-lower-cards-div" id="services-cards-open-modal">
+                        <img class="services-card-img services-card-img-hover" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Design-sem-nome-6-169x300.png' ); ?>">
+                        <p class="services-card-title">Prospecção Internacional</p>
+                        <p class="services-card-description hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum minima dolorum fuga voluptas quod, dolorem repellendus ipsa asperiores neque sed nulla? Sit a asperiores tempora cum molestiae laborum suscipit possimus.
+                        Eos voluptate, dolore autem iusto deserunt perspiciatis debitis consequatur placeat eius, voluptates at repudiandae et, qui enim? Eaque, culpa aliquam animi delectus pariatur officiis quibusdam corrupti quaerat tempora rerum et.</p>
                     </div>
                 </div>
             </div>
@@ -88,22 +104,22 @@ get_header();
         <div class="card-1">
             <img class="results-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/calendar-150x150.png' ); ?>">
             <p class="results-card-counter" data-count="6">0</p>
-            <p><strong>Anos no Mercado</strong></p>
+            <p class="results-card-title"><strong>Anos no Mercado</strong></p>
         </div>
         <div class="card-2">
             <img class="results-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/presentation-150x150.png' ); ?>">
             <p class="results-card-counter" data-count="70">0</p>
-            <p><strong>Projetos Realizados</strong></p>
+            <p class="results-card-title"><strong>Projetos Realizados</strong></p>
         </div>
         <div class="card-3">
             <img class="results-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/graduated-150x150.png' ); ?>">
             <p class="results-card-counter" data-count="100">0</p>
-            <p><strong>Estudantes Impactados</strong></p>
+            <p class="results-card-title"><strong>Estudantes Impactados</strong></p>
         </div>
         <div class="card-4">
             <img class="results-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/review-150x150.png' ); ?>">
             <p class="results-card-counter" data-count="80">0</p>
-            <p><strong>Satisfação dos Clientes</strong></p>
+            <p class="results-card-title"><strong>Satisfação dos Clientes</strong></p>
         </div>
     </div>
 </section>
