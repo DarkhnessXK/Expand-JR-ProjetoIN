@@ -159,6 +159,7 @@ get_header();
     <div class="title-h2-div">
         <h2>Nossos Parceiros</h2>
     </div>
+    <div class="group-images-section5-div">
     <?php
     $contador_imagens = get_field('Partnership-images');
         if (have_rows('Partnership-images')):
@@ -167,7 +168,7 @@ get_header();
             while (have_rows('Partnership-images')):
                 
                 ?>
-
+    
                 <div class="mySlides2">
 
                     <?php
@@ -178,6 +179,7 @@ get_header();
                 </div>
             <?php endwhile ?>
         <?php endif ?>
+            </div>
         <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle">
             <div class="w3-left w3-hover-text-khaki" id="left-arrow2">&#10094;</div>
             <div class="w3-right w3-hover-text-khaki" id="right-arrow2">&#10095;</div>

@@ -54,20 +54,29 @@ leftArrow.addEventListener("click", left)
 
 function slider2() {
   section2[indice2].style.display = "block"
-
+  section2[indice2 + 1].style.display = "block"
+  section2[indice2 + 2].style.display = "block"
+  section2[indice2 + 3].style.display = "block"
 }
 
 function next2() {
-  if (indice2 < (limite2-1)) {
+  if (indice2 < (limite2 - 1)) {
 
     section2[indice2].style.display = "none"
     indice2++
     section2[indice2].style.display = "block"
+    section2[indice2 + 1].style.display = "block"
+    section2[indice2 + 2].style.display = "block"
+    section2[indice2 + 3].style.display = "block"
+    indice2 +=3
   }
-  else if (indice2 == (limite2-1)) {
+  else if (indice2 == (limite2 - 1) || (indice2 > limite2)) {
     section2[indice2].style.display = "none"
     indice2 = 0
     section2[indice2].style.display = "block"
+    section2[indice2 + 1].style.display = "block"
+    section2[indice2 + 2].style.display = "block"
+    section2[indice2 + 3].style.display = "block"
   }
 }
 
@@ -79,11 +88,17 @@ function left2() {
     section2[indice2].style.display = "none"
     indice2--
     section2[indice2].style.display = "block"
+    section2[indice2 - 1].style.display = "block"
+    section2[indice2 - 2].style.display = "block"
+    section2[indice2 - 3].style.display = "block"
   }
   else if (indice2 == 0) {
     section2[indice2].style.display = "none"
-    indice2 = limite2-1
+    indice2 = limite2 - 1
     section2[indice2].style.display = "block"
+    section2[indice2 - 1].style.display = "block"
+    section2[indice2 - 2].style.display = "block"
+    section2[indice2 - 3].style.display = "block"
   }
 }
 
