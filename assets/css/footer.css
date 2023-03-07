@@ -241,7 +241,11 @@ footer > div:nth-child(1) {
         height: 28rem;
     }
 
-    #footer_email {
+    .footer_email {
         width: 260px;
+    }
+
+    .footer_form > div label {
+        white-space: normal;
     }
 }
