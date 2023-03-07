@@ -6,8 +6,9 @@ let leftArrow = document.querySelector("#left-arrow")
 window.addEventListener("load", slider)
 
 let section2 = document.querySelectorAll(".mySlides2")
-let indice2 = 1
-let limite2 = 2
+let indice2 = 0
+let quantity_images = document.querySelector(".quantity-images")
+let limite2 = quantity_images.textContent
 let rightArrow2 = document.querySelector("#right-arrow2")
 let leftArrow2 = document.querySelector("#left-arrow2")
 window.addEventListener("load", slider2)
@@ -57,13 +58,13 @@ function slider2() {
 }
 
 function next2() {
-  if (indice2 < limite2) {
+  if (indice2 < (limite2-1)) {
 
     section2[indice2].style.display = "none"
     indice2++
     section2[indice2].style.display = "block"
   }
-  else if (indice2 = limite2) {
+  else if (indice2 == (limite2-1)) {
     section2[indice2].style.display = "none"
     indice2 = 0
     section2[indice2].style.display = "block"
@@ -81,7 +82,7 @@ function left2() {
   }
   else if (indice2 == 0) {
     section2[indice2].style.display = "none"
-    indice2 = 2
+    indice2 = limite2-1
     section2[indice2].style.display = "block"
   }
 }

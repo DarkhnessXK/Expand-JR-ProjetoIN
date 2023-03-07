@@ -160,17 +160,21 @@ get_header();
         <h2>Nossos Parceiros</h2>
     </div>
     <?php
+    $contador_imagens = get_field('Partnership-images');
         if (have_rows('Partnership-images')):
             ?>
             <?php
             while (have_rows('Partnership-images')):
+                
                 ?>
 
                 <div class="mySlides2">
 
                     <?php
                     echo '<img class="img-partnerships" src="' . the_row()['full_image_url'] . '"alt="">';
+                    
                     ?>
+                    <div class="quantity-images"><?php echo count($contador_imagens);?></div>
                 </div>
             <?php endwhile ?>
         <?php endif ?>
