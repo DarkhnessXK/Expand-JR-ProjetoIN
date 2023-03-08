@@ -106,7 +106,7 @@ main{
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 3rem;
-    color:rgb(10, 59, 150);
+    color:#0076C1;
     
 }
 .bloco1{
@@ -115,13 +115,46 @@ main{
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 1.5rem;
     min-width: 350px;
+
   
     height: 30rem;
- 
-
-
 }
+
+.div_contact_info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.div_contact_info > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.div_contact_info > div > div {
+    width: 33px;
+    display: flex;
+    justify-content: center;
+}
+
+.c_phone_div img {
+    width: 30px;
+    height: 30px;
+}
+
+.c_email_div img {
+    width: 30px;
+    height: 24px;
+}
+
+.c_address_div img {
+    width: 21px;
+    height: 30px;
+}
+
 .bloco2{
    
     width: 50%;
@@ -134,17 +167,22 @@ main{
 }
 
 .rotulo{
-    margin-top: 20px;
+    margin-top: 1.5rem;
    
 }
 /* !---- Dados do formulário ---- !  */
+.dados {
+    display: flex;
+    flex-direction: column;
+}
+
 .dados > input{
-    height: 50px;
-    width: 600px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid royalblue;
-    border-radius: 8px;
+    height: 50px ;
+    width: 600px ;
+    margin-top: 10px ;
+    margin-bottom: 10px ;
+    border: 1px solid royalblue ;
+    border-radius: 8px ;
 }
 textarea{
     height: 90px;
@@ -157,26 +195,38 @@ textarea{
     padding-left: 15px;
     padding-top: 10px;
 }
-.dados > button{ 
+.dados > .tnp-submit { 
     height: 50px;
     width: 600px;
-   margin-top: 10px; 
-   background-color: rgb(28, 129, 187);
-   border: solid 1px;
-   border-radius: 30px;
+    margin-top: 10px; 
+    background-color: #0076C1;
+    /* border: solid 1px; */
+    border-radius: 30px;
 }
 .cor{
     padding-left: 15px;
-
 }
 /* -----Página inicial para entrar em contato-----*/
 
 .solicitar{
-    background-color:  #9cadb1;
     color: #ffff;
-    height: 400px;
+    height: 500px;
     text-align: center;
-    padding-top: 100px;
     font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../images/background-img-navio-cort.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-blend-mode: overlay;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     
+}
+
+footer {
+    margin-top: 3rem;
 }
