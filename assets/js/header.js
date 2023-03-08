@@ -75,10 +75,10 @@ function mostrarLinguas() {
 }
 
 function alterarBotao(htmlTag) {
-    console.log(htmlTag.title)
-    let alt_lang = document.querySelectorAll('.alt_lang')
+    /* let alt_lang = document.querySelectorAll('.alt_lang')
     if (htmlTag.title == 'English') {
         alt_lang[0].innerText = 'EN'
+        lang_db
     }
     else {
         if (htmlTag.title == 'Portuguese') {
@@ -89,7 +89,7 @@ function alterarBotao(htmlTag) {
                 alt_lang[0].innerText = 'ES'
             }
         }
-    }
+    } */
 }
 
 
