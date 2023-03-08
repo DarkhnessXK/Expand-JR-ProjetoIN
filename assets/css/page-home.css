@@ -590,4 +590,5 @@ p{
 
 .group-images-section5-div{
     display:flex;
+    flex-wrap: wrap;
 }
