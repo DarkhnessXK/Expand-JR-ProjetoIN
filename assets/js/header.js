@@ -74,6 +74,25 @@ function mostrarLinguas() {
     }
 }
 
+function alterarBotao(htmlTag) {
+    console.log(htmlTag.title)
+    let alt_lang = document.querySelectorAll('.alt_lang')
+    if (htmlTag.title == 'English') {
+        alt_lang[0].innerText = 'EN'
+    }
+    else {
+        if (htmlTag.title == 'Portuguese') {
+            alt_lang[0].innerText = 'PT'
+        }
+        else {
+            if (htmlTag.title == 'Spanish') {
+                alt_lang[0].innerText = 'ES'
+            }
+        }
+    }
+}
+
+
 
 
 
