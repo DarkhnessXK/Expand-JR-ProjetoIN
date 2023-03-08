@@ -102,22 +102,22 @@ get_header();
     <div class="results-cards-div">
         <div class="card-1">
             <img class="results-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/calendar-150x150.png' ); ?>">
-            <p class="results-card-counter" data-count="6">0</p>
+            <p class="results-card-counter" id="count-1" data-count="6">0</p>
             <p class="results-card-title"><strong>Anos no Mercado</strong></p>
         </div>
         <div class="card-2">
             <img class="results-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/presentation-150x150.png' ); ?>">
-            <p class="results-card-counter" data-count="70">0</p>
+            <p class="results-card-counter" id="count-2" data-count="70">0</p>
             <p class="results-card-title"><strong>Projetos Realizados</strong></p>
         </div>
         <div class="card-3">
             <img class="results-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/graduated-150x150.png' ); ?>">
-            <p class="results-card-counter" data-count="100">0</p>
+            <p class="results-card-counter" id="count-3" data-count="100">0</p>
             <p class="results-card-title"><strong>Estudantes Impactados</strong></p>
         </div>
         <div class="card-4">
             <img class="results-card-img" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/review-150x150.png' ); ?>">
-            <p class="results-card-counter" data-count="80">0</p>
+            <p class="results-card-counter" id="count-4" data-count="80">0</p>
             <p class="results-card-title"><strong>Satisfação dos Clientes</strong></p>
         </div>
     </div>

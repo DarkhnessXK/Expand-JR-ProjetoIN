@@ -1,15 +1,29 @@
-let countersDisplay = document.querySelectorAll(".results-card-counter");
-let interval = 8000;
+let interval = 4000;
 
-countersDisplay.forEach((counterDisplay) => {
-    let counterstart = parseInt(counterDisplay.textContent);
-    let counterend = parseInt(counterDisplay.getAttribute("data-count"));
-    let duration = Math.floor(interval / counterend);
-    let count = setInterval(() => {
-        counterstart += 1;
-        counterDisplay.textContent = counterstart;
-        if(counterstart == counterend){
-            clearInterval(count);
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        const service = entry.target;
+        if(entry.isIntersecting){
+            let counterstart = parseInt(service.textContent);
+            let counterend = parseInt(service.getAttribute("data-count"));
+            let duration = Math.floor(interval / counterend);
+            if(counterstart != counterend){
+                let count = setInterval(() => {
+                    counterstart += 1;
+                    service.textContent = counterstart;
+                    if(counterstart == counterend){
+                        clearInterval(count);
+                    }
+                }, duration);
+            }else{
+                return;
+            }
         }
-    }, duration);
+        
+    })
 })
+
+observer.observe(document.querySelector("#count-1"));
+observer.observe(document.querySelector("#count-2"));
+observer.observe(document.querySelector("#count-3"));
+observer.observe(document.querySelector("#count-4"));
