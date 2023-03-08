@@ -158,6 +158,10 @@ Description: Tema do site da EJ Expand Jr.
    display: none;
 }
 
+.group-images-section5-div{
+    display:flex;
+}
+
 a {
     color: inherit;
 }
