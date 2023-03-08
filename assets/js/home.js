@@ -1,6 +1,6 @@
 let section = document.querySelectorAll(".mySlides")
-let indice = 1
-let limite = 2
+let indice = 0
+let limite = section.length - 1
 let rightArrow = document.querySelector("#right-arrow")
 let leftArrow = document.querySelector("#left-arrow")
 window.addEventListener("load", slider)
@@ -32,14 +32,13 @@ rightArrow.addEventListener("click", next)
 
 function left() {
   if (indice > 0) {
-
     section[indice].style.display = "none"
     indice--
     section[indice].style.display = "block"
   }
   else if (indice == 0) {
     section[indice].style.display = "none"
-    indice = 2
+    indice = limite
     section[indice].style.display = "block"
   }
 }

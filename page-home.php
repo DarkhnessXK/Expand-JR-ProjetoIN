@@ -133,18 +133,18 @@ get_header();
     $objeto = new WP_Query($args_search);
 
     if( $objeto->have_posts() ):
-
-      while ( $objeto->have_posts() ) :   
-        $objeto->the_post();
+        
+        while ( $objeto->have_posts() ) :   
+            $objeto->the_post();
 
     ?>
 
         <div class="mySlides">
-             <?php the_content(); ?>
+             <div class="text-sucess-cases"><?php the_content(); ?></div>
             <div class="sucess-people-div">
                 <img src="<?php the_field('image-case'); ?>" class="case-image">
                 <cite>
-                    <span><?php the_title(); ?></span>
+                    <span class="name-sucess-case"><?php the_title(); ?></span>
                 </cite>
             </div>
         </div>
