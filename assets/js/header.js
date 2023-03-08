@@ -57,16 +57,20 @@ function tirarServicos() {
     services_options.style.display = 'none'
 }
 
+function mostrarLinguas() {
+    let lang_options = document.querySelectorAll('.lang_options')
+    if (lang_options[0].style.display == 'flex') {
+        lang_options[0].style.display = 'none'
+    }
+    else {
+        lang_options[0].style.display = 'flex'
+    }
 
-function trocarLingua() {
-    let alt_lang_array = document.querySelectorAll('.alt_lang')  //tem o botão do menu grande e do menu hamburguer
-    for (alt_lang of alt_lang_array) {
-        if (alt_lang.innerText == 'PT') {
-            alt_lang.innerText = 'EN'
-        }
-        else {
-            alt_lang.innerText = 'PT'
-        }
+    if (lang_options[1].style.display == 'flex') {
+        lang_options[1].style.display = 'none'
+    }
+    else {
+        lang_options[1].style.display = 'flex'
     }
 }
 

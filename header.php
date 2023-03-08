@@ -29,7 +29,10 @@
                     <li><a href="<?php echo esc_url( get_permalink( get_page_by_path('contato') ) ); ?>">Contato</a></li>
                 </ul>
                 <div class='lang_div'>
-                    <button class='alt_lang' onclick='trocarLingua()'>PT</button>
+                    <button class='alt_lang' onclick='mostrarLinguas()'>PT</button>
+                    <div class='lang_options' onclick='mostrarLinguas()'>
+                        <?php echo do_shortcode('[gtranslate]'); ?>
+                    </div>
                 </div>
             </div>
 
@@ -37,7 +40,10 @@
 
             <div class='hamburger_div'>
                 <div class='lang_div lang_hamburger'>
-                    <button class='alt_lang' onclick='trocarLingua()'>PT</button>
+                    <button class='alt_lang' onclick='mostrarLinguas()'>PT</button>
+                    <div class='lang_options' onclick='mostrarLinguas()'>
+                        <?php echo do_shortcode('[gtranslate]'); ?>
+                    </div>
                 </div>
                 <img class='hamburger_menu' onclick='mostrarMenu()' src="<?php echo IMAGES_DIR . '/icon-menu-hamburger.png' ?>" alt="Ícone do menu hamburguer">
                 <img class='x_menu' onclick='mostrarMenu()' src="<?php echo IMAGES_DIR . '/icon-x.png' ?>" alt="Ícone do X">
