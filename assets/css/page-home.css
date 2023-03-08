@@ -510,7 +510,6 @@ p{
 
 .case-image {
     height: 80px;
-    margin-top: 2rem;
     border-radius: 80%;
 }
 
@@ -542,6 +541,18 @@ p{
 
 .mySlides {
     display: none
+}
+
+.name-sucess-case{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.text-sucess-cases{
+    padding-bottom: 2rem;
 }
 
 .mySlides2 {
