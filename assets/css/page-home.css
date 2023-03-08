@@ -482,7 +482,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 5rem;
     color: #0076C1;
 
 }
@@ -563,6 +563,7 @@ p{
     flex-direction: column;
     align-items: center;
     color: #0076C1;
+    padding: 5rem;
 }
 
 .quantity-images{
