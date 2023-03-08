@@ -198,9 +198,16 @@ p{
 @media (max-width: 820px) {
     .section-1-home{
         padding: 2em;
+        padding-top: 5em;
     }
     .section-1-home-title{
         font-size: 66px;
+    }
+}
+
+@media (max-width: 385px) {
+    .section-1-home{
+        padding-top: 7em;
     }
 }
 

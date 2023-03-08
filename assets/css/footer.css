@@ -105,6 +105,7 @@ footer > div:nth-child(1) {
 .footer_form > input:nth-child(5) {
     width: 100px;
     height: 30px;
+    cursor: pointer;
 }
 
 
@@ -139,6 +140,10 @@ footer > div:nth-child(1) {
 .footer_bottom div:nth-child(3) img {
     width: 37px;
     height: 37px;
+}
+
+.footer_bottom div:nth-child(3) img:hover {
+    scale: 1.13;
 }
 
 
