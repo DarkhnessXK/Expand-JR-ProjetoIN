@@ -510,8 +510,16 @@ p{
 
 .title-h2-div {
     font-size: 2rem;
-    padding: 2rem;
     color: #0076C1;
+}
+
+.slider-cases-h2{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.slider-partnerships-h2{
+    padding-bottom: 4rem;
 }
 
 

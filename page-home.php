@@ -125,7 +125,7 @@ get_header();
 </section>
 <section class="section-4-success-cases">
     <div class="title-h2-div">
-        <h2>Cases de Sucesso</h2>
+        <h2 class="slider-cases-h2">Cases de Sucesso</h2>
     </div>
     <div class="w3-content w3-display-container">
     
@@ -165,7 +165,7 @@ get_header();
 
 <section class="section-5-partnerships">
     <div class="title-h2-div">
-        <h2>Nossos Parceiros</h2>
+        <h2 class="slider-partnerships-h2">Nossos Parceiros</h2>
     </div>
     <div class="group-images-section5-div">
     <?php
