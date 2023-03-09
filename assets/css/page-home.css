@@ -557,7 +557,7 @@ p{
 .w3-display-bottommiddle {  /**botão de passar pro lado**/
     display: flex;
     justify-content: center;
-    gap: 50rem;
+    gap: 30rem;
     margin-bottom: 2rem;
 }
 
