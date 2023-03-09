@@ -129,8 +129,8 @@ get_header();
     </div>
     <div class="w3-content w3-display-container">
     
-    <?php $args_search = array('cat_name' => 'cases-slug',); 
-    $objeto = new WP_Query($args_search);
+    <?php 
+    $objeto = new WP_Query(array('category_name' => 'cases-slug'));
 
     if( $objeto->have_posts() ):
         
