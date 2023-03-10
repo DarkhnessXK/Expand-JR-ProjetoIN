@@ -14,7 +14,7 @@ h1{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 900;
-    font-size: clamp(65px, 9vw, 75px);
+    font-size: clamp(60px, 9vw, 70px);
     color: #000000;
     text-align: center;
 }
@@ -26,7 +26,7 @@ h2{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: clamp(28px, 6vw, 38px);
+    font-size: clamp(25px, 6vw, 35px);
     font-size: 38px;
     line-height: 66px;
     letter-spacing: 0.05em;
@@ -167,7 +167,7 @@ p{
     align-items: center;
     gap: 1.5em;
 
-    background-image: url(https://expandjr.com.br/wp-content/uploads/2022/10/Capa-Site-Expandindo-seus-Horizontes-scaled.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-image: url(../images/Capa-Site-Expandindo-seus-Horizontes-scaled.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
     background-blend-mode: overlay;
     background-position: center center;
     background-repeat: no-repeat;
@@ -428,7 +428,7 @@ p{
     flex-direction: column;
     align-items: center;
     gap: 2.5em;
-    background-color: white;
+    background-color: #E9EAEC;
 }
 
 .results-cards-div{
@@ -500,7 +500,7 @@ p{
 /* casos de sucesso e nossos parceiros */
 
 .section-4-success-cases {
-    background-color: #E9EAEC;
+    background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -605,6 +605,7 @@ p{
     flex-direction: column;
     align-items: center;
     color: #0076C1;
+    background-color: #E9EAEC;
     padding: 5rem;
 }
 

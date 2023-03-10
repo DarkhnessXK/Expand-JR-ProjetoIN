@@ -15,9 +15,10 @@ Description: Tema do site da EJ Expand Jr.
 a {
     color: inherit;
 }
-
+/*
 @media screen and (max-width: 782px) {
     #html {
         margin-top: 0 !important;
     }
 }
+*/

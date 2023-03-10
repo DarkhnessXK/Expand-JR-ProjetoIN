@@ -14,7 +14,7 @@ $cel = get_option('zap_cadastro_telefone');
 
 <nav>
 <div class="solicitar">
-  <h1>Contatos</h1>
+  <h1>CONTATOS</h1>
   <p>Fale conosco e peça seu diagnóstico gratuito!</p>
 </nav>
 <section class="step-wizard">

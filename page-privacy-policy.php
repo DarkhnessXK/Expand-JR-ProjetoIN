@@ -3,15 +3,15 @@ get_header();
 ?>
 
 <section class="section-1-privacy-policy">
-    <h1 class="section-1-privacy-policy-title">Termos de Uso e Políticas de Privacidade</h1>
+    <h1 class="section-1-privacy-policy-title">TERMOS DE USO E POLÍTICAS DE PRIVACIDADE</h1>
 </section>
 <main>
     <h2>LGPD</h2>
     <p>
         Na Expand Jr., privacidade e segurança são prioridades e nos comprometemos com a transparência do tratamento de dados pessoais dos nossos usuários/clientes. Por isso, esta presente Política de Privacidade estabelece como é feita a coleta, uso e transferência de informações de clientes ou outras pessoas que acessam ou usam nosso site.
-
+        <br>
         Ao utilizar nossos serviços, você entende que coletaremos e usaremos suas informações pessoais nas formas descritas nesta Política, sob as normas da Constituição Federal de 1988 (art. 5º, LXXIX; e o art. 22º, XXX – incluídos pela EC 115/2022), das normas de Proteção de Dados (LGPD, Lei Federal 13.709/2018), das disposições consumeristas da Lei Federal 8078/1990 e as demais normas do ordenamento jurídico brasileiro aplicáveis.
-
+        <br>
         Dessa forma, a Expand Jr., inscrita no CNPJ/MF sob o nº 11.111.111/0000-00, no papel de Controladora de Dados, obriga-se ao disposto na presente Política de Privacidade.
     </p>
     <h2>Documentos</h2>
@@ -22,6 +22,10 @@ get_header();
     </ul>
 </main>
 
+<?php $cel = get_option('zap_cadastro_telefone'); ?>
+<a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=<?php echo $cel; ?>" target="_blank">
+  <img src="<?php echo IMAGES_DIR . '/icon-whatsapp-48.png'; ?>" alt="Ícone do Whatsapp">
+</a>
 <?php
 get_footer();
 ?>
