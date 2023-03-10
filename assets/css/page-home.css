@@ -564,7 +564,7 @@ p{
 .mySlides {
     display: none;
     width: 45rem;
-    height: 37rem;
+    height: 35rem;
 }
 
 .name-sucess-case{
@@ -584,8 +584,7 @@ p{
 }
 
 .img-partnerships{
-    margin-right: 5rem;
-    margin-left: 5rem;
+    margin-right: 2.5rem;
 }
 
 .w3-left,
@@ -605,7 +604,8 @@ p{
     flex-direction: column;
     align-items: center;
     color: #0076C1;
-    padding: 5rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
 }
 
 .quantity-images{
