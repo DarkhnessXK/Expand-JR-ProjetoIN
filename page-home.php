@@ -19,7 +19,14 @@ get_header();
                 <input class="tnp-name register-newsletter-form-name-field" type="text" name="nn" id="tnp-1" value=""></div>
                 <div class="tnp-field tnp-field-email register-newsletter-form-field"><label for="tnp-2">Seu email:</label>
                 <input class="tnp-email register-newsletter-form-email-field" type="email" name="ne" id="tnp-2" value="" required></div>
-                <div class="tnp-field tnp-privacy-field register-newsletter-form-field"><label><input type="checkbox" name="ny" required class="tnp-privacy"> Li e aceito as políticas de privacidade e termos de uso</label></div><div class="tnp-field tnp-field-button register-newsletter-form-button"><input class="tnp-submit register-newsletter-submit-button" type="submit" value="Cadastrar">
+                <div class="tnp-field tnp-privacy-field register-newsletter-form-field"><label><input type="checkbox" name="ny" required class="tnp-privacy"><a target="_blank" href="http://expandjr.local/privacy-policy/">Li e aceito as politicas de privacidade e termos de uso</a></label></div><div class="tnp-field tnp-field-button register-newsletter-form-button"><input class="tnp-submit register-newsletter-submit-button" type="submit" value="Cadastrar">
+                </div>
+
+                <div class='input_hidden'>
+                    <label for="tnp-3">Telefone</label>
+                    <input class="tnp-profile tnp-profile-2 cor" id="tnp-profile_2" type="text" size="" name="np2" placeholder="Ex.: (xx) xxxxx-xxxx">
+                    <label for="tnp-4">Mensagem</label>
+                    <input class="tnp-profile tnp-profile-3 cor" id="tnp-profile_3" type="text" size="" name="np3" placeholder="Conte para nós a sua necessidade">
                 </div>
             </form>
         </div>
@@ -195,7 +202,7 @@ get_header();
     </div>
 </section>
 <?php $cel = get_option('zap_cadastro_telefone'); ?>
-<a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=<?php echo $cel; ?>" target_blank="_blank">
+<a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=<?php echo $cel; ?>" target="_blank">
   <img src="<?php echo IMAGES_DIR . '/icon-whatsapp-48.png'; ?>" alt="Ícone do Whatsapp">
 </a>
 

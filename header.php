@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id='html'>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,13 +23,13 @@
             <div class='nav_div'>
                 <ul>
                     <li><a href="<?php echo esc_url( get_permalink( get_page_by_path('quem-somos') ) ); ?>">Quem Somos</a></li>
-                    <li id='li_services' onmouseover='mostrarServicos()' onmouseout='tirarServicos()'><a href="<?php echo esc_url( get_permalink( get_page_by_path('servicos') ) ); ?>">Serviços</a></li>
+                    <li id='li_services' onclick='irAteServicos()' onmouseover='mostrarServicos()' onmouseout='tirarServicos()'>Serviços</li>
                     <script>criarServicos()</script>
                     <li><a href="<?php echo esc_url( get_permalink( get_page_by_path('blog') ) ); ?>">Blog</a></li>
                     <li><a href="<?php echo esc_url( get_permalink( get_page_by_path('contato') ) ); ?>">Contato</a></li>
                 </ul>
                 <div class='lang_div'>
-                    <button class='alt_lang' onclick='mostrarLinguas()'>TR</button>
+                    <button class='alt_lang' onclick='mostrarLinguas()'>PT</button>
                     <div class='lang_options' onclick='mostrarLinguas()'>
                         <?php echo do_shortcode('[gtranslate]'); ?>
                     </div>
@@ -41,16 +41,16 @@
             <div class='hamburger_div'>
                 <div class='lang_div lang_hamburger'>
                     <div class='lang_db'></div>
-                    <button class='alt_lang' onclick='mostrarLinguas()'>TR</button>
+                    <button class='alt_lang' onclick='mostrarLinguas()'>PT</button>
                     <div class='lang_options' onclick='mostrarLinguas()'>
                         <?php echo do_shortcode('[gtranslate]'); ?>
                     </div>
                 </div>
                 <img class='hamburger_menu' onclick='mostrarMenu()' src="<?php echo IMAGES_DIR . '/icon-menu-hamburger.png' ?>" alt="Ícone do menu hamburguer">
                 <img class='x_menu' onclick='mostrarMenu()' src="<?php echo IMAGES_DIR . '/icon-x.png' ?>" alt="Ícone do X">
-                <ul class='menu_list'>
+                <ul class='menu_list' onclick='mostrarMenu()'>
                     <li><a href="<?php echo esc_url( get_permalink( get_page_by_path('quem-somos') ) ); ?>">Quem Somos</a></li>
-                    <li><a href="<?php echo esc_url( get_permalink( get_page_by_path('servicos') ) ); ?>">Serviços</a></li>
+                    <li id='li_services' onclick='irAteServicos()'>Serviços</li>
                     <li><a href="<?php echo esc_url( get_permalink( get_page_by_path('blog') ) ); ?>">Blog</a></li>
                     <li><a href="<?php echo esc_url( get_permalink( get_page_by_path('contato') ) ); ?>">Contato</a></li>
                 </ul>
