@@ -9,6 +9,7 @@
                             'limit' => 3, 
                             'range' => 'all',
                             'post_type' => 'post',
+                            'category_name' => 'post-blog',
                             'stats_views' => '0',
                             'stats_comments' => '0',
                             'stats_author' => '0',
@@ -41,7 +42,8 @@
                         'post_type' => 'post',
                         'posts_per_page' => 3,
                         'orderby' => 'date',
-                        'order' => 'DESC'
+                        'order' => 'DESC',
+                        'category_name' => 'post-blog'  //Só pega com essa categoria (slug)
                         );
 
                         $query = new WP_Query($args);
@@ -62,8 +64,8 @@
                         <a href="<?php echo esc_url( get_permalink( get_page_by_path('servicos') ) ); ?>">Serviços</a>
                         <a href="<?php echo esc_url( get_permalink( get_page_by_path('quem-somos') ) ); ?>">Quem somos</a>
                         <a href="<?php echo esc_url( get_permalink( get_page_by_path('blog') ) ); ?>">Blog</a>
-                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('') ) ); ?>">Política de privacidade</a>
-                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('') ) ); ?>">Termos de uso</a>
+                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('privacy-policy') ) ); ?>">Política de privacidade</a>
+                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('privacy-policy') ) ); ?>">Termos de uso</a>
                     </div>
                 </div>
             </div>
@@ -74,29 +76,44 @@
                     <!-- <img src="<?php echo IMAGES_DIR . '/expandjr-logo-210.png' ?>" alt="Logo da Expand Jr"> -->
                     <p>CNPJ: 11.111.111/0000-00</p>
                 </div>
-                <!-- <form class='footer_form' action="">
-                    <label for="footer_email">Cadastre-se em nossa newsletter!</label>
-                    <input type="text" id='footer_email' name='footer_email' placeholder='Digite seu email'>
-                    <div>
-                        <input type="checkbox" name="politica_priv" id="politica_priv">
-                        <label for="politica_priv">Li e aceito as politicas de privacidade e termos de uso</label>
-                    </div>
-                    <input type="submit" value="Cadastrar">
-                </form> -->
-                <form class='footer_form' method="post" action="http://expand-jr.local/?na=s">
+
+                <!-- <form class='footer_form' method="post" action="http://expand-jr.local/?na=s">
                     <input type="hidden" name="nlang" value="">
-                    <label for="tnp-1">Cadastre-se em nossa newsletter!</label>
-                    <input class="footer_email" type="email" name="ne" id="tnp-1" placeholder='Digite seu email' required>
+                    <label for="tnp-2">Cadastre-se em nossa newsletter!</label>
+                    <input class="footer_email" type="email" name="ne" id="tnp-2" placeholder='Digite seu email' required>
                     <div class="tnp-field tnp-privacy-field">
                         <input type="checkbox" id='politica_priv' name="ny" required class="tnp-privacy">
                         <label for="politica_priv">Li e aceito as politicas de privacidade e termos de uso</label>
                     </div>
                     <input class="tnp-submit" type="submit" value="Cadastrar" >
+                </form> -->
+
+                <form class='footer_form' method="post" action="http://expandjr.local/?na=s">
+                    <input type="hidden" name="nlang" value="">
+                    <label for="tnp-2">Email</label>
+                    <input class="footer_email" type="email" name="ne" id="tnp-2" value="" placeholder='Email' required>
+                    
+                    <div class='input_hidden'>
+                        <label for="tnp-1">Nome</label>
+                        <input class="tnp-name cor" type="text" name="nn" id="tnp-1" value="" placeholder='Nome'>
+                        <label for="tnp-3">Telefone</label>
+                        <input class="tnp-profile tnp-profile-2 cor" id="tnp-profile_2" type="text" size="" name="np2" placeholder="Ex.: (xx) xxxxx-xxxx">
+                        <label for="tnp-4">Mensagem</label>
+                        <input class="tnp-profile tnp-profile-3 cor" id="tnp-profile_3" type="text" size="" name="np3" placeholder="Conte para nós a sua necessidade">
+                    </div>
+                    
+                    <div class='form_priv'>
+                        <input type="checkbox" name="ny" id='politica_priv' required class="tnp-privacy">
+                        <label for='politica_priv'>
+                            <a target="_blank" href="http://expandjr.local/privacy-policy/">Li e aceito as politicas de privacidade e termos de uso</a>
+                        </label>
+                    </div>
+                    <input class="tnp-submit" type="submit" value="Enviar" >
                 </form>
             
                 <div>
                     <div>
-                        <p>Av. Exemplo, 111 - Niterói, Rio de Janeiro</p>
+                        <p><?php echo get_option('enjr_cadastro_endereco'); ?></p>
                         <p>Telefone: &nbsp; <?php echo get_option('expandjr_telefone'); ?></p>
                     </div>
                     <div>
