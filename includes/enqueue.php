@@ -49,7 +49,12 @@ function enqueue_expandjr_styles() {
 
         wp_register_script('contato-script', SCRIPTS_DIR . '/page-contato.js', [], '1.0.0', true);
         wp_enqueue_script('contato-script');
-    }  
+    }
+
+    if (is_page('privacy-policy')) {
+        wp_register_style('privacy-policy', STYLES_DIR . '/page-privacy-policy.css', [], '1.0.0', false);
+        wp_enqueue_style('privacy-policy');
+    }
 }
 
 ?>
