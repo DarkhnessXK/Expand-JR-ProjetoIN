@@ -1,30 +1,23 @@
 function criarServicos() {
-    let servico1 = document.createElement('a')
-    servico1.setAttribute('href', '')
+    let servico1 = document.createElement('p')
     servico1.innerText = 'Análise Burocrática'
 
-    let servico2 = document.createElement('a')
-    servico2.setAttribute('href', '')
+    let servico2 = document.createElement('p')
     servico2.innerText = 'Assessoria para Emissão de Passaporte Brasileiro'
 
-    let servico3 = document.createElement('a')
-    servico3.setAttribute('href', '')
+    let servico3 = document.createElement('p')
     servico3.innerText = 'Captação Internacional de Recursos'
 
-    let servico4 = document.createElement('a')
-    servico4.setAttribute('href', '')
+    let servico4 = document.createElement('p')
     servico4.innerText = 'Dupla Cidadania Portuguesa'
 
-    let servico5 = document.createElement('a')
-    servico5.setAttribute('href', '')
+    let servico5 = document.createElement('p')
     servico5.innerText = 'Estudo e Análise de Mercado'
 
-    let servico6 = document.createElement('a')
-    servico6.setAttribute('href', '')
+    let servico6 = document.createElement('p')
     servico6.innerText = 'Planejamento Logístico'
 
-    let servico7 = document.createElement('a')
-    servico7.setAttribute('href', '')
+    let servico7 = document.createElement('p')
     servico7.innerText = 'Prospecção Internacional'
 
     servicos = [servico1, servico2, servico3, servico4, servico5, servico6, servico7]
@@ -46,6 +39,7 @@ function criarServicos() {
     let li_services = document.querySelector('#li_services')
     li_services.append(services_options)
 }
+
 
 function mostrarServicos() {
     let services_options = document.querySelector('.services_options')
@@ -75,27 +69,38 @@ function mostrarLinguas() {
 }
 
 function alterarBotao(htmlTag) {
-    /* let alt_lang = document.querySelectorAll('.alt_lang')
+    let alt_lang = document.querySelectorAll('.alt_lang')
     if (htmlTag.title == 'English') {
         alt_lang[0].innerText = 'EN'
-        lang_db
+        alt_lang[1].innerText = 'EN'
+        setCookie('linguaAtual', 'EN')
     }
     else {
         if (htmlTag.title == 'Portuguese') {
             alt_lang[0].innerText = 'PT'
+            alt_lang[1].innerText = 'PT'
+            setCookie('linguaAtual', 'PT')
         }
         else {
             if (htmlTag.title == 'Spanish') {
                 alt_lang[0].innerText = 'ES'
+                alt_lang[1].innerText = 'ES'
+                setCookie('linguaAtual', 'ES')
             }
         }
-    } */
+    }
 }
 
-
-
-
-
+function irAteServicos() {
+    if (window.location.href == 'http://expandjr.local/') {
+        let section2_services = document.querySelector('.section-2-services')
+        section2_services.scrollIntoView({ behavior : 'smooth' })
+    }
+    else {
+        setCookie('estavaHome', 'true')
+        window.location.href = 'http://expandjr.local/' 
+    }
+}
 
 /*Functions related to the hamburger menu*/
 function mostrarMenu() {
@@ -116,4 +121,61 @@ function mostrarMenu() {
     }
 }
 
+function setCookie(nome, valor, days) {
+    var validade = "";
+    if (days) {
+        console.log('DIAS')
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        validade = "; expires=" + date.toUTCString();
+    }
+    document.cookie = nome + "=" + (valor || "")  + validade + "; path=/";
+}
+
+function getCookie(nome) {
+    var nomeCookie = nome + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nomeCookie) == 0) return c.substring(nomeCookie.length,c.length);
+    }
+    return null;
+}
+
+function eraseCookie(nome) {   
+    document.cookie = nome +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
 var menuAparecendo = false
+var estavaHome = getCookie('estavaHome')
+var linguaAtual = getCookie('linguaAtual')
+window.onload = () => {
+    if (estavaHome == 'true') {
+        let section2_services = document.querySelector('.section-2-services')
+        section2_services.scrollIntoView({ behavior : 'smooth' })       
+        setCookie('estavaHome', 'false')
+    }
+
+    if (linguaAtual != null) {
+        let alt_lang = document.querySelectorAll('.alt_lang')
+        if (linguaAtual == 'EN') {  
+            alt_lang[0].innerText = 'EN'
+            alt_lang[1].innerText = 'EN'
+        }
+        else {
+            if (linguaAtual == 'ES') {
+                alt_lang[0].innerText = 'ES'
+                alt_lang[1].innerText = 'ES'
+            }
+            else {
+                alt_lang[0].innerText = 'PT'
+                alt_lang[1].innerText = 'PT'
+            }
+        } 
+    }
+}
+
+window.addEventListener('beforeunload', () => {
+    document.cookie = "estavaHome=";
+})
