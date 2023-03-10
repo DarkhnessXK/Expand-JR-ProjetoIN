@@ -5,7 +5,7 @@ get_header();
 $endereco_completo = get_option('enjr_cadastro_telefone')  . '</br>' .get_option('enjr_cadastro_email') . '</br>' . get_option('enjr_cadastro_endereco');
 $endereco = urlencode(get_option('enjr_cadastro_endereco'));
 
-$telefone = get_option('teljr_cadastro_telefone');
+$telefone = get_option('expandjr_telefone');
 $email = get_option('emjr_cadastro_email');
 $endereco2 = get_option('enjr_cadastro_endereco');
 
@@ -18,39 +18,88 @@ $cel = get_option('zap_cadastro_telefone');
   <p>Fale conosco e peça seu diagnóstico gratuito!</p>
 </nav>
 <section class="step-wizard">
-    <ul class="step-wizard-list">
+    <h2>Nossa Jornada do Cliente</h2>
+    <!-- <ul class="step-wizard-list">
         <li class="step-wizard-item">
-        <span class="progress-label">Primeiro Contato</span>
-            <span class="progress-count">1</span>
-          
+          <span class="progress-label">Primeiro Contato</span>
+          <span class="progress-count">1</span> 
         </li>
-           <li class="step-wizard-item current-item">
-           <span class="progress-label">Diagnostico</span>
-            <span class="progress-count">2</span>
-           
-            </li>
+
         <li class="step-wizard-item current-item">
-        <span class="progress-label">Negociação</span>
-            <span class="progress-count">3</span>
-         
+          <span class="progress-label">Diagnostico</span>
+          <span class="progress-count">2</span>
         </li>
-       <li class="step-wizard-item current-item">
-       <span class="progress-label">Inicio do Projeto</span>
-            <span class="progress-count">4</span>
-   
+
+        <li class="step-wizard-item current-item">
+          <span class="progress-label">Negociação</span>
+          <span class="progress-count">3</span>
         </li>
-    </ul>
+
+        <li class="step-wizard-item current-item">
+          <span class="progress-label">Inicio do Projeto</span>
+          <span class="progress-count">4</span>
+        </li>
+    </ul> -->
+    <div class='journey'>
+      <div class='big_circle' onclick='mostrarJornada(this)'>
+        <p>Primeiro Contato</p>
+        <div class='small_circle first_small_circle'>
+        </div>
+      </div>
+      
+      <div class='progress_bar'></div>
+
+      <div class='big_circle' onclick='mostrarJornada(this)'>
+        <p>Diagnóstico</p>
+        <div class='small_circle second_small_circle'>
+        </div>
+      </div>
+      
+      <div class='progress_bar'></div>
+
+      <div class='big_circle' onclick='mostrarJornada(this)'>
+        <p>Negociação</p>
+        <div class='small_circle third_small_circle'>
+        </div>
+      </div>
+      
+      <div class='progress_bar'></div>
+
+      <div class='big_circle' onclick='mostrarJornada(this)'>
+        <p>Início do Projeto</p>
+        <div class='small_circle fourth_small_circle'>
+        </div>
+      </div>
+    </div>
+    <p class='client_journey_text first_text'>
+      Primeiro Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores illum quis error odio, corrupti doloribus iure voluptas temporibus ad reiciendis doloremque officia vero? Temporibus optio obcaecati itaque dolorum accusantium consequatur.
+      Laudantium beatae voluptas esse corporis vero error repellat nostrum consequuntur ipsa. Corporis quidem laborum beatae molestias enim necessitatibus numquam natus delectus omnis, aspernatur fuga accusamus earum unde, aperiam saepe cumque!
+      Dolor iure itaque doloribus voluptatum nisi libero adipisci harum sapiente minus reiciendis molestias facilis reprehenderit atque, debitis eum. Ullam ea dicta voluptas molestias fugiat eveniet? Rem eos inventore placeat suscipit.
+      Suscipit in labore esse deserunt placeat laboriosam enim veniam architecto totam? Eos, fugiat explicabo ducimus ad delectus soluta aperiam? Perferendis at ipsa iusto corrupti repellat, veniam eveniet neque! Fugiat, sed.
+      Laborum nostrum tenetur, eum saepe placeat quasi beatae at, laudantium ipsam ea sint. Aliquid obcaecati nemo aliquam sint accusantium quae numquam deleniti minima nihil magni. Quaerat aliquid placeat fugit voluptatum.
+    </p>
+    <p class='client_journey_text second_text'>
+      Segundo Fugit, corporis possimus dolorum, sint dolores quibusdam pariatur totam doloribus, vero laborum eos amet veritatis aut a at! Illo eligendi aut molestias voluptate! Repudiandae asperiores, commodi nisi repellendus voluptatum provident!
+      Dolor quasi dolores, repudiandae ea deserunt nihil voluptate necessitatibus, quia rerum cumque quaerat? Cupiditate commodi voluptates cumque sequi animi id. Dicta dolor beatae iure odit id dolore quibusdam. Quod, sit.
+      In eum quasi eos repellat assumenda deleniti iusto distinctio, expedita nobis dicta voluptate tenetur libero? Qui veritatis ducimus laborum minus saepe vitae neque, soluta beatae doloremque! Animi similique quibusdam perspiciatis?
+      Laboriosam repellat tempore reiciendis, beatae ullam tempora accusantium quasi! Provident maiores veniam quam corporis fuga obcaecati pariatur eveniet iste soluta expedita nesciunt consectetur saepe dignissimos repudiandae, beatae id eius atque?
+    </p>
+    <p class='client_journey_text third_text'>
+      Terceiro Eius vel laudantium accusantium sunt unde adipisci impedit nam natus quod, doloribus neque, inventore numquam a voluptate. Placeat illo, culpa minima provident est, dolores, fugit cumque sequi sit deserunt commodi?
+      Esse, tempora aperiam laboriosam atque beatae eligendi suscipit cumque ducimus aspernatur enim. Recusandae voluptatum laborum impedit numquam, totam provident qui cum libero, non corrupti ducimus illum omnis, fugiat atque facere?
+      Fugit, incidunt. Velit, nisi id! Illum qui sapiente ducimus ipsa eius. Quaerat odit est, ratione ducimus sit recusandae? Corporis dignissimos molestiae placeat ratione, expedita recusandae voluptate blanditiis eveniet asperiores explicabo?
+      Laborum quas inventore, aperiam voluptatum eos magnam ipsa quo error porro. Voluptatibus eveniet maiores, odit magni totam dolorum sunt laudantium similique veniam consequatur doloribus expedita consequuntur ea autem ab nihil!
+    </p>
+    <p class='client_journey_text fourth_text'>
+      Quarto Amet, in reprehenderit laborum praesentium suscipit mollitia minima sed dolorum provident sit sint ad, iste aperiam vero debitis quo voluptatum pariatur. Saepe et quas ratione sequi dolorem totam iure veniam.
+      Ducimus optio fuga esse magnam, doloribus ullam, impedit quos maiores qui earum consectetur quas, voluptate minima dolore. Eius perferendis inventore tenetur impedit iure, ab quia doloremque ad molestias nihil tempora!
+      Laborum doloremque qui impedit recusandae sunt fuga delectus possimus excepturi a distinctio maiores consequatur porro eveniet odit ab, est quisquam illo dicta magnam. Ipsum cum hic quod laboriosam, tempore accusantium!
+      Sequi quas veniam quae aliquam, laudantium totam minima, soluta a rem sit ipsam perspiciatis, commodi corporis adipisci suscipit. Vero porro dicta mollitia a veritatis qui minus delectus amet tempora in?
+    </p>
 </section>
 
-<p>
-Lorem ipsum dolor sit amet.
- Est laborum rerum qui corrupti fugiat aut numquam quisquam et repudiandae reprehenderit 33 quos aliquid quo tempora quod ut aspernatur iste. Eos inventore porro sit reiciendis omnis est molestias atque.
-  Quo autem accusantium in delectus consequatur quo dolore temporibus ex quos dicta eum sequi voluptatem et suscipit aliquam. Ut nihil natus qui temporibus asperiores qui recusandae nisi ut eligendi recusandae et tempora rerum ut facilis iste qui delectus excepturi.
 
-Ut aspernatur provident ut porro quia id omnis rerum sit laudantium galisum in soluta sequi a deleniti suscipit. Eos alias iure id recusandae voluptas et labore omnis non minus dignissimos ut soluta consequuntur et reiciendis incidunt qui eligendi assumenda. 
-Id quia enim qui minima voluptatem et maiores expedita ad provident quod eos perferendis odio eos fugiat maxime ad corrupti quos. Et aliquam quos non quas dolore est blanditiis consequuntur et ipsam dolore in quaerat rerum vel debitis accusantium.
 
-</p>
 <main>
   <div class="bloco">
    <div class="bloco1">
@@ -116,17 +165,26 @@ Id quia enim qui minima voluptatem et maiores expedita ad provident quod eos per
 
           <input type="hidden" name="nlang" value="">
 
-          <label for="tnp-1">Email</label>
-          <input class="tnp-email cor" type="email" name="ne" id="tnp-1" value="" placeholder='Email' required>
+          <label for="tnp-2">Email</label>
+          <input class="tnp-email cor" type="email" name="ne" id="tnp-2" value="" placeholder='Email' required>
 
-          <label for="tnp-2">Nome</label>
-          <input class="tnp-profile tnp-profile-1 cor" id="tnp-profile_1" type="text" size="" name="np1" placeholder="Nome">
+          <!-- <label for="tnp-2">Nome</label>
+          <input class="tnp-profile tnp-profile-1 cor" id="tnp-profile_1" type="text" size="" name="np1" placeholder="Nome"> -->
+          <label for="tnp-1">Nome</label>
+          <input class="tnp-name cor" type="text" name="nn" id="tnp-1" value="" placeholder='Nome'>
 
           <label for="tnp-3">Telefone</label>
           <input class="tnp-profile tnp-profile-2 cor" id="tnp-profile_2" type="text" size="" name="np2" placeholder="Ex.: (xx) xxxxx-xxxx">
 
           <label for="tnp-4">Mensagem</label>
           <input class="tnp-profile tnp-profile-3 cor" id="tnp-profile_3" type="text" size="" name="np3" placeholder="Conte para nós a sua necessidade">
+
+          <div>
+            <input type="checkbox" name="ny" id='politica_priv' required class="tnp-privacy">
+            <label for='politica_priv'>
+              <a target="_blank" href="http://expandjr.local/privacy-policy/">Li e aceito as politicas de privacidade e termos de uso</a>
+            </label>
+          </div>
 
           <input class="tnp-submit" type="submit" value="Enviar" >
         </form>
@@ -135,7 +193,7 @@ Id quia enim qui minima voluptatem et maiores expedita ad provident quod eos per
    </div>
   </div>
 </main>
-<a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=<?php echo $cel; ?>" target_blank="_blank">
+<a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=<?php echo $cel; ?>" target="_blank">
   <img src="<?php echo IMAGES_DIR . '/icon-whatsapp-48.png'; ?>" alt="Ícone do Whatsapp">
 </a>
 
