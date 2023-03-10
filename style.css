@@ -12,8 +12,12 @@ Description: Tema do site da EJ Expand Jr.
     box-sizing: border-box;
 }
 
-
-
 a {
     color: inherit;
+}
+
+@media screen and (max-width: 782px) {
+    #html {
+        margin-top: 0 !important;
+    }
 }
