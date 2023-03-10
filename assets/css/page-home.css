@@ -563,13 +563,8 @@ p{
 
 .mySlides {
     display: none;
-<<<<<<< HEAD
     width: 45rem;
     height: 35rem;
-=======
-    /* width: 45rem;
-    height: 37rem; */
->>>>>>> d0a84816f80b34aede7f12e4280d28d6e2b7df04
 }
 
 .name-sucess-case{
@@ -582,6 +577,9 @@ p{
 
 .text-sucess-cases{
     padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 50rem;
 }
 
 .mySlides2 {
