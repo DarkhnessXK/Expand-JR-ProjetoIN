@@ -92,12 +92,12 @@ footer > div:nth-child(1) {
     padding-left: 1rem;
 }
 
-.footer_form > div {
+.form_priv {
     display: flex;
     gap: 8px;
 }
 
-.footer_form > div label {
+.form_priv label {
     font-size: 14px;
     white-space: nowrap;
 }
@@ -106,6 +106,10 @@ footer > div:nth-child(1) {
     width: 100px;
     height: 30px;
     cursor: pointer;
+}
+
+.input_hidden {
+    display: none;
 }
 
 

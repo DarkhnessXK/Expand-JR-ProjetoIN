@@ -1,0 +1,101 @@
+/* GLOBAL */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+section{
+    overflow: hidden;
+    white-space: wrap;
+}
+
+/*ideal: 65px*/
+/*min: 9vw*/
+/*max: 75px*/
+
+h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(28px, 6vw, 38px);
+    font-size: 38px;
+    line-height: 66px;
+    letter-spacing: 0.05em;
+    color: #0076C1;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(14px, 5vw, 24px);
+    line-height: 36px;
+    letter-spacing: 0.03em;
+    color: #000000;
+    text-align: center;
+}
+
+p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(10px, 5vw, 20px);
+    line-height: 29px;
+    color: #000000;
+    text-align: justify;
+}
+
+.section-1-privacy-policy{
+    font-family: 'Barlow', sans-serif;
+    color: #ffff;
+    height: 500px;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../images/background-img-navio-cort.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-blend-mode: overlay;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section-1-privacy-policy-title{
+    color: #FFFFFF;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5em;
+    padding: 75px 50px;
+}
+
+.term-file-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+}
+
+.term-file{
+    margin-left: 25px;
+    font-size: 150%;
+}
+
+.term-file-link{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(14px, 5vw, 24px);
+    line-height: 29px;
+    color: #0076C1;
+    text-align: justify;
+    text-decoration: underline;
+}
