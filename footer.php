@@ -16,9 +16,6 @@
                             'stats_date' => '0'
                         );
                         $popular_posts = wpp_get_mostpopular($args);
-                        echo '<pre>';
-                        print_r($popular_posts);
-                        echo '</pre>';
                         
                         if($popular_posts) {
                             echo '<div>';
