@@ -18,7 +18,7 @@ get_header();
                 <input class="tnp-name register-newsletter-form-name-field" type="text" name="nn" id="tnp-1" value=""></div>
                 <div class="tnp-field tnp-field-email register-newsletter-form-field"><label for="tnp-2">Seu email:</label>
                 <input class="tnp-email register-newsletter-form-email-field" type="email" name="ne" id="tnp-2" value="" required></div>
-                <div class="tnp-field tnp-privacy-field register-newsletter-form-field"><label><input type="checkbox" name="ny" required class="tnp-privacy"> Li e aceito as políticas de privacidade e termos de uso</label></div><div class="tnp-field tnp-field-button register-newsletter-form-button"><input class="tnp-submit register-newsletter-submit-button" type="submit" value="Cadastrar">
+                <div class="tnp-field tnp-privacy-field register-newsletter-form-field"><label><input type="checkbox" name="ny" required class="tnp-privacy"> <a target="_blank" href="http://expandjr.local/privacy-policy/">Li e aceito as políticas de privacidade e termos de uso</a></label></div><div class="tnp-field tnp-field-button register-newsletter-form-button"><input class="tnp-submit register-newsletter-submit-button" type="submit" value="Cadastrar">
                 </div>
             </form>
         </div>
