@@ -1,6 +1,10 @@
 <?php 
 get_header();
 ?>
+<section class="section-1-blog">
+    <h1 class="section-1-blog-title">NOSSO BLOG</h1>
+    <p class="section-1-blog-subtitle">Nos conectamos para conectar o mundo</p>
+</section>
 
 <?php $cel = get_option('zap_cadastro_telefone'); ?>
 <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=<?php echo $cel; ?>" target="_blank">
