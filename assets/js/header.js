@@ -68,29 +68,6 @@ function mostrarLinguas() {
     }
 }
 
-function alterarBotao(htmlTag) {
-    let alt_lang = document.querySelectorAll('.alt_lang')
-    if (htmlTag.title == 'English') {
-        alt_lang[0].innerText = 'EN'
-        alt_lang[1].innerText = 'EN'
-        setCookie('linguaAtual', 'EN')
-    }
-    else {
-        if (htmlTag.title == 'Portuguese') {
-            alt_lang[0].innerText = 'PT'
-            alt_lang[1].innerText = 'PT'
-            setCookie('linguaAtual', 'PT')
-        }
-        else {
-            if (htmlTag.title == 'Spanish') {
-                alt_lang[0].innerText = 'ES'
-                alt_lang[1].innerText = 'ES'
-                setCookie('linguaAtual', 'ES')
-            }
-        }
-    }
-}
-
 function irAteServicos() {
     let home_url = document.querySelector('.home_url')
     if (window.location.href == home_url.textContent) {
@@ -160,12 +137,12 @@ window.onload = () => {
 
     if (linguaAtual != null) {
         let alt_lang = document.querySelectorAll('.alt_lang')
-        if (linguaAtual == 'EN') {  
+        if (linguaAtual == 'en') {  
             alt_lang[0].innerText = 'EN'
             alt_lang[1].innerText = 'EN'
         }
         else {
-            if (linguaAtual == 'ES') {
+            if (linguaAtual == 'es') {
                 alt_lang[0].innerText = 'ES'
                 alt_lang[1].innerText = 'ES'
             }
@@ -175,6 +152,31 @@ window.onload = () => {
             }
         } 
     }
+
+    /*Change PT/EN/ES text when choosing the language*/
+    var lang_options = document.querySelector('.lang_options')
+    lang_options.addEventListener('click', (e)=>{
+        let alt_lang = document.querySelectorAll('.alt_lang')
+        if (e.target.alt == 'en') {
+            alt_lang[0].innerText = 'EN'
+            alt_lang[1].innerText = 'EN'
+            setCookie('linguaAtual', 'en')
+        }
+        else {
+            if (e.target.alt == 'pt') {
+                alt_lang[0].innerText = 'PT'
+                alt_lang[1].innerText = 'PT'
+                setCookie('linguaAtual', 'pt')
+            }
+            else {
+                if (e.target.alt == 'sp') {
+                    alt_lang[0].innerText = 'ES'
+                    alt_lang[1].innerText = 'ES'
+                    setCookie('linguaAtual', 'es')
+                }
+            }
+        }
+    })
 }
 
 window.addEventListener('beforeunload', () => {
