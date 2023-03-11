@@ -92,13 +92,14 @@ function alterarBotao(htmlTag) {
 }
 
 function irAteServicos() {
-    if (window.location.href == 'http://expandjr.local/') {
+    let home_url = document.querySelector('.home_url')
+    if (window.location.href == home_url.textContent) {
         let section2_services = document.querySelector('.section-2-services')
         section2_services.scrollIntoView({ behavior : 'smooth' })
     }
     else {
         setCookie('estavaHome', 'true')
-        window.location.href = 'http://expandjr.local/' 
+        window.location.href = home_url.textContent
     }
 }
 
