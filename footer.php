@@ -58,7 +58,7 @@
                 <div class='footer_columns links_column'>
                     <p>Links</p>
                     <div>
-                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('servicos') ) ); ?>">Serviços</a>
+                        <p onclick='irAteServicos()'>Serviços</p>
                         <a href="<?php echo esc_url( get_permalink( get_page_by_path('quem-somos') ) ); ?>">Quem somos</a>
                         <a href="<?php echo esc_url( get_permalink( get_page_by_path('blog') ) ); ?>">Blog</a>
                         <a href="<?php echo esc_url( get_permalink( get_page_by_path('privacy-policy') ) ); ?>">Política de privacidade</a>
@@ -114,9 +114,9 @@
                         <p>Telefone: &nbsp; <?php echo get_option('expandjr_telefone'); ?></p>
                     </div>
                     <div>
-                        <a href="<?php echo get_option('expandjr_instagram'); ?>"><img src="<?php echo IMAGES_DIR . '/icon-instagram.png' ?>" alt="Ícone do Instagram"></a>
-                        <a href="<?php echo get_option('expandjr_linkedin'); ?>"><img src="<?php echo IMAGES_DIR . '/icon-linkedin.png' ?>" alt="Ícone do Linkedin"></a>
-                        <a href="<?php echo get_option('expandjr_email'); ?>"><img src="<?php echo IMAGES_DIR . '/icon-email.png' ?>" alt="Ícone do Email"></a>
+                        <a href="<?php echo get_option('expandjr_instagram'); ?>" target=_blank><img src="<?php echo IMAGES_DIR . '/icon-instagram.png' ?>" alt="Ícone do Instagram"></a>
+                        <a href="<?php echo get_option('expandjr_linkedin'); ?>" target=_blank><img src="<?php echo IMAGES_DIR . '/icon-linkedin.png' ?>" alt="Ícone do Linkedin"></a>
+                        <a href="<?php echo get_option('expandjr_email'); ?>" target=_blank><img src="<?php echo IMAGES_DIR . '/icon-email.png' ?>" alt="Ícone do Email"></a>
                     </div>
                 </div>
             </div>
