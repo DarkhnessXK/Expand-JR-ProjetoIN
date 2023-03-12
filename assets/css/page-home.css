@@ -14,7 +14,7 @@ h1{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 900;
-    font-size: clamp(65px, 9vw, 75px);
+    font-size: clamp(60px, 9vw, 70px);
     color: #000000;
     text-align: center;
 }
@@ -26,7 +26,7 @@ h2{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: clamp(28px, 6vw, 38px);
+    font-size: clamp(25px, 6vw, 35px);
     font-size: 38px;
     line-height: 66px;
     letter-spacing: 0.05em;
@@ -167,7 +167,7 @@ p{
     align-items: center;
     gap: 1.5em;
 
-    background-image: url(https://expandjr.com.br/wp-content/uploads/2022/10/Capa-Site-Expandindo-seus-Horizontes-scaled.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-image: url(../images/Capa-Site-Expandindo-seus-Horizontes-scaled.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
     background-blend-mode: overlay;
     background-position: center center;
     background-repeat: no-repeat;
@@ -428,7 +428,7 @@ p{
     flex-direction: column;
     align-items: center;
     gap: 2.5em;
-    background-color: white;
+    background-color: #E9EAEC;
 }
 
 .results-cards-div{
@@ -500,11 +500,12 @@ p{
 /* casos de sucesso e nossos parceiros */
 
 .section-4-success-cases {
-    background-color: #E9EAEC;
+    background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #0076C1;
+    min-height: 52rem;
 
 }
 
@@ -552,19 +553,43 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
 }
 
 .w3-display-bottommiddle {  /**botão de passar pro lado**/
     display: flex;
     justify-content: center;
-    gap: 30rem;
     margin-bottom: 2rem;
 }
 
+#left-arrow,#left-arrow2{
+    padding-top: 2rem;
+    position: absolute;
+    left: 25%;
+    right: auto;
+}
+
+#right-arrow, #right-arrow2{
+    position: absolute;
+    right: 25%;
+    left: auto;
+    padding-top: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+    #left-arrow,#left-arrow2 {
+        left: 2%;
+    }
+
+    #right-arrow, #right-arrow2{
+        right: 2%;
+    }
+  }
+
 .mySlides {
     display: none;
-    /* width: 45rem;
-    height: 37rem; */
+    width: 45rem;
+    height: 35rem;
 }
 
 .name-sucess-case{
@@ -577,6 +602,9 @@ p{
 
 .text-sucess-cases{
     padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 50rem;
 }
 
 .mySlides2 {
@@ -584,8 +612,7 @@ p{
 }
 
 .img-partnerships{
-    margin-right: 5rem;
-    margin-left: 5rem;
+    margin-right: 2.5rem;
 }
 
 .w3-left,
@@ -605,7 +632,9 @@ p{
     flex-direction: column;
     align-items: center;
     color: #0076C1;
-    padding: 5rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    background-color: #E9EAEC;
 }
 
 .quantity-images{

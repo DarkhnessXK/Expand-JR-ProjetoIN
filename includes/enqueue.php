@@ -43,13 +43,23 @@ function enqueue_expandjr_styles() {
         wp_enqueue_style('quem-somos');
     }
 
+    if (is_page('blog')) {
+        wp_register_style('blog', STYLES_DIR . '/blog.css', [], '1.0.0', false);
+        wp_enqueue_style('blog');
+    }
+
     if (is_page('contato')) {
         wp_register_style('contato', STYLES_DIR . '/page-contato.css', [], '1.0.0', false);
         wp_enqueue_style('contato');
 
         wp_register_script('contato-script', SCRIPTS_DIR . '/page-contato.js', [], '1.0.0', true);
         wp_enqueue_script('contato-script');
-    }  
+    }
+
+    if (is_page('privacy-policy')) {
+        wp_register_style('privacy-policy', STYLES_DIR . '/page-privacy-policy.css', [], '1.0.0', false);
+        wp_enqueue_style('privacy-policy');
+    }
 }
 
 ?>

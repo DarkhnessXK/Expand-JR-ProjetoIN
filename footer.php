@@ -61,8 +61,7 @@
                         <p onclick='irAteServicos()'>Serviços</p>
                         <a href="<?php echo esc_url( get_permalink( get_page_by_path('quem-somos') ) ); ?>">Quem somos</a>
                         <a href="<?php echo esc_url( get_permalink( get_page_by_path('blog') ) ); ?>">Blog</a>
-                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('privacy-policy') ) ); ?>">Política de privacidade</a>
-                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('privacy-policy') ) ); ?>">Termos de uso</a>
+                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('privacy-policy') ) ); ?>">Termos de uso e <br>Políticas de privacidade</a>
                     </div>
                 </div>
             </div>
