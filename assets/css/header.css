@@ -71,13 +71,16 @@ header {
 
 .lang_options {
     background-color: #999;
-    /* width: 104px; */
     padding: 2px 5px;
     display: none;
-    gap: 5px;
     position: absolute;
     top: 57px;
     left: -32px;
+}
+
+.gtranslate_wrapper {
+    display: flex;
+    gap: 5px;
 }
 
 
@@ -143,6 +146,10 @@ header {
     top: 53px;
     right: -63px;
     list-style: none;
+}
+
+.hidden {
+    display: none;
 }
 
 @media screen and (max-width: 966px) {

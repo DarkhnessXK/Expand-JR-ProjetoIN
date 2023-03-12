@@ -18,6 +18,7 @@
 </head>
 <body <?php body_class(); ?>>
     <header>
+        <div class='hidden home_url'><?php echo get_permalink( get_page_by_path('home') ); ?></div> <!-- PARA FAZER O SCROLL FUNCIONAR -->
         <nav class='header_nav'>
             <?php the_custom_logo(); ?>
             <div class='nav_div'>
@@ -58,3 +59,8 @@
             
         </nav>
     </header>
+    <div class='parent'>
+        <a href="#" title='child-1'></a>
+        <a href="#" title='child-2'></a>
+        <a href="#" title='child-3'></a>
+    </div>

@@ -5,28 +5,34 @@
                     <p>Postagens Populares</p>
                     <div>
                         <?php
-                        $args = array(
+                        /* $args = array(
                             'limit' => 3, 
                             'range' => 'all',
                             'post_type' => 'post',
-                            'category_name' => 'post-blog',
                             'stats_views' => '0',
                             'stats_comments' => '0',
                             'stats_author' => '0',
-                            'stats_date' => '0'
+                            'stats_date' => '0',
+                            'category_name' => 'post-blog',
                         );
-                        $popular_posts = wpp_get_mostpopular($args);
+                        wpp_get_mostpopular($args); */
+
                         
-                        if($popular_posts) {
-                            echo '<div>';
-                            foreach($popular_posts as $post) {
-                                setup_postdata($post);
-                                ?>
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                <?php
-                            }
-                            wp_reset_postdata();
-                            echo '</div>';
+                        $popular_posts = new WP_Query( array( 
+                            'posts_per_page' => 3, 
+                            'meta_key' => 'wpb_post_views_count', 
+                            'orderby' => 'meta_value_num', 
+                            'order' => 'DESC',
+                            'category_name' => 'post-blog'  ) );
+                        
+                        if ( $popular_posts) {
+                            while ( $popular_posts->have_posts() ) {
+                                $popular_posts->the_post();
+                                echo '<a href="' . get_permalink() . '">';
+                                the_title();
+                                echo '</a>';
+                            } 
+                        wp_reset_postdata();
                         }
                         ?>
                     </div>
@@ -58,7 +64,7 @@
                 <div class='footer_columns links_column'>
                     <p>Links</p>
                     <div>
-                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('servicos') ) ); ?>">Serviços</a>
+                        <p onclick='irAteServicos()'>Serviços</p>
                         <a href="<?php echo esc_url( get_permalink( get_page_by_path('quem-somos') ) ); ?>">Quem somos</a>
                         <a href="<?php echo esc_url( get_permalink( get_page_by_path('blog') ) ); ?>">Blog</a>
                         <a href="<?php echo esc_url( get_permalink( get_page_by_path('privacy-policy') ) ); ?>">Termos de uso e <br>Políticas de privacidade</a>
@@ -113,9 +119,9 @@
                         <p>Telefone: &nbsp; <?php echo get_option('expandjr_telefone'); ?></p>
                     </div>
                     <div>
-                        <a href="<?php echo get_option('expandjr_instagram'); ?>"><img src="<?php echo IMAGES_DIR . '/icon-instagram.png' ?>" alt="Ícone do Instagram"></a>
-                        <a href="<?php echo get_option('expandjr_linkedin'); ?>"><img src="<?php echo IMAGES_DIR . '/icon-linkedin.png' ?>" alt="Ícone do Linkedin"></a>
-                        <a href="<?php echo get_option('expandjr_email'); ?>"><img src="<?php echo IMAGES_DIR . '/icon-email.png' ?>" alt="Ícone do Email"></a>
+                        <a href="<?php echo get_option('expandjr_instagram'); ?>" target=_blank><img src="<?php echo IMAGES_DIR . '/icon-instagram.png' ?>" alt="Ícone do Instagram"></a>
+                        <a href="<?php echo get_option('expandjr_linkedin'); ?>" target=_blank><img src="<?php echo IMAGES_DIR . '/icon-linkedin.png' ?>" alt="Ícone do Linkedin"></a>
+                        <a href="<?php echo get_option('expandjr_email'); ?>" target=_blank><img src="<?php echo IMAGES_DIR . '/icon-email.png' ?>" alt="Ícone do Email"></a>
                     </div>
                 </div>
             </div>
@@ -124,11 +130,6 @@
         <div class='footer_copyright'>
             <p>Copyright ⒸExpand JR 2023</p>
         </div>
-        <?php
-        echo '<pre>';
-        print_r($popular_posts);
-        echo '</pre>';
-        ?>
         
     </footer>
 <?php wp_footer(); ?>
