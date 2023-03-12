@@ -194,9 +194,8 @@ main{
     flex-direction: column;
     gap: 1.5rem;
     min-width: 350px;
-
-  
-    height: 30rem;
+    height: 30rem; 
+   
 }
 
 .div_contact_info {
@@ -239,8 +238,7 @@ main{
     align-items: center;
     flex-direction: column;
     min-width: 350px;
-  
-    height: 30rem;
+    height: 56rem; 
 }
 
 .parent {
@@ -309,7 +307,54 @@ textarea{
     background-attachment: fixed;
     
 }
+/* <!-- Ceckbox --!>  */
+legend{
+    font-family: 'Barlow', sans-serif;
+    gap: 10px;
+}
+/* <!-- Ceckbox --!>  */
+.questionary{
+    font-family: 'Barlow', sans-serif;
 
+}
+
+/* <!-- Checkbox_radio --!>  */
+.option_questionary{
+    font-family: 'Barlow', sans-serif;
+    padding-top: 10px;
+}
+
+.option_questionary{
+    font-family: 'Roboto', sans-serif;
+     
+}
+
+.option1{
+    font-family: 'Barlow', sans-serif;
+    margin-top: 5px;
+}
+
+.option1 > label {
+    font-family: 'Barlow', sans-serif;
+    margin-left: 7px;
+}
+
+.option2{
+    font-family: 'Barlow', sans-serif;
+    margin-top: 5px;
+      
+}
+
+.option2 > label {
+    font-family: 'Barlow', sans-serif;
+    margin-left: 7px;
+}
+/* <!-- Politica de Privacidade --!>  */
+.yes_privacity{
+    margin-top: 7px;
+    background-color: rgba(0,0,0,0.1)
+
+}
 footer {
     margin-top: 3rem;
 }
