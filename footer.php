@@ -5,28 +5,34 @@
                     <p>Postagens Populares</p>
                     <div>
                         <?php
-                        $args = array(
+                        /* $args = array(
                             'limit' => 3, 
                             'range' => 'all',
                             'post_type' => 'post',
-                            'category_name' => 'post-blog',
                             'stats_views' => '0',
                             'stats_comments' => '0',
                             'stats_author' => '0',
-                            'stats_date' => '0'
+                            'stats_date' => '0',
+                            'category_name' => 'post-blog',
                         );
-                        $popular_posts = wpp_get_mostpopular($args);
+                        wpp_get_mostpopular($args); */
+
                         
-                        if($popular_posts) {
-                            echo '<div>';
-                            foreach($popular_posts as $post) {
-                                setup_postdata($post);
-                                ?>
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                <?php
-                            }
-                            wp_reset_postdata();
-                            echo '</div>';
+                        $popular_posts = new WP_Query( array( 
+                            'posts_per_page' => 3, 
+                            'meta_key' => 'wpb_post_views_count', 
+                            'orderby' => 'meta_value_num', 
+                            'order' => 'DESC',
+                            'category_name' => 'post-blog'  ) );
+                        
+                        if ( $popular_posts) {
+                            while ( $popular_posts->have_posts() ) {
+                                $popular_posts->the_post();
+                                echo '<a href="' . get_permalink() . '">';
+                                the_title();
+                                echo '</a>';
+                            } 
+                        wp_reset_postdata();
                         }
                         ?>
                     </div>
@@ -124,11 +130,6 @@
         <div class='footer_copyright'>
             <p>Copyright ⒸExpand JR 2023</p>
         </div>
-        <?php
-        echo '<pre>';
-        print_r($popular_posts);
-        echo '</pre>';
-        ?>
         
     </footer>
 <?php wp_footer(); ?>
