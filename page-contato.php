@@ -165,21 +165,64 @@ $cel = get_option('zap_cadastro_telefone');
 
           <input type="hidden" name="nlang" value="">
 
+           <!-- <label for="tnp-2">Nome</label>
+          <input class="tnp-profile tnp-profile-1 cor" id="tnp-profile_1" type="text" size="" name="np1" placeholder="Nome"> -->
+          <label for="tnp-1">Nome Completo</label>
+          <input class="tnp-name cor" type="text" name="nn" id="tnp-1" value="" placeholder='Nome'>
+
           <label for="tnp-2">Email</label>
           <input class="tnp-email cor" type="email" name="ne" id="tnp-2" value="" placeholder='Email' required>
 
-          <!-- <label for="tnp-2">Nome</label>
-          <input class="tnp-profile tnp-profile-1 cor" id="tnp-profile_1" type="text" size="" name="np1" placeholder="Nome"> -->
-          <label for="tnp-1">Nome</label>
-          <input class="tnp-name cor" type="text" name="nn" id="tnp-1" value="" placeholder='Nome'>
 
           <label for="tnp-3">Telefone</label>
-          <input class="tnp-profile tnp-profile-2 cor" id="tnp-profile_2" type="text" size="" name="np2" placeholder="Ex.: (xx) xxxxx-xxxx">
+          <input class="tnp-profile tnp-profile-3 cor" id="tnp-profile_3" type="text" size="" name="np3" placeholder="Ex.: (xx) xxxxx-xxxx">
 
-          <label for="tnp-4">Mensagem</label>
-          <input class="tnp-profile tnp-profile-3 cor" id="tnp-profile_3" type="text" size="" name="np3" placeholder="Conte para nós a sua necessidade">
+          <label for="tnp-4">Cidade</label>
+          <input class="tnp-profile tnp-profile-3 cor" id="tnp-profile_2" type="text" size="" name="np4" placeholder="Cidade">
 
-          <div>
+
+          <label for="tnp-5">Qual a sua principal necessidade?</label>
+          <input class="tnp-profile tnp-profile-5 cor" id="tnp-profile_5" type="text" size="" name="np5" placeholder="Conte para nós a sua necessidade">
+          
+          <!-- Checkbox -->
+           <div class="questionary">
+            <legend>Algum dos nossos serviços te disperta mais interesse?</legend>
+           <div class="option1">
+           <input type="checkbox" name="questionario" id='resposta_questionario'>
+           <label>Dupla Cidadania Portuguesa</label><br/>
+
+           <input type="checkbox" name="questionario" id='resposta_questionario'>
+           <label>Assessoria para emissão de Passaporte Brasileiro</label><br/>
+
+           <input type="checkbox" name="questionario" id='resposta_questionario'>
+           <label>Análise Burocrática</label><br/>
+
+           <input type="checkbox" name="questionario" id='resposta_questionario'>
+           <label>Estudo e Análise do Mercado</label><br/>
+
+           <input type="checkbox" name="questionario" id='resposta_questionario'>
+           <label>Planejamento Logístico</label><br/>
+
+           <input type="checkbox" name="questionario" id='resposta_questionario'>
+           <label>Prospecção Internacional</label>
+
+           </div>
+           </div>
+
+           <div class="option_questionary">
+            <legend>Como chegou até nós?</legend>
+            <div class="option2">
+            <input type="radio" name="internet" value="internet"/><label>Pesquisando na internet</label><br/>
+            <input type="radio" name="internet" value="instagram"/><label>Instagram</label><br/>
+            <input type="radio" name="internet" value="linkedin"/><label>Linkedin</label><br/>
+            <input type="radio" name="internet" value="indicacao"/><label>Me indicaram voçês</label><br/>
+            <input type="radio" name="internet" value="evento"/><label>Evento</label><br/>
+            <input type="radio" name="internet" value="email"/><label>Recebi um e-mail de voçês</label><br/>
+            <input type="radio" name="internet" value="outros"/><label>Outros</label>
+            </div>
+             </div>
+           <!-- Política de privacidade -->
+          <div class="yes_privacity">
             <input type="checkbox" name="ny" id='politica_priv' required class="tnp-privacy">
             <label for='politica_priv'>
               <a target="_blank" href="http://expandjr.local/privacy-policy/">Li e aceito as politicas de privacidade e termos de uso</a>
