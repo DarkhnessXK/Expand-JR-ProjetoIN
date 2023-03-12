@@ -41,7 +41,7 @@ $cel = get_option('zap_cadastro_telefone');
         </li>
     </ul> -->
     <div class='journey'>
-      <div class='big_circle' onclick='mostrarJornada(this)'>
+      <div class='big_circle filled_color' onclick='mostrarJornada(this)'>
         <p>Primeiro Contato</p>
         <div class='small_circle first_small_circle'>
         </div>
