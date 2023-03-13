@@ -33,8 +33,9 @@
 
 .blog-post-div{
     display: flex;
-    width: 50%;
+    width: 80%;
     padding-left: 2rem;
+    padding-bottom: 2rem;
 }
 
 .blog-image{
@@ -44,5 +45,12 @@
 }
 .blog-subtitle-category ul {
     list-style: none;
+}
+
+.read-more-blog-p{
+    padding-top: 1rem;
+    width: 2rem;
+    height: 3.5rem;
+    background-color: grey;
 }
 

@@ -28,7 +28,7 @@ get_header();
               <?php the_category(); ?>
             </h6>
             <?php the_content(); ?>
-            <a type="button" href="" class="read-more-blog">Leia Mais</a>
+            <a type="button" href="" class="read-more-blog"><p class="read-more-blog-p">Leia Mais</p></a>
           </div>
         </div>
       <?php endwhile;
