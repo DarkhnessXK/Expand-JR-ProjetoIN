@@ -33,7 +33,7 @@ get_header();
             <h6 class="blog-subtitle-category">
               <?php the_category(); ?>
             </h6>
-            <?php the_content(); ?>
+            <?php the_excerpt(); ?>
             <a type="button" href="" class="read-more-blog">
               <p class="read-more-blog-p">Ler Mais</p>
             </a>

@@ -63,10 +63,15 @@
     list-style: none;
 }
 
+.read-more-blog{
+    display: inline-block;
+    padding-top: 1rem;
+}
+
 .read-more-blog-p{
-    margin-top: 1rem;
     width: 4rem;
-    height: auto;
+    height: 1rem;
+    border-radius: 1rem;
     background-color: grey;
 }
 
