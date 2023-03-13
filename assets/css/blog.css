@@ -76,7 +76,8 @@
     padding-left: 1rem;
     padding-right: 1rem;
     border-radius: 0.3rem;
-    background-color: grey;
+    border-color: #0076C1;
+    background-color: #0076C1;
     color: #ffff;
 }
 
