@@ -7,7 +7,13 @@ get_header();
 </section>
 
 <section class="section-2-blog">
+  <div class="search-bar-blog-div">
+    <input type="search" class="search-bar-blog" placeholder="Buscar">
+    <button type="submit" class="submit-search-blog"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/lupa.png' ); ?>"></button>
+  </div>
+
   <div class="blog-width-div">
+
     <?php
     $objeto = new WP_Query(array('category_name' => 'post-blog'));
 
@@ -28,7 +34,9 @@ get_header();
               <?php the_category(); ?>
             </h6>
             <?php the_content(); ?>
-            <a type="button" href="" class="read-more-blog"><p class="read-more-blog-p">Leia Mais</p></a>
+            <a type="button" href="" class="read-more-blog">
+              <p class="read-more-blog-p">Ler Mais</p>
+            </a>
           </div>
         </div>
       <?php endwhile;

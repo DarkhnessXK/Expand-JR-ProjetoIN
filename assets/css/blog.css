@@ -26,9 +26,25 @@
     font-weight: normal;
 }
 
+.search-bar-blog-div{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2rem;
+    padding-right: 1rem;
+}
+
+.submit-search-blog{
+    background-color: #FFFFFF;
+}
+
+.submit-search-blog :hover{
+    cursor: pointer;
+}
+
 .blog-width-div{
     display: flex;
     flex-direction: column;
+    padding-top: 2rem;
 }
 
 .blog-post-div{
@@ -48,9 +64,9 @@
 }
 
 .read-more-blog-p{
-    padding-top: 1rem;
-    width: 2rem;
-    height: 3.5rem;
+    margin-top: 1rem;
+    width: 4rem;
+    height: auto;
     background-color: grey;
 }
 
