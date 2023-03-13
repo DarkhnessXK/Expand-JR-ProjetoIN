@@ -25,3 +25,24 @@
     color: #FFFFFF;
     font-weight: normal;
 }
+
+.blog-width-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-post-div{
+    display: flex;
+    width: 50%;
+    padding-left: 2rem;
+}
+
+.blog-image{
+    max-width: 28rem;
+    max-height: 20rem;
+    padding-right: 2rem;
+}
+.blog-subtitle-category ul {
+    list-style: none;
+}
+
