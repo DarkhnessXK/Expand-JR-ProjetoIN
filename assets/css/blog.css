@@ -64,14 +64,17 @@
 }
 
 .read-more-blog{
+    margin-top: 1rem;
     display: inline-block;
-    padding-top: 1rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.3rem;
+    background-color: grey;
+    color: #ffff;
 }
 
-.read-more-blog-p{
-    width: 4rem;
-    height: 1rem;
-    border-radius: 1rem;
-    background-color: grey;
+.read-more-blog:hover{
+    cursor: pointer;
 }
 
