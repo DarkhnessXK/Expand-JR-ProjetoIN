@@ -25,3 +25,66 @@
     color: #FFFFFF;
     font-weight: normal;
 }
+
+.search-bar-blog-div{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2rem;
+    padding-right: 1rem;
+    height: 4rem;
+}
+
+.submit-search-blog{
+    background-color: #FFFFFF;
+    border: none;
+    
+}
+
+.submit-search-blog :hover{
+    cursor: pointer;
+}
+
+.blog-width-div{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.blog-post-div{
+    display: flex;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+
+.blog-image{
+    max-width: 28rem;
+    max-height: 20rem;
+    padding-right: 2rem;
+}
+
+.content-blog{
+    max-height: 20rem;
+    max-width: 28rem;
+}
+
+.blog-subtitle-category ul {
+    list-style: none;
+    padding-bottom: 1rem;
+}
+
+.read-more-blog{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.3rem;
+    border-color: #0076C1;
+    background-color: #0076C1;
+    color: #ffff;
+}
+
+.read-more-blog:hover{
+    cursor: pointer;
+}
+
