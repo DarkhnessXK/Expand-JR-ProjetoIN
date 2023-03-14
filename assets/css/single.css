@@ -1,4 +1,10 @@
-.section-1-blog{
+.single-main{
+    margin: 0 18%;
+    line-height: 25px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.section-1-single{
     font-family: 'Barlow', sans-serif;
     color: #ffff;
     height: 500px;
@@ -17,11 +23,41 @@
     background-attachment: fixed;
 }
 
-.section-1-blog-title{
+.section-1-single-title{
     color: #FFFFFF;
 }
 
-.section-1-blog-subtitle{
+.section-1-single-subtitle{
     color: #FFFFFF;
     font-weight: normal;
 }
+
+.single-page-blog-image{
+    width: 45rem;
+    height: 20rem;
+    padding-right: 2rem;
+    
+    
+}
+.image-blog-div{
+    max-width: 28rem;
+    max-height: 20rem;
+    object-fit: cover;
+}
+
+.section-2-single{
+    display: flex;
+    flex-direction: column;
+}
+
+.single-title{
+    font-size: 2rem;
+    padding-top: 0.5rem;
+}
+
+.single-post-content p{
+    padding-top: 1.5rem;
+    font-size: 1.3rem;
+}
+
+
