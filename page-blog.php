@@ -12,9 +12,9 @@ get_header();
   <div class="blog-width-div">
     <div class="search-bar-blog-div">
       <input type="search" class="search-bar-blog" placeholder="Buscar">
-      <button type="submit" class="submit-search-blog">
+      <a class="submit-search-blog">
         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lupa.png'); ?>">
-      </button>
+      </a>
     </div>
 
     <?php
@@ -25,7 +25,7 @@ get_header();
 
       while ($objeto->have_posts()):
         $objeto->the_post();
-        $post_id =  get_the_ID(  );
+        $post_id = get_the_ID();
 
 
         ?>

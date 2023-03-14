@@ -34,9 +34,22 @@
     height: 4rem;
 }
 
+.search-bar-blog{
+    border: 1px solid grey;
+    border-right: none;
+}
+
+.search-bar-blog::placeholder{
+    padding-left: 0.5rem;
+}
+
 .submit-search-blog{
     background-color: #FFFFFF;
-    border: none;
+    border: 1px solid grey;
+    border-left: none;
+    display: flex;
+    align-items: center;
+    
     
 }
 
