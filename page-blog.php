@@ -7,14 +7,15 @@ get_header();
 </section>
 
 <section class="section-2-blog">
-  <div class="search-bar-blog-div">
-    <input type="search" class="search-bar-blog" placeholder="Buscar">
-    <button type="submit" class="submit-search-blog">
-      <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lupa.png'); ?>">
-    </button>
-  </div>
+
 
   <div class="blog-width-div">
+    <div class="search-bar-blog-div">
+      <input type="search" class="search-bar-blog" placeholder="Buscar">
+      <a class="submit-search-blog">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lupa.png'); ?>">
+      </a>
+    </div>
 
     <?php
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -24,13 +25,15 @@ get_header();
 
       while ($objeto->have_posts()):
         $objeto->the_post();
-
+        $post_id = get_the_ID();
 
 
         ?>
 
         <div class="blog-post-div">
-          <img src="<?php the_field('image-blog'); ?>" class="blog-image">
+          <div class="image-blog-div">
+            <img src="<?php the_field('image-blog'); ?>" class="blog-image">
+          </div>
           <div class="content-blog">
             <h2 class="news-title">
               <?php the_title(); ?>
@@ -40,7 +43,7 @@ get_header();
             </h6>
 
             <?php the_excerpt(); ?>
-            <input type="button" href="" class="read-more-blog" value="LER MAIS">
+            <a href="<?php echo get_permalink($post_id); ?>" class="read-more-blog">LER MAIS</a>
           </div>
         </div>
 

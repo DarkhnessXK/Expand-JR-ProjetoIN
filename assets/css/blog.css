@@ -27,16 +27,33 @@
 }
 
 .search-bar-blog-div{
-    display: flex;
+    display: inline-flex;
     justify-content: flex-end;
     padding-top: 2rem;
-    padding-right: 1rem;
+    padding-right: 2rem;
     height: 4rem;
+}
+
+.search-bar-blog{
+    border: 1px solid grey;
+    border-right: none;
+}
+
+.search-bar-blog:focus{
+    outline: none;
+}
+
+.search-bar-blog::placeholder{
+    padding-left: 0.5rem;
 }
 
 .submit-search-blog{
     background-color: #FFFFFF;
-    border: none;
+    border: 1px solid grey;
+    border-left: none;
+    display: flex;
+    align-items: center;
+    
     
 }
 
@@ -58,9 +75,19 @@
 }
 
 .blog-image{
+    width: 28rem;
+    height: 20rem;
+    padding-right: 2rem;
+    
+    
+}
+
+.image-blog-div{
     max-width: 28rem;
     max-height: 20rem;
-    padding-right: 2rem;
+    
+    object-fit: cover;
+    
 }
 
 .content-blog{
