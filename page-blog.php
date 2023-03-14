@@ -9,19 +9,23 @@ get_header();
 <section class="section-2-blog">
   <div class="search-bar-blog-div">
     <input type="search" class="search-bar-blog" placeholder="Buscar">
-    <button type="submit" class="submit-search-blog"><img
-        src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lupa.png'); ?>"></button>
+    <button type="submit" class="submit-search-blog">
+      <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lupa.png'); ?>">
+    </button>
   </div>
 
   <div class="blog-width-div">
 
     <?php
-    $objeto = new WP_Query(array('category_name' => 'post-blog'));
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $objeto = new WP_Query(array('category_name' => 'post-blog', 'posts_per_page' => 3, 'paged' => $paged));
 
     if ($objeto->have_posts()):
 
       while ($objeto->have_posts()):
         $objeto->the_post();
+
+
 
         ?>
 
@@ -34,13 +38,39 @@ get_header();
             <h6 class="blog-subtitle-category">
               <?php the_category(); ?>
             </h6>
+
             <?php the_excerpt(); ?>
             <input type="button" href="" class="read-more-blog" value="LER MAIS">
           </div>
         </div>
+
       <?php endwhile;
       wp_reset_postdata();
       ?>
+      <div class="pagination-blog-div">
+        <?php
+        $total_pages = $objeto->max_num_pages;
+
+        if ($total_pages > 1) {
+
+          $current_page = max(1, get_query_var('paged'));
+
+          echo paginate_links(
+            array(
+              'base' => get_pagenum_link(1) . '%_%',
+              'format' => '/page/%#%',
+              'current' => $current_page,
+              'total' => $total_pages,
+              'prev_text' => __('<   '),
+              'next_text' => __('    >'),
+            )
+          );
+        }
+        ?>
+      </div>
+
+
+
 
     <?php endif; ?>
   </div>
