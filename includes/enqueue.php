@@ -60,6 +60,9 @@ function enqueue_expandjr_styles() {
         wp_register_style('privacy-policy', STYLES_DIR . '/page-privacy-policy.css', [], '1.0.0', false);
         wp_enqueue_style('privacy-policy');
     }
+
+    wp_register_style('single', STYLES_DIR . '/single.css', [], '1.0.0', false);
+    wp_enqueue_style('single');
 }
 
 ?>
