@@ -15,6 +15,7 @@ include_once(INCLUDES_DIR . '/theme-setup.php');
 add_action( 'wp_enqueue_scripts', 'enqueue_expandjr_styles');
 add_action( 'after_setup_theme', 'setup_expandjr_theme');
 
+//Para contar os views dos blogs
 function wpb_set_post_views($postID) {
     $count_key = 'wpb_post_views_count';
     $count = get_post_meta($postID, $count_key, true);
@@ -29,4 +30,6 @@ function wpb_set_post_views($postID) {
 }
 //To keep the count accurate, lets get rid of prefetching
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+
 ?>

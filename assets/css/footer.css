@@ -31,6 +31,7 @@ footer > div:nth-child(1) {
     font-weight: 700;
     font-family: 'Barlow', sans-serif;
     line-height: default;
+    text-align: start;
 }
 
 .footer_columns > div {
@@ -154,10 +155,11 @@ footer > div:nth-child(1) {
 .footer_bottom div:nth-child(3) img {
     width: 37px;
     height: 37px;
+    transition: transform 0.1s cubic-bezier(0, 0, 0, 1);
 }
 
 .footer_bottom div:nth-child(3) img:hover {
-    scale: 1.13;
+    transform: scale(1.13);
 }
 
 

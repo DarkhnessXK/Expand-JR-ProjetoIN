@@ -41,7 +41,7 @@ $cel = get_option('zap_cadastro_telefone');
         </li>
     </ul> -->
     <div class='journey'>
-      <div class='big_circle filled_color' onclick='mostrarJornada(this)'>
+      <div class='big_circle' onclick='mostrarJornada(this)'>
         <p>Primeiro Contato</p>
         <div class='small_circle first_small_circle'>
         </div>
@@ -147,26 +147,73 @@ $cel = get_option('zap_cadastro_telefone');
     <div class="bloco2">
        <h1>Fale Conosco</h1>
          <div class="parent">
-          <!-- <form class="dados"> 
-           <p>Nome</p>
-           <input type="text" class="cor" placeholder="Nome">
-           <p>Telefone</p>
-           <input type="text"class="cor" placeholder="Ex: (xx)xxxxx-xxxx">
-           <p>E-mail</p>
-           <input type="text" class="cor" placeholder="Digite aqui o seu email">
-           <p>Mensagem</p>
-           <textarea class="color" placeholder="Conte para nós a sua necessidade"></textarea>
-           </br>
-           <button>Enviar</button>
-        </form> -->
+          
+         <?php echo do_shortcode('[contact-form-7 id="126" title="Contact form 1"]'); ?>
+          <!-- <form action='' method="POST">
+            <label for="name">Nome Completo</label>
+            <input class="cor" type="text" name="contact_name" id="contact_name" placeholder='Nome'>
 
+            <label for="email">Email</label>
+            <input class="cor" type="email" name="contact_email" id="contact_email" placeholder='Email' required>
+
+
+            <label for="telephone">Telefone</label>
+            <input class="cor" type="text" id="contact_telephone" name="contact_telephone" placeholder="Ex.: (xx) xxxxx-xxxx">
+
+            <label for="city">Cidade</label>
+            <input class="cor" type="text" id="contact_city" name="contact_city" placeholder="Cidade">
+
+
+            <label for="message">Qual a sua principal necessidade?</label>
+            <input class="cor" type="text" id="contact_message" name="contact_message" placeholder="Conte para nós a sua necessidade" required>
+
+            <div class="questionary">
+              <legend>Algum dos nossos serviços te disperta mais interesse?</legend>
+              <div class="option1">
+              <input type="checkbox" name="Dupla Cidadania Portuguesa" id='como chegou até nós'>
+              <label>Dupla Cidadania Portuguesa</label><br/>
+
+              <input type="checkbox" name="Assessoria para emissão de Passaporte Brasileiro" id='como chegou até nós'>
+              <label>Assessoria para emissão de Passaporte Brasileiro</label><br/>
+
+              <input type="checkbox" name="Análise Burocrática" id='como chegou até nós'>
+              <label>Análise Burocrática</label><br/>
+
+              <input type="checkbox" name="Estudo e Análise do Mercado" id='como chegou até nós'>
+              <label>Estudo e Análise do Mercado</label><br/>
+
+              <input type="checkbox" name="Planejamento Logístico" id='como chegou até nós'>
+              <label>Planejamento Logístico</label><br/>
+
+              <input type="checkbox" name="Prospecção Internacional" id='como chegou até nós'>
+              <label>Prospecção Internacional</label>
+            </div>
+            </div>
+
+            <div class="option_questionary">
+              <legend>Como chegou até nós?</legend>
+              <div class="option2">
+              <input type="radio" name="como_chegou_até_nós" value="internet"/><label>Pesquisando na como chegou até nós</label><br/>
+              <input type="radio" name="como_chegou_até_nós" value="instagram"/><label>Instagram</label><br/>
+              <input type="radio" name="como_chegou_até_nós" value="linkedin"/><label>Linkedin</label><br/>
+              <input type="radio" name="como_chegou_até_nós" value="indicacao"/><label>Me indicaram voçês</label><br/>
+              <input type="radio" name="como_chegou_até_nós" value="evento"/><label>Evento</label><br/>
+              <input type="radio" name="como_chegou_até_nós" value="email"/><label>Recebi um e-mail de voçês</label><br/>
+              <input type="radio" name="como_chegou_até_nós" value="outros"/><label>Outros</label>
+            </div>
+              </div>
+            <div class="yes_privacity">
+              <input type="checkbox" name="politica_priv" id='politica_priv' required>
+              <label for='politica_priv'>
+                <a target="_blank" href="http://expandjr.local/privacy-policy/">Li e aceito as politicas de privacidade e termos de uso</a>
+              </label>
+            </div>
+            <input name='submit' type="submit" value="Enviar">
+          </form>
 
         <form class='dados' method="post" action="http://expandjr.local/?na=s">
 
           <input type="hidden" name="nlang" value="">
-
-           <!-- <label for="tnp-2">Nome</label>
-          <input class="tnp-profile tnp-profile-1 cor" id="tnp-profile_1" type="text" size="" name="np1" placeholder="Nome"> -->
           <label for="tnp-1">Nome Completo</label>
           <input class="tnp-name cor" type="text" name="nn" id="tnp-1" value="" placeholder='Nome'>
 
@@ -183,8 +230,6 @@ $cel = get_option('zap_cadastro_telefone');
 
           <label for="tnp-5">Qual a sua principal necessidade?</label>
           <input class="tnp-profile tnp-profile-5 cor" id="tnp-profile_5" type="text" size="" name="np5" placeholder="Conte para nós a sua necessidade">
-          
-          <!-- Checkbox -->
            <div class="questionary">
             <legend>Algum dos nossos serviços te disperta mais interesse?</legend>
            <div class="option1">
@@ -221,7 +266,6 @@ $cel = get_option('zap_cadastro_telefone');
             <input type="radio" name="internet" value="outros"/><label>Outros</label>
             </div>
              </div>
-           <!-- Política de privacidade -->
           <div class="yes_privacity">
             <input type="checkbox" name="ny" id='politica_priv' required class="tnp-privacy">
             <label for='politica_priv'>
@@ -230,7 +274,7 @@ $cel = get_option('zap_cadastro_telefone');
           </div>
 
           <input class="tnp-submit" type="submit" value="Enviar" >
-        </form>
+        </form> -->
 </div>
       </div>
    </div>

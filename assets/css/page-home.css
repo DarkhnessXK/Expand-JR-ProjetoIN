@@ -87,6 +87,7 @@ p{
 }
 
 .register-newsletter{
+    padding-top: 20px !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 1.5em !important;

@@ -169,10 +169,13 @@ window.onload = () => {
                 setCookie('linguaAtual', 'pt')
             }
             else {
-                if (e.target.alt == 'sp') {
+                if (e.target.alt == 'es') {
                     alt_lang[0].innerText = 'ES'
                     alt_lang[1].innerText = 'ES'
                     setCookie('linguaAtual', 'es')
+
+                    let section1_h1 = document.querySelector('.section-1-home-title')
+                    section1_h1.innerText = 'Expande tus horizontes'
                 }
             }
         }
