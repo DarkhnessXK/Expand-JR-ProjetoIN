@@ -51,6 +51,12 @@
     padding-left: 8rem;
 }
 
+.not_found {
+    align-self: center;
+    padding-bottom: 5rem;
+}
+
+
 .blog-post-div{
     display: flex;
     padding-left: 2rem;

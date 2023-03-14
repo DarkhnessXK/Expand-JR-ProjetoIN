@@ -1,5 +1,7 @@
 <?php
 get_header();
+
+
 ?>
 <section class="section-1-blog">
   <h1 class="section-1-blog-title">NOSSO BLOG</h1>
@@ -8,31 +10,66 @@ get_header();
 
 <section class="section-2-blog">
   <div class="search-bar-blog-div">
-    <form action="">
-    <input type="search" class="search-bar-blog" placeholder="Buscar" list='historico'>
-          <datalist id='historico'>
-            <?php
-              $objeto = new WP_Query(array('category_name' => 'post-blog', 'posts_per_page' => 3, 'paged' => $paged));
-              if ($objeto->have_posts()) {
-                while ($objeto->have_posts()){
-                  $objeto->the_post();
-                  echo '<option value="';
-                  echo the_title();
-                  echo '"></option>';
-                } 
-              }
-            ?>
-          </datalist>
-        </form>
-    <button type="submit" class="submit-search-blog">
-      <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lupa.png'); ?>">
-    </button>
+    <form action="" method='POST'>
+      <input type="search" name='search_bar_blog' class="search-bar-blog" placeholder="Buscar" list='historico'>
+      <datalist id='historico'>
+        <?php
+        $objeto = new WP_Query(array('category_name' => 'post-blog', 'posts_per_page' => 3, 'paged' => $paged));
+        if ($objeto->have_posts()) {
+          while ($objeto->have_posts()){
+            $objeto->the_post();
+            echo '<option value="';
+            echo the_title();
+            echo '"></option>';
+          } 
+        }
+        ?>
+      </datalist>
+      <button name='submit' type="submit" class="submit-search-blog">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lupa.png'); ?>">
+      </button>
+    </form>
+    
   </div>
 
   <div class="blog-width-div">
 
     <?php
-    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    if (isset($_POST['submit'])) {
+      $all_posts = new WP_Query(array('category_name' => 'post-blog'));
+      if ($all_posts->have_posts()) {
+        while($all_posts->have_posts()) {
+          $all_posts->the_post();
+          $string_searched = $_POST['search_bar_blog'];
+          $existe_algum = false;
+          if (mb_strpos(strtolower(the_title('', '', false)), strtolower($string_searched)) !== false) {
+            ?>
+            <div class="blog-post-div">
+              <img src="<?php the_field('image-blog'); ?>" class="blog-image">
+              <div class="content-blog">
+                <h2 class="news-title">
+                  <?php the_title(); ?>
+                </h2>
+                <h6 class="blog-subtitle-category">
+                  <?php the_category(); ?>
+                </h6>
+                <?php the_excerpt(); ?>
+                <input type="button" href="" class="read-more-blog" value="LER MAIS">
+              </div>
+            </div>
+            <?php
+          $existe_algum = true;
+          }
+        }
+      }
+      if ($existe_algum == false) {
+        ?>
+        <h1 class='not_found'>Nenhum blog encontrado</h1>
+        <?php
+      }
+    }
+    else {
+      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $objeto = new WP_Query(array('category_name' => 'post-blog', 'posts_per_page' => 3, 'paged' => $paged));
 
     if ($objeto->have_posts()):
@@ -83,7 +120,9 @@ get_header();
 
 
 
-    <?php endif; ?>
+    <?php endif; 
+    }
+    ?>
   </div>
 </section>
 
