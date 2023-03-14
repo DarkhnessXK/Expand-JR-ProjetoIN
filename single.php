@@ -28,6 +28,8 @@ wpb_set_post_views(get_the_ID());
           <?php the_content(); ?>
         </div>
 
+        <a href="<?php echo esc_url( get_permalink( get_page_by_path('blog') ) ); ?>" class="back-to-blog-link">Voltar ao Blog</a>
+
       <?php endwhile; ?>
 
     <?php endif; ?>

@@ -62,4 +62,18 @@
     text-align: justify;
 }
 
+.back-to-blog-link{
+    margin-top: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.3rem;
+    border-color: #0076C1;
+    background-color: #0076C1;
+    color: #ffff;
+    width: 9rem;
+}
+
 
