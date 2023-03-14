@@ -8,7 +8,22 @@ get_header();
 
 <section class="section-2-blog">
   <div class="search-bar-blog-div">
-    <input type="search" class="search-bar-blog" placeholder="Buscar">
+    <form action="">
+    <input type="search" class="search-bar-blog" placeholder="Buscar" list='historico'>
+          <datalist id='historico'>
+            <?php
+              $objeto = new WP_Query(array('category_name' => 'post-blog', 'posts_per_page' => 3, 'paged' => $paged));
+              if ($objeto->have_posts()) {
+                while ($objeto->have_posts()){
+                  $objeto->the_post();
+                  echo '<option value="';
+                  echo the_title();
+                  echo '"></option>';
+                } 
+              }
+            ?>
+          </datalist>
+        </form>
     <button type="submit" class="submit-search-blog">
       <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lupa.png'); ?>">
     </button>
@@ -24,11 +39,7 @@ get_header();
 
       while ($objeto->have_posts()):
         $objeto->the_post();
-
-
-
         ?>
-
         <div class="blog-post-div">
           <img src="<?php the_field('image-blog'); ?>" class="blog-image">
           <div class="content-blog">
