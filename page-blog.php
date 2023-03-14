@@ -45,28 +45,31 @@ get_header();
         </div>
 
       <?php endwhile;
-
-      $total_pages = $objeto->max_num_pages;
-
-      if ($total_pages > 1) {
-
-        $current_page = max(1, get_query_var('paged'));
-
-        echo paginate_links(
-          array(
-            'base' => get_pagenum_link(1) . '%_%',
-            'format' => '/page/%#%',
-            'current' => $current_page,
-            'total' => $total_pages,
-            'prev_text' => __('<   '),
-            'next_text' => __('    >'),
-          )
-        );
-      }
-
-
       wp_reset_postdata();
       ?>
+      <div class="pagination-blog-div">
+        <?php
+        $total_pages = $objeto->max_num_pages;
+
+        if ($total_pages > 1) {
+
+          $current_page = max(1, get_query_var('paged'));
+
+          echo paginate_links(
+            array(
+              'base' => get_pagenum_link(1) . '%_%',
+              'format' => '/page/%#%',
+              'current' => $current_page,
+              'total' => $total_pages,
+              'prev_text' => __('<   '),
+              'next_text' => __('    >'),
+            )
+          );
+        }
+        ?>
+      </div>
+
+
 
 
     <?php endif; ?>

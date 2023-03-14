@@ -89,3 +89,19 @@
     cursor: pointer;
 }
 
+.pagination-blog-div{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.pagination-blog-div a,span{
+    padding-right: 1rem;
+}
+
+.pagination-blog-div span{
+    color: #0076C1;
+}
+
