@@ -25,7 +25,7 @@ get_header();
 
       while ($objeto->have_posts()):
         $objeto->the_post();
-
+        $post_id =  get_the_ID(  );
 
 
         ?>
@@ -43,7 +43,7 @@ get_header();
             </h6>
 
             <?php the_excerpt(); ?>
-            <input type="button" href="" class="read-more-blog" value="LER MAIS">
+            <a href="<?php echo get_permalink($post_id); ?>" class="read-more-blog">LER MAIS</a>
           </div>
         </div>
 

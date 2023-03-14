@@ -58,9 +58,19 @@
 }
 
 .blog-image{
+    width: 28rem;
+    height: 20rem;
+    padding-right: 2rem;
+    
+    
+}
+
+.image-blog-div{
     max-width: 28rem;
     max-height: 20rem;
-    padding-right: 2rem;
+    
+    object-fit: cover;
+    
 }
 
 .content-blog{
