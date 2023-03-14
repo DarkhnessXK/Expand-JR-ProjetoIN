@@ -7,6 +7,7 @@ get_header();
 </section>
 <main>
     <section class='main_aside2_section'>
+        <h2 class="titulo_sessao_principal_hidden"> <?php the_field('titulo_sessao_principal') ?> </h2>
         <img src="<?php the_field('imagem_sessao_principal') ?>" alt="">
         <div class='main_aside2_text'>
             <h2> <?php the_field('titulo_sessao_principal') ?> </h2>
@@ -47,6 +48,7 @@ get_header();
     </section>
 
     <section class='main_aside2_section aside2_section'>
+        <h2 class="titulo_sessao_aside2_hidden"> <?php the_field('titulo_sessao_aside2') ?> </h2>
         <img src="<?php the_field('imagem_sessao_aside2') ?>" alt="">
         <div class='main_aside2_text aside2_section_text'>
             <h2> <?php the_field('titulo_sessao_aside2') ?> </h2>

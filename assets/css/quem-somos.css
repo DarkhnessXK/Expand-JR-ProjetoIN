@@ -107,6 +107,14 @@ main {
     height: 371px;
 }
 
+.titulo_sessao_principal_hidden{
+    display: none;
+}
+
+.titulo_sessao_aside2_hidden{
+    display: none;
+}
+
 @media screen and (max-width: 385px) {
     .main_aside2_section {
         padding-top: 7em;
@@ -214,6 +222,18 @@ main {
     
     .main_aside1_right_div p {
         width: 100%;
+    }
+
+    .titulo_sessao_principal_hidden{
+        display: block;
+    }
+
+    .titulo_sessao_aside2_hidden{
+        display: block;
+    }
+
+    .main_aside2_text h2{
+        display: none;
     }
 }
 
