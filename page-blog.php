@@ -7,14 +7,15 @@ get_header();
 </section>
 
 <section class="section-2-blog">
-  <div class="search-bar-blog-div">
-    <input type="search" class="search-bar-blog" placeholder="Buscar">
-    <button type="submit" class="submit-search-blog">
-      <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lupa.png'); ?>">
-    </button>
-  </div>
+
 
   <div class="blog-width-div">
+    <div class="search-bar-blog-div">
+      <input type="search" class="search-bar-blog" placeholder="Buscar">
+      <button type="submit" class="submit-search-blog">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/lupa.png'); ?>">
+      </button>
+    </div>
 
     <?php
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -30,7 +31,9 @@ get_header();
         ?>
 
         <div class="blog-post-div">
-          <img src="<?php the_field('image-blog'); ?>" class="blog-image">
+          <div class="image-blog-div">
+            <img src="<?php the_field('image-blog'); ?>" class="blog-image">
+          </div>
           <div class="content-blog">
             <h2 class="news-title">
               <?php the_title(); ?>
