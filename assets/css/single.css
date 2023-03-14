@@ -3,6 +3,7 @@
     line-height: 25px;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    font-family: 'Roboto', sans-serif;
 }
 .section-1-single{
     font-family: 'Barlow', sans-serif;
@@ -33,7 +34,7 @@
 }
 
 .single-page-blog-image{
-    width: 45rem;
+    width: 40rem;
     height: 20rem;
     padding-right: 2rem;
     
@@ -52,12 +53,13 @@
 
 .single-title{
     font-size: 2rem;
-    padding-top: 0.5rem;
+    padding-top: 1.5rem;
 }
 
 .single-post-content p{
     padding-top: 1.5rem;
     font-size: 1.3rem;
+    text-align: justify;
 }
 
 
