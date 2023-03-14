@@ -47,15 +47,16 @@ main {
     padding-top: 3.5em;
 }
 
-.main_aside2_section > img {
-    /* object-fit: cover;
-    width: 583px;
-    height: 371px; */
-    
-    width: 54%;
-    max-width: 583px;
-    /* align-self: center; */
-    height: 30%;
+.main_aside2_section > div:first-child {
+    width: 300px; 
+    height: 200px; 
+    overflow: hidden;
+}
+
+.main_aside2_section > div:first-child > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .main_aside2_text {
