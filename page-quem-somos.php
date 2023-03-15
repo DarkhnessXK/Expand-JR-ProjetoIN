@@ -9,7 +9,6 @@ get_header();
     <section class='main_aside2_section'>
         <h2 class="titulo_sessao_principal_hidden"> <?php the_field('titulo_sessao_principal') ?> </h2>
         <img src="<?php the_field('imagem_sessao_principal') ?>" alt="">
-            <img src="<?php the_field('imagem_sessao_principal') ?>" alt="">
         
         <div class='main_aside2_text'>
             <h2> <?php the_field('titulo_sessao_principal') ?> </h2>
