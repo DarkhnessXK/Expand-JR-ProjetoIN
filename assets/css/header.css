@@ -75,7 +75,12 @@ header {
     display: none;
     position: absolute;
     top: 57px;
-    left: -32px;
+    left: -42px;
+}
+
+.country-selector.weglot-inline a:hover {
+    text-decoration: none;
+    color: white; 
 }
 
 .gtranslate_wrapper {
