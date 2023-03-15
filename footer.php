@@ -121,7 +121,7 @@
                     <div>
                         <a href="<?php echo get_option('expandjr_instagram'); ?>" target=_blank><img src="<?php echo IMAGES_DIR . '/icon-instagram.png' ?>" alt="Ícone do Instagram"></a>
                         <a href="<?php echo get_option('expandjr_linkedin'); ?>" target=_blank><img src="<?php echo IMAGES_DIR . '/icon-linkedin.png' ?>" alt="Ícone do Linkedin"></a>
-                        <a href="<?php echo get_option('expandjr_email'); ?>" target=_blank><img src="<?php echo IMAGES_DIR . '/icon-email.png' ?>" alt="Ícone do Email"></a>
+                        <a href="<?php echo esc_url( get_permalink( get_page_by_path('contato') ) ); ?>"><img src="<?php echo IMAGES_DIR . '/icon-email.png' ?>" alt="Ícone do Email"></a>
                     </div>
                 </div>
             </div>
