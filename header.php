@@ -32,9 +32,10 @@
                 <div class='lang_div'>
                     <button class='alt_lang' onclick='mostrarLinguas()'>PT</button>
                     <div class='lang_options' onclick='mostrarLinguas()'>
-                        <?php echo do_shortcode('[gtranslate]'); ?>
+                        <div id="weglot_here"></div>
                     </div>
                 </div>
+                
             </div>
 
 
