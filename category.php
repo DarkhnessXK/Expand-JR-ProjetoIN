@@ -17,7 +17,7 @@ get_header();
           <input type="search" name='search_bar_blog' class="search-bar-blog" placeholder="Buscar" list='historico'>
           <datalist id='historico'>
             <?php
-            $objeto = new WP_Query(array('category_name' => 'post-blog', 'posts_per_page' => 3, 'paged' => $paged));
+            $objeto = new WP_Query(array('category_name' => get_queried_object()->slug, 'posts_per_page' => 3, 'paged' => $paged));
             if ($objeto->have_posts()) {
               while ($objeto->have_posts()){
                 $objeto->the_post();
@@ -101,13 +101,18 @@ get_header();
         }
       }
       else {
-        if(have_posts()){
-            while(have_posts()){
-                the_post();
-                $post_id = get_the_ID();
-                ?>
-                <div class="blog-post-div">
-                <?php 
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $objeto = new WP_Query(array('category_name' => get_queried_object()->slug, 'posts_per_page' => 3, 'paged' => $paged));
+
+      if ($objeto->have_posts()):
+
+        while ($objeto->have_posts()):
+          $objeto->the_post();
+          $post_id = get_the_ID();
+
+          ?>
+          <div class="blog-post-div">
+              <?php 
                 $img_src = get_field('image-blog');
                 if($img_src != ""){
                   ?>
@@ -123,24 +128,51 @@ get_header();
                   <?php
                 }
               ?>
-                    <div class="content-blog">
-                    <h2 class="news-title">
-                        <?php the_title(); ?>
-                    </h2>
-                    <h6 class="blog-subtitle-category">
-                        <?php the_category(); ?>
-                    </h6>
-                    <?php the_excerpt(); ?>
-                    <a href="<?php echo get_permalink($post_id); ?>" class="read-more-blog">LER MAIS</a>
-                    </div>
-                </div>
-                <?php
-            }
-        }
-      }
-      ?>
+
+            <div class="content-blog">
+              <h2 class="news-title">
+                <?php the_title(); ?>
+              </h2>
+              <h6 class="blog-subtitle-category">
+                <?php the_category(); ?>
+              </h6>
+
+              <?php the_excerpt(); ?>
+              <a href="<?php echo get_permalink($post_id); ?>" class="read-more-blog">LER MAIS</a>
+            </div>
+          </div>
+
+        <?php endwhile;
+        wp_reset_postdata();
+        ?>
+
     </div>
   </div>
+
+  <div class="pagination-blog-div">
+      <?php
+      $total_pages = $objeto->max_num_pages;
+
+      if ($total_pages > 1) {
+
+        $current_page = max(1, get_query_var('paged'));
+
+        echo paginate_links(
+          array(
+            'base' => get_pagenum_link(1) . '%_%',
+            'format' => '/page/%#%',
+            'current' => $current_page,
+            'total' => $total_pages,
+            'prev_text' => __('<   '),
+            'next_text' => __('    >'),
+          )
+        );
+      }
+      ?>
+  </div>
+    <?php endif; 
+      }
+    ?>
 </section>
 
 <?php $cel = get_option('zap_cadastro_telefone'); ?>

@@ -86,7 +86,7 @@ get_header();
                     <?php the_category(); ?>
                   </h6>
                   <?php the_excerpt(); ?>
-                  <input type="button" href="" class="read-more-blog" value="LER MAIS">
+                  <a href="<?php echo get_permalink(); ?>" class="read-more-blog">LER MAIS</a>
                 </div>
               </div>
               <?php
