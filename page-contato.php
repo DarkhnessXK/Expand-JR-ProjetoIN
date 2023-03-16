@@ -112,21 +112,21 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
 
         <div class='div_contact_info'>
           <div class='c_phone_div'>
-            <div>
+            <div class="div-border-phone">
               <img src="<?php echo IMAGES_DIR . '/icon-phone.png'; ?>" alt="Ícone do telefone">
             </div>
             <p><?php echo $telefone; ?></p>
           </div>
 
           <div class='c_email_div'>
-            <div>
+            <div class="div-border-email">
               <img src="<?php echo IMAGES_DIR . '/icon-email2.png'; ?>" alt="Ícone do email">
             </div>
             <p><?php echo $email; ?></p>
           </div>
 
           <div class='c_address_div'>
-            <div>
+            <div class="div-border-adress">
               <img src="<?php echo IMAGES_DIR . '/icon-location.png'; ?>" alt="Ícone da localização">
             </div>
             <p><?php echo $endereco2; ?></p>
@@ -135,8 +135,8 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
         
 
         <div class="rotulo">
-          <div style="overflow:hidden;width: 250px;position: relative;">
-          <iframe width="350" height="300" src="https://maps.google.com/maps?width=250&amp;height=168&amp;hl=en&amp;q=<?php echo $endereco; ?>;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+          <div style="overflow:hidden;position: relative;" class="div-iframe">
+          <iframe width="500" height="380" src="https://maps.google.com/maps?width=250&amp;height=168&amp;hl=en&amp;q=<?php echo $endereco; ?>;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
           </iframe>
 
           <div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by 
@@ -150,7 +150,7 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
 
     
     <div class="bloco2">
-      <h1>Fale Conosco</h1>
+      <h1>Formulario de Contato</h1>
       <form action='' method="POST">
         <div class="playlist">
           <div class='answer_div'>
