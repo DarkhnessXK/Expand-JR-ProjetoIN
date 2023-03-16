@@ -72,6 +72,7 @@
                 </div>
             </div>
 
+            <iframe name="dummyfooter" id="dummyfooter" style="display: none;"></iframe>
             <div class='footer_bottom'>
                 <div>
                     <?php the_custom_logo(); ?>
@@ -90,7 +91,9 @@
                     <input class="tnp-submit" type="submit" value="Cadastrar" >
                 </form> -->
 
-                <form class='footer_form' method="post" action="http://expandjr.local/?na=s">
+                <form class='footer_form' method="post" action="http://expandjr.local/?na=s" target="dummyfooter" onsubmit="
+                alert('Cadastro realizado com sucesso!');
+                ">
                     <input type="hidden" name="nlang" value="">
                     <label for="tnp-2">Email</label>
                     <input class="footer_email" type="email" name="ne" id="tnp-2" value="" placeholder='Email' required>

@@ -62,9 +62,22 @@ get_header();
             if (mb_strpos(strtolower(the_title('', '', false)), strtolower($string_searched)) !== false) {
               ?>
               <div class="blog-post-div">
-                <div class="image-blog-div">
-                  <img src="<?php the_field('image-blog'); ?>" class="blog-image">
-                </div>
+              <?php 
+                $img_src = get_field('image-blog');
+                if($img_src != ""){
+                  ?>
+                  <div class="image-blog-div">
+                  <img src="<?php echo $img_src; ?>" class="blog-image">
+                  </div>
+                  <?php
+                }else{
+                  ?>
+                  <div class="image-blog-div">
+                  <img src="<?php echo IMAGES_DIR . '/default-image.png' ?>" class="blog-image">
+                  </div>
+                  <?php
+                }
+              ?>
                 <div class="content-blog">
                   <h2 class="news-title">
                     <?php the_title(); ?>
@@ -94,9 +107,22 @@ get_header();
                 $post_id = get_the_ID();
                 ?>
                 <div class="blog-post-div">
-                    <div class="image-blog-div">
-                        <img src="<?php the_field('image-blog'); ?>" class="blog-image">
-                    </div>
+                <?php 
+                $img_src = get_field('image-blog');
+                if($img_src != ""){
+                  ?>
+                  <div class="image-blog-div">
+                  <img src="<?php echo $img_src; ?>" class="blog-image">
+                  </div>
+                  <?php
+                }else{
+                  ?>
+                  <div class="image-blog-div">
+                  <img src="<?php echo IMAGES_DIR . '/default-image.png' ?>" class="blog-image">
+                  </div>
+                  <?php
+                }
+              ?>
                     <div class="content-blog">
                     <h2 class="news-title">
                         <?php the_title(); ?>

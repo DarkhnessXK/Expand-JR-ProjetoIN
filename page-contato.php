@@ -8,7 +8,148 @@ $cel = get_option('zap_cadastro_telefone');
 $endereco_completo = get_option('enjr_cadastro_telefone')  . '</br>' .get_option('enjr_cadastro_email') . '</br>' . get_option('enjr_cadastro_endereco');
 $endereco = urlencode(get_option('enjr_cadastro_endereco'));
 
+if (isset($_POST['submit'])) {
+  $to = $email;
+  $subject = 'Novo contato do site Expand Jr.';
 
+  /*Armazenando as informações do formulário nas variáveis*/
+  /*Inputs de texto*/
+  $sender_name = $_POST['contact_name'];
+  $sender_email = $_POST['contact_email'];
+  if ( strlen($_POST['contact_telephone']) != 0) {
+    $sender_telephone = $_POST['contact_telephone'];
+  }
+  if ( strlen($_POST['contact_city']) != 0 ) {
+    $sender_city = $_POST['contact_city'];
+  }
+  $sender_message = $_POST['contact_message'];
+  /*Checkboxes*/
+  if (isset($_POST['check_option1'])) {
+    $check_option1 = get_field('acf-checkbox1');
+  }
+  if (isset($_POST['check_option2'])) {
+    $check_option2 = get_field('acf-checkbox2');
+  }
+  if (isset($_POST['check_option3'])) {
+    $check_option3 = get_field('acf-checkbox3');
+  }
+  if (isset($_POST['check_option4'])) {
+    $check_option4 = get_field('acf-checkbox4');
+  }
+  if (isset($_POST['check_option5'])) {
+    $check_option5 = get_field('acf-checkbox5');
+  }
+  if (isset($_POST['check_option6'])) {
+    $check_option6 = get_field('acf-checkbox6');
+  }
+  if (isset($_POST['check_option7'])) {
+    $check_option7 = get_field('acf-checkbox7');
+  }
+  if (isset($_POST['check_option8'])) {
+    $check_option8 = get_field('acf-checkbox8');
+  }
+  if (isset($_POST['check_option9'])) {
+    $check_option9 = get_field('acf-checkbox9');
+  }
+  if (isset($_POST['check_option10'])) {
+    $check_option10 = get_field('acf-checkbox10');
+  }
+  /*Radios*/
+  if (isset($_POST['radio_option1'])) {
+    $radio_option = $_POST['radio_option1'];
+  }
+  else {
+    if (isset($_POST['radio_option2'])) {
+      $radio_option = $_POST['radio_option2'];
+    }
+    else {
+      if (isset($_POST['radio_option3'])) {
+        $radio_option = $_POST['radio_option3'];
+      }
+      else {
+        if (isset($_POST['radio_option4'])) {
+          $radio_option = $_POST['radio_option4'];
+        }
+        else {
+          if (isset($_POST['radio_option5'])) {
+            $radio_option = $_POST['radio_option5'];
+          }
+          else {
+            if (isset($_POST['radio_option6'])) {
+              $radio_option = $_POST['radio_option6'];
+            }
+            else {
+              if (isset($_POST['radio_option7'])) {
+                $radio_option = $_POST['radio_option7'];
+              }
+              else {
+                if (isset($_POST['radio_option8'])) {
+                  $radio_option = $_POST['radio_option8'];
+                }
+                else {
+                  if (isset($_POST['radio_option9'])) {
+                    $radio_option = $_POST['radio_option9'];
+                  }
+                  else {
+                    if (isset($_POST['radio_option10'])) {
+                      $radio_option = $_POST['radio_option10'];
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /*Adicionando todas as informações disponíveis no corpo do email*/
+  $message = "INFORMAÇÕES DO REMETENTE: \n\n";
+  $message .= 'Nome: ' . $sender_name . "\n";
+  $message .= 'Email: ' . $sender_email . "\n";
+  if (isset($sender_telephone)) {
+    $message .= 'Telefone: ' . $sender_telephone . "\n";
+  }
+  if (isset($sender_city)) {
+    $message .= 'Cidade: '. $sender_city . "\n";
+  }
+  $message .= 'Principal necessidade: ' . $sender_message . "\n";
+  $message .= 'Serviços que despertam mais interesse: ' . "\n";
+  if (isset($check_option1)) {
+    $message .= '   - ' . $check_option1 . "\n";
+  }
+  if (isset($check_option2)) {
+    $message .= '   - ' . $check_option2 . "\n";
+  }
+  if (isset($check_option3)) {
+    $message .= '   - ' . $check_option3 . "\n";
+  }
+  if (isset($check_option4)) {
+    $message .= '   - ' . $check_option4 . "\n";
+  }
+  if (isset($check_option5)) {
+    $message .= '   - ' . $check_option5 . "\n";
+  }
+  if (isset($check_option6)) {
+    $message .= '   - ' . $check_option6 . "\n";
+  }
+  if (isset($check_option7)) {
+    $message .= '   - ' . $check_option7 . "\n";
+  }
+  if (isset($check_option8)) {
+    $message .= '   - ' . $check_option8 . "\n";
+  }
+  if (isset($check_option9)) {
+    $message .= '   - ' . $check_option9 . "\n";
+  }
+  if (isset($check_option10)) {
+    $message .= '   - ' . $check_option10 . "\n";
+  }
+  $message .= 'Como chegou até nós: ' . $radio_option;
+  
+  wp_mail($to, $subject, $message);
+}
 
 
 ?>
@@ -112,21 +253,21 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
 
         <div class='div_contact_info'>
           <div class='c_phone_div'>
-            <div>
+            <div class="div-border-phone">
               <img src="<?php echo IMAGES_DIR . '/icon-phone.png'; ?>" alt="Ícone do telefone">
             </div>
             <p><?php echo $telefone; ?></p>
           </div>
 
           <div class='c_email_div'>
-            <div>
+            <div class="div-border-email">
               <img src="<?php echo IMAGES_DIR . '/icon-email2.png'; ?>" alt="Ícone do email">
             </div>
             <p><?php echo $email; ?></p>
           </div>
 
           <div class='c_address_div'>
-            <div>
+            <div class="div-border-adress">
               <img src="<?php echo IMAGES_DIR . '/icon-location.png'; ?>" alt="Ícone da localização">
             </div>
             <p><?php echo $endereco2; ?></p>
@@ -135,8 +276,8 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
         
 
         <div class="rotulo">
-          <div style="overflow:hidden;width: 250px;position: relative;">
-          <iframe width="350" height="300" src="https://maps.google.com/maps?width=250&amp;height=168&amp;hl=en&amp;q=<?php echo $endereco; ?>;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+          <div style="overflow:hidden;position: relative;" class="div-iframe">
+          <iframe width="500" height="380" src="https://maps.google.com/maps?width=250&amp;height=168&amp;hl=en&amp;q=<?php echo $endereco; ?>;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
           </iframe>
 
           <div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by 
@@ -149,103 +290,267 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
   </div>
 
     
-    <div class="bloco2">
-      <div class="extra">
-      <h1>Fale Conosco</h1>
-      <form action='' method="POST">
-        <div class="playlist">
-          <div class='answer_div'>
-            <label for='contact_name'>Nome Completo</label>
+  <div class="bloco2">
+       <h1>Formulario de Contato</h1>
+         <form class='contact-page-form' action='' method="POST">
+          <div class='input-div'>
+            <label for="name">Nome Completo</label>
             <input class="cor" type="text" name="contact_name" id="contact_name" placeholder='Nome'>
-          </div>  
-          <div class='answer_div'>
-            <label for='contact_email'>Email</label>
+          </div>
+          <div class='input-div'>
+            <label for="email">Email</label>
             <input class="cor" type="email" name="contact_email" id="contact_email" placeholder='Email' required>
           </div>
-          <div class='answer_div'>
-            <label for='contact_telephone'>Telefone</label>
+          <div class='input-div'>
+            <label for="telephone">Telefone</label>
             <input class="cor" type="text" id="contact_telephone" name="contact_telephone" placeholder="Ex.: (xx) xxxxx-xxxx">
           </div>
-          <div class='answer_div'>
-            <label for='contact_city'>Cidade</label>
+          <div class='input-div'>
+            <label for="city">Cidade</label>
             <input class="cor" type="text" id="contact_city" name="contact_city" placeholder="Cidade">
           </div>
-          <div class='answer_div'>
-            <label for='contact_message'>Qual a sua principal necessidade?</label>
+          <div class='input-div'>
+            <label for="message">Qual a sua principal necessidade?</label>
             <textarea class="cor" type="text" id="contact_message" name="contact_message" placeholder="Conte para nós a sua necessidade" required></textarea>
           </div>
-
-        <div class="questionary">
-          <legend>Algum dos nossos serviços te disperta mais interesse?</legend>
-          <div class="option1">
-            <div>
-              <input type="checkbox" name="Dupla Cidadania Portuguesa" id='como chegou até nós'>
-              <label>Dupla Cidadania Portuguesa</label>
-            </div>
-            <div>
-              <input type="checkbox" name="Assessoria para emissão de Passaporte Brasileiro" id='como chegou até nós'>
-              <label>Assessoria para emissão de Passaporte Brasileiro</label>
-            </div>
-            <div>
-              <input type="checkbox" name="Análise Burocrática" id='como chegou até nós'>
-              <label>Análise Burocrática</label>
-            </div>
-            <div>
-              <input type="checkbox" name="Estudo e Análise do Mercado" id='como chegou até nós'>
-              <label>Estudo e Análise do Mercado</label>
-            </div>
-            <div>
-              <input type="checkbox" name="Planejamento Logístico" id='como chegou até nós'>
-              <label>Planejamento Logístico</label>
-            </div>
-            <div>
-              <input type="checkbox" name="Prospecção Internacional" id='como chegou até nós'>
-              <label>Prospecção Internacional</label>
+          <div class="questionary">
+            <p>Algum dos nossos serviços te disperta mais interesse?</p>
+            <div class="option1">
+              <?php
+              if ( strlen(get_field('acf-checkbox1')) != 0 ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option1" id='check_options1'>
+                  <label for='check_options1'>
+                    <?php echo the_field('acf-checkbox1'); ?>
+                  </label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox2')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option2" id='check_options2'>
+                  <label for='check_options2'><?php echo the_field('acf-checkbox2'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox3')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option3" id='check_options3'>
+                  <label for='check_options3'><?php echo the_field('acf-checkbox3'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox4')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option4" id='check_options4'>
+                  <label for='check_options4'><?php echo the_field('acf-checkbox4'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox5')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option5" id='check_options5'>
+                  <label for='check_options5'><?php echo the_field('acf-checkbox5'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox6')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option6" id='check_options6'>
+                  <label for='check_options6'><?php echo the_field('acf-checkbox6'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox7')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option7" id='check_options7'>
+                  <label for='check_options7'><?php echo the_field('acf-checkbox7'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox8')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option8" id='check_options8'>
+                  <label for='check_options8'><?php echo the_field('acf-checkbox8'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox9')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option9" id='check_options9'>
+                  <label for='check_options9'><?php echo the_field('acf-checkbox9'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox10')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option10" id='check_options10'>
+                  <label for='check_options10'><?php echo the_field('acf-checkbox10'); ?></label>
+                </div>
+                <?php
+              }
+              ?>
+              <!-- <div>
+                <input type="checkbox" name="check_option1" id='como chegou até nós'>
+                <label>Dupla Cidadania Portuguesa</label>
+               </div>
+              <div>
+                <input type="checkbox" name="check_option2" id='como chegou até nós'>
+                <label>Assessoria para emissão de Passaporte Brasileiro</label>
+              </div>
+              <div>
+                <input type="checkbox" name="check_option3" id='como chegou até nós'>
+                <label>Análise Burocrática</label>
+              </div>
+              <div>
+                <input type="checkbox" name="check_option4" id='como chegou até nós'>
+                <label>Estudo e Análise do Mercado</label>
+              </div>
+              <div>
+                <input type="checkbox" name="check_option5" id='como chegou até nós'>
+                <label>Planejamento Logístico</label>
+              </div>
+              <div>
+                <input type="checkbox" name="check_option6" id='como chegou até nós'>
+                <label>Prospecção Internacional</label>
+              </div> -->
             </div>
           </div>
-        </div>
-
-        <div class="option_questionary">
-          <legend>Como chegou até nós?</legend>
-          <div class="option2">
-            <div>
-              <input type="radio" name="como_chegou_até_nós" value="internet"/>
-              <label>Pesquisando na como chegou até nós</label>
+          <div class="option_questionary">
+            <p>Como chegou até nós?</p>
+            <div class="option2">
+              <?php
+              if (strlen(get_field('acf-radio1')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option1" value="<?php echo the_field('acf-radio1'); ?>"/>
+                  <label><?php echo the_field('acf-radio1'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio2')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option2" value="<?php echo the_field('acf-radio2'); ?>"/>
+                  <label><?php echo the_field('acf-radio2'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio3')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option3" value="<?php echo the_field('acf-radio3'); ?>"/>
+                  <label><?php echo the_field('acf-radio3'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio4')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option4" value="<?php echo the_field('acf-radio4'); ?>"/>
+                  <label><?php echo the_field('acf-radio4'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio5')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option5" value="<?php echo the_field('acf-radio5'); ?>"/>
+                  <label><?php echo the_field('acf-radio5'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio6')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option6" value="<?php echo the_field('acf-radio6'); ?>"/>
+                  <label><?php echo the_field('acf-radio6'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio7')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option7" value="<?php echo the_field('acf-radio7'); ?>"/>
+                  <label><?php echo the_field('acf-radio7'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio8')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option8" value="<?php echo the_field('acf-radio8'); ?>"/>
+                  <label><?php echo the_field('acf-radio8'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio9')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option9" value="<?php echo the_field('acf-radio9'); ?>"/>
+                  <label><?php echo the_field('acf-radio9'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio10')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option10" value="<?php echo the_field('acf-radio10'); ?>"/>
+                  <label><?php echo the_field('acf-radio10'); ?></label>
+                </div>
+                <?php
+              }
+              ?>
+              
+              <!-- <div>
+                <input type="radio" name="radio_option1" value="Pesquisando"/>
+                <label>Pesquisando</label>
+              </div>
+              <div>
+                <input type="radio" name="radio_option2" value="Instagram"/>
+                <label>Instagram</label>
+              </div>
+              <div>
+                <input type="radio" name="radio_option3" value="Linkedin"/>
+                <label>Linkedin</label>
+              </div>
+              <div>
+                <input type="radio" name="radio_option4" value="Me indicaram voçês"/>
+                <label>Me indicaram voçês</label>
+              </div>
+              <div>
+                <input type="radio" name="radio_option5" value="Evento"/>
+                <label>Evento</label>
+              </div>
+              <div>
+                <input type="radio" name="radio_option6" value="Recebi um e-mail de voçês"/>
+                <label>Recebi um e-mail de voçês</label>
+              </div>
+              <div>
+                <input type="radio" name="radio_option7" value="Outros"/>
+                <label>Outros</label>
+              </div> -->
             </div>
-            <div>
-              <input type="radio" name="como_chegou_até_nós" value="instagram"/>
-              <label>Instagram</label>
-            </div>
-            <div>
-              <input type="radio" name="como_chegou_até_nós" value="linkedin"/>
-              <label>Linkedin</label>
-            </div>
-            <div>
-              <input type="radio" name="como_chegou_até_nós" value="indicacao"/>
-              <label>Me indicaram voçês</label>
-            </div>
-            <div>
-              <input type="radio" name="como_chegou_até_nós" value="evento"/>
-              <label>Evento</label>
-            </div>
-            <div>
-              <input type="radio" name="como_chegou_até_nós" value="email"/>
-              <label>Recebi um e-mail de voçês</label>
-            </div>
-            <div>
-              <input type="radio" name="como_chegou_até_nós" value="outros"/>
-              <label>Outros</label>
-            </div>
-        </div>
-        <div class="yes_privacity">
-          <input type="checkbox" name="politica_priv" id='politica_priv' required>
-          <label for='politica_priv'>
-            <a target="_blank" href="http://expandjr.local/privacy-policy/">Li e aceito as politicas de privacidade e termos de uso</a>
-          </label>
-        </div>
-        <input class="botao" name='submit' type="submit" value="Enviar">
-      </form>
-    </div>
+          </div>
+          <div class="yes_privacity">
+            <input type="checkbox" name="politica_priv" id='politica_priv' required>
+            <label for='politica_priv'>
+              <a target="_blank" href="http://expandjr.local/privacy-policy/">Li e aceito as politicas de privacidade e termos de uso</a>
+            </label>
+          </div>
+          <input class='botao' name='submit' type="submit" value="Enviar">
+        </form>
+</div>
       </div>
    </div>
   </div>
