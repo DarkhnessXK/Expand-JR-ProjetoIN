@@ -153,13 +153,14 @@ window.onload = () => {
         } 
     }
 
-    if (window.location.href.indexOf('/en') != -1) {
+    /*Change PT/EN text when chose the language WEGLOT */
+    /* if (window.location.href.indexOf('/en') != -1) {
         let altLang = document.querySelector('.alt_lang')
         altLang.innerText = 'EN'
-    }
+    } */
 
     /*Change PT/EN/ES text when choosing the language GTRANSLATE*/
-    /* var lang_options = document.querySelector('.lang_options')
+    var lang_options = document.querySelector('.lang_options')
     lang_options.addEventListener('click', (e)=>{
         let alt_lang = document.querySelectorAll('.alt_lang')
         if (e.target.alt == 'en') {
@@ -184,7 +185,7 @@ window.onload = () => {
                 }
             }
         }
-    }) */
+    })
 }
 
 window.addEventListener('beforeunload', () => {

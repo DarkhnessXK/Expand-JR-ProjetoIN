@@ -32,7 +32,8 @@
                 <div class='lang_div'>
                     <button class='alt_lang' onclick='mostrarLinguas()'>PT</button>
                     <div class='lang_options' onclick='mostrarLinguas()'>
-                        <div id="weglot_here"></div>
+                        <!-- <div id="weglot_here"></div> -->
+                        <?php echo do_shortcode('[gtranslate]'); ?> 
                     </div>
                 </div>
                 
@@ -45,7 +46,8 @@
                     <div class='lang_db'></div>
                     <button class='alt_lang' onclick='mostrarLinguas()'>PT</button>
                     <div class='lang_options' onclick='mostrarLinguas()'>
-                        <div id="weglot_here"></div>
+                        <!-- <div id="weglot_here"></div> -->
+                        <?php echo do_shortcode('[gtranslate]'); ?>
                     </div>
                 </div>
                 <img class='hamburger_menu' onclick='mostrarMenu()' src="<?php echo IMAGES_DIR . '/icon-menu-hamburger.png' ?>" alt="Ícone do menu hamburguer">
