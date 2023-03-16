@@ -9,10 +9,7 @@ $endereco_completo = get_option('enjr_cadastro_telefone')  . '</br>' .get_option
 $endereco = urlencode(get_option('enjr_cadastro_endereco'));
 
 
-$to = $email;
-$subject = 'Teste de email';
-$message = 'isso é uma mensagem de teste';
-wp_mail($to, $subject, $message);
+
 
 ?>
 
@@ -75,6 +72,7 @@ wp_mail($to, $subject, $message);
         </div>
       </div>
     </div>
+    <div class='text_journey'>
     <p class='client_journey_text first_text'>
       Primeiro Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores illum quis error odio, corrupti doloribus iure voluptas temporibus ad reiciendis doloremque officia vero? Temporibus optio obcaecati itaque dolorum accusantium consequatur.
       Laudantium beatae voluptas esse corporis vero error repellat nostrum consequuntur ipsa. Corporis quidem laborum beatae molestias enim necessitatibus numquam natus delectus omnis, aspernatur fuga accusamus earum unde, aperiam saepe cumque!
@@ -100,6 +98,8 @@ wp_mail($to, $subject, $message);
       Laborum doloremque qui impedit recusandae sunt fuga delectus possimus excepturi a distinctio maiores consequatur porro eveniet odit ab, est quisquam illo dicta magnam. Ipsum cum hic quod laboriosam, tempore accusantium!
       Sequi quas veniam quae aliquam, laudantium totam minima, soluta a rem sit ipsam perspiciatis, commodi corporis adipisci suscipit. Vero porro dicta mollitia a veritatis qui minus delectus amet tempora in?
     </p>
+    </div>
+    
 </section>
 
 
@@ -148,72 +148,103 @@ wp_mail($to, $subject, $message);
       </div>
   </div>
 
+    
     <div class="bloco2">
-       <h1>Fale Conosco</h1>
-         <div class="parent">
-          
-          <form action='' method="POST">
-            <label for="name">Nome Completo</label>
+      <h1>Fale Conosco</h1>
+      <form action='' method="POST">
+        <div class="playlist">
+          <div class='answer_div'>
+            <label for='contact_name'>Nome Completo</label>
             <input class="cor" type="text" name="contact_name" id="contact_name" placeholder='Nome'>
-
-            <label for="email">Email</label>
+          </div>  
+          <div class='answer_div'>
+            <label for='contact_email'>Email</label>
             <input class="cor" type="email" name="contact_email" id="contact_email" placeholder='Email' required>
-
-
-            <label for="telephone">Telefone</label>
+          </div>
+          <div class='answer_div'>
+            <label for='contact_telephone'>Telefone</label>
             <input class="cor" type="text" id="contact_telephone" name="contact_telephone" placeholder="Ex.: (xx) xxxxx-xxxx">
-
-            <label for="city">Cidade</label>
+          </div>
+          <div class='answer_div'>
+            <label for='contact_city'>Cidade</label>
             <input class="cor" type="text" id="contact_city" name="contact_city" placeholder="Cidade">
-
-
-            <label for="message">Qual a sua principal necessidade?</label>
+          </div>
+          <div class='answer_div'>
+            <label for='contact_message'>Qual a sua principal necessidade?</label>
             <input class="cor" type="text" id="contact_message" name="contact_message" placeholder="Conte para nós a sua necessidade" required>
+          </div>
 
-            <div class="questionary">
-              <legend>Algum dos nossos serviços te disperta mais interesse?</legend>
-              <div class="option1">
+        <div class="questionary">
+          <legend>Algum dos nossos serviços te disperta mais interesse?</legend>
+          <div class="option1">
+            <div>
               <input type="checkbox" name="Dupla Cidadania Portuguesa" id='como chegou até nós'>
-              <label>Dupla Cidadania Portuguesa</label><br/>
-
+              <label>Dupla Cidadania Portuguesa</label>
+            </div>
+            <div>
               <input type="checkbox" name="Assessoria para emissão de Passaporte Brasileiro" id='como chegou até nós'>
-              <label>Assessoria para emissão de Passaporte Brasileiro</label><br/>
-
+              <label>Assessoria para emissão de Passaporte Brasileiro</label>
+            </div>
+            <div>
               <input type="checkbox" name="Análise Burocrática" id='como chegou até nós'>
-              <label>Análise Burocrática</label><br/>
-
+              <label>Análise Burocrática</label>
+            </div>
+            <div>
               <input type="checkbox" name="Estudo e Análise do Mercado" id='como chegou até nós'>
-              <label>Estudo e Análise do Mercado</label><br/>
-
+              <label>Estudo e Análise do Mercado</label>
+            </div>
+            <div>
               <input type="checkbox" name="Planejamento Logístico" id='como chegou até nós'>
-              <label>Planejamento Logístico</label><br/>
-
+              <label>Planejamento Logístico</label>
+            </div>
+            <div>
               <input type="checkbox" name="Prospecção Internacional" id='como chegou até nós'>
               <label>Prospecção Internacional</label>
             </div>
-            </div>
+          </div>
+        </div>
 
-            <div class="option_questionary">
-              <legend>Como chegou até nós?</legend>
-              <div class="option2">
-              <input type="radio" name="como_chegou_até_nós" value="internet"/><label>Pesquisando na como chegou até nós</label><br/>
-              <input type="radio" name="como_chegou_até_nós" value="instagram"/><label>Instagram</label><br/>
-              <input type="radio" name="como_chegou_até_nós" value="linkedin"/><label>Linkedin</label><br/>
-              <input type="radio" name="como_chegou_até_nós" value="indicacao"/><label>Me indicaram voçês</label><br/>
-              <input type="radio" name="como_chegou_até_nós" value="evento"/><label>Evento</label><br/>
-              <input type="radio" name="como_chegou_até_nós" value="email"/><label>Recebi um e-mail de voçês</label><br/>
-              <input type="radio" name="como_chegou_até_nós" value="outros"/><label>Outros</label>
+        <div class="option_questionary">
+          <legend>Como chegou até nós?</legend>
+          <div class="option2">
+            <div>
+              <input type="radio" name="como_chegou_até_nós" value="internet"/>
+              <label>Pesquisando na como chegou até nós</label>
             </div>
-              </div>
-            <div class="yes_privacity">
-              <input type="checkbox" name="politica_priv" id='politica_priv' required>
-              <label for='politica_priv'>
-                <a target="_blank" href="http://expandjr.local/privacy-policy/">Li e aceito as politicas de privacidade e termos de uso</a>
-              </label>
+            <div>
+              <input type="radio" name="como_chegou_até_nós" value="instagram"/>
+              <label>Instagram</label>
             </div>
-            <input name='submit' type="submit" value="Enviar">
-          </form>
-</div>
+            <div>
+              <input type="radio" name="como_chegou_até_nós" value="linkedin"/>
+              <label>Linkedin</label>
+            </div>
+            <div>
+              <input type="radio" name="como_chegou_até_nós" value="indicacao"/>
+              <label>Me indicaram voçês</label>
+            </div>
+            <div>
+              <input type="radio" name="como_chegou_até_nós" value="evento"/>
+              <label>Evento</label>
+            </div>
+            <div>
+              <input type="radio" name="como_chegou_até_nós" value="email"/>
+              <label>Recebi um e-mail de voçês</label>
+            </div>
+            <div>
+              <input type="radio" name="como_chegou_até_nós" value="outros"/>
+              <label>Outros</label>
+            </div>
+        </div>
+        <div class="yes_privacity">
+          <input type="checkbox" name="politica_priv" id='politica_priv' required>
+          <label for='politica_priv'>
+            <a target="_blank" href="http://expandjr.local/privacy-policy/">Li e aceito as politicas de privacidade e termos de uso</a>
+          </label>
+        </div>
+        <input class="botao" name='submit' type="submit" value="Enviar">
+      </form>
+    </div>
       </div>
    </div>
   </div>

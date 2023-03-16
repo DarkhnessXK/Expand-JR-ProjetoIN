@@ -60,8 +60,3 @@
             
         </nav>
     </header>
-    <div class='parent'>
-        <a href="#" title='child-1'></a>
-        <a href="#" title='child-2'></a>
-        <a href="#" title='child-3'></a>
-    </div>

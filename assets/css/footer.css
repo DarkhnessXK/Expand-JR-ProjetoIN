@@ -44,6 +44,12 @@ footer > div:nth-child(1) {
     font-family: 'Barlow', sans-serif;
     font-size: 18px;
     font-weight: 500;
+    transition: transform .1s ease;
+}
+
+.footer_columns > div > a:hover, .links_column > div > p:hover {
+    color: #ffffff;
+    transform: translateX(4%) scale(1.09);
 }
 
 .footer_columns > div > p {
@@ -117,6 +123,12 @@ footer > div:nth-child(1) {
     width: 100px;
     height: 30px;
     cursor: pointer;
+}
+
+.tnp-submit:hover {
+    background-color: rgb(214, 214, 214);
+    outline: none;
+    border: none;
 }
 
 .input_hidden {
