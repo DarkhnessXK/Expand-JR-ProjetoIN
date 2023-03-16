@@ -42,6 +42,7 @@
     border: 1px solid grey;
     border-right: none;
     padding: 5px;
+    width: 15em;
 }
 
 .search-bar-blog:focus{
@@ -146,6 +147,7 @@
     justify-content: space-between;
     flex-direction: row-reverse;
     padding: 3em 5em;
+    gap: 1.5em;
 }
 
 .search-bar-form{
@@ -179,7 +181,7 @@
     background: transparent url(../images/vector.png) no-repeat;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 982px) {
     .blog-container{
         flex-direction: column;
         padding: 1em 2em;
@@ -211,3 +213,4 @@
         width: 100%;
     }
 }
+    
