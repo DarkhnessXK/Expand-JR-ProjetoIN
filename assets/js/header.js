@@ -154,10 +154,37 @@ window.onload = () => {
     }
 
     if (window.location.href.indexOf('/en') != -1) {
-        console.log('entrei')
         let altLang = document.querySelector('.alt_lang')
         altLang.innerText = 'EN'
     }
+
+    /*Change PT/EN/ES text when choosing the language GTRANSLATE*/
+    /* var lang_options = document.querySelector('.lang_options')
+    lang_options.addEventListener('click', (e)=>{
+        let alt_lang = document.querySelectorAll('.alt_lang')
+        if (e.target.alt == 'en') {
+            alt_lang[0].innerText = 'EN'
+            alt_lang[1].innerText = 'EN'
+            setCookie('linguaAtual', 'en')
+        }
+        else {
+            if (e.target.alt == 'pt') {
+                alt_lang[0].innerText = 'PT'
+                alt_lang[1].innerText = 'PT'
+                setCookie('linguaAtual', 'pt')
+            }
+            else {
+                if (e.target.alt == 'es') {
+                    alt_lang[0].innerText = 'ES'
+                    alt_lang[1].innerText = 'ES'
+                    setCookie('linguaAtual', 'es')
+
+                    let section1_h1 = document.querySelector('.section-1-home-title')
+                    section1_h1.innerText = 'Expande tus horizontes'
+                }
+            }
+        }
+    }) */
 }
 
 window.addEventListener('beforeunload', () => {
