@@ -196,8 +196,8 @@ get_header();
         <?php endif ?>
             </div>
         <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle">
-            <div class="w3-left w3-hover-text-khaki" id="left-arrow2">&#10094;</div>
-            <div class="w3-right w3-hover-text-khaki" id="right-arrow2">&#10095;</div>
+            <div class="w3-left w3-hover-text-khaki left-arrow-bottom" id="left-arrow2">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki right-arrow-bottom" id="right-arrow2">&#10095;</div>
         </div>
     </div>
 </section>
