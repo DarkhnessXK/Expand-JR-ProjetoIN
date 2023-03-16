@@ -45,15 +45,18 @@
                     <div class='lang_db'></div>
                     <button class='alt_lang' onclick='mostrarLinguas()'>PT</button>
                     <div class='lang_options' onclick='mostrarLinguas()'>
-                        <?php echo do_shortcode('[gtranslate]'); ?>
+                        <div id="weglot_here"></div>
                     </div>
                 </div>
                 <img class='hamburger_menu' onclick='mostrarMenu()' src="<?php echo IMAGES_DIR . '/icon-menu-hamburger.png' ?>" alt="Ícone do menu hamburguer">
                 <img class='x_menu' onclick='mostrarMenu()' src="<?php echo IMAGES_DIR . '/icon-x.png' ?>" alt="Ícone do X">
                 <ul class='menu_list' onclick='mostrarMenu()'>
                     <li><a href="<?php echo esc_url( get_permalink( get_page_by_path('quem-somos') ) ); ?>">Quem Somos</a></li>
+                    <div class="services_divider"></div>
                     <li id='li_services' onclick='irAteServicos()'>Serviços</li>
+                    <div class="services_divider"></div>
                     <li><a href="<?php echo esc_url( get_permalink( get_page_by_path('blog') ) ); ?>">Blog</a></li>
+                    <div class="services_divider"></div>
                     <li><a href="<?php echo esc_url( get_permalink( get_page_by_path('contato') ) ); ?>">Contato</a></li>
                 </ul>
             </div>

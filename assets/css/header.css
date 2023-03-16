@@ -170,6 +170,14 @@ header {
     list-style: none;
 }
 
+.menu_list li {
+    width: 100%;
+}
+
+.menu_list #li_services {
+    padding-left: 4.2rem;
+}
+
 .hidden {
     display: none;
 }
