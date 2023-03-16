@@ -249,7 +249,7 @@ if (isset($_POST['submit'])) {
 
     
   <div class="bloco2">
-       <h1>Fale Conosco</h1>
+       <h1>Formulario de Contato</h1>
          <form class='contact-page-form' action='' method="POST">
           <div class='input-div'>
             <label for="name">Nome Completo</label>
