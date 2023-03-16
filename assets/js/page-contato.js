@@ -1,5 +1,7 @@
+console.log('OI')
 function mostrarJornada(htmlTag) {
-    if (htmlTag.children[0].textContent == 'Primeiro Contato') {
+    console.log(htmlTag.children[0].classList[0])
+    if (htmlTag.children[0].classList[0] == 'primeiro') {
         let second_small_circle = document.querySelector('.second_small_circle')
         second_small_circle.style.backgroundColor = '#999'
         let third_small_circle = document.querySelector('.third_small_circle')
@@ -14,7 +16,7 @@ function mostrarJornada(htmlTag) {
         }
     }
     else {
-        if (htmlTag.children[0].textContent == 'Diagnóstico') {
+        if (htmlTag.children[0].classList[0] == 'segundo') {
             htmlTag.children[1].style.backgroundColor = '#0076C1'
             let third_small_circle = document.querySelector('.third_small_circle')
             third_small_circle.style.backgroundColor = '#999'
@@ -46,7 +48,7 @@ function mostrarJornada(htmlTag) {
             }
         }
         else {
-            if (htmlTag.children[0].textContent == 'Negociação') {
+            if (htmlTag.children[0].classList[0] == 'terceiro') {
                 htmlTag.children[1].style.backgroundColor = '#0076C1'
                 let second_small_circle = document.querySelector('.second_small_circle')
                 second_small_circle.style.backgroundColor = '#0076C1'
@@ -77,7 +79,7 @@ function mostrarJornada(htmlTag) {
                 }
             }
             else {
-                if (htmlTag.children[0].textContent == 'Início do Projeto') {
+                if (htmlTag.children[0].classList[0] == 'quarto') {
                     htmlTag.children[1].style.backgroundColor = '#0076C1'
                     let second_small_circle = document.querySelector('.second_small_circle')
                     let third_small_circle = document.querySelector('.third_small_circle')

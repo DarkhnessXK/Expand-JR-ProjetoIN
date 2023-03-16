@@ -43,7 +43,7 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
     </ul> -->
     <div class='journey'>
       <div class='big_circle' onclick='mostrarJornada(this)'>
-        <p>Primeiro Contato</p>
+        <p class='primeiro'>Primeiro Contato</p>
         <div class='small_circle first_small_circle'>
         </div>
       </div>
@@ -51,7 +51,7 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
       <div class='progress_bar'></div>
 
       <div class='big_circle' onclick='mostrarJornada(this)'>
-        <p>Diagnóstico</p>
+        <p class='segundo'>Diagnóstico</p>
         <div class='small_circle second_small_circle'>
         </div>
       </div>
@@ -59,7 +59,7 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
       <div class='progress_bar'></div>
 
       <div class='big_circle' onclick='mostrarJornada(this)'>
-        <p>Negociação</p>
+        <p class='terceiro'>Negociação</p>
         <div class='small_circle third_small_circle'>
         </div>
       </div>
@@ -67,7 +67,7 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
       <div class='progress_bar'></div>
 
       <div class='big_circle' onclick='mostrarJornada(this)'>
-        <p>Início do Projeto</p>
+        <p class='quarto'>Início do Projeto</p>
         <div class='small_circle fourth_small_circle'>
         </div>
       </div>
