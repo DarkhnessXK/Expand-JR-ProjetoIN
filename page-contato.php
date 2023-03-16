@@ -13,6 +13,7 @@ if (isset($_POST['submit'])) {
   $subject = 'Novo contato do site Expand Jr.';
 
   /*Armazenando as informações do formulário nas variáveis*/
+  /*Inputs de texto*/
   $sender_name = $_POST['contact_name'];
   $sender_email = $_POST['contact_email'];
   if ( strlen($_POST['contact_telephone']) != 0) {
@@ -22,24 +23,38 @@ if (isset($_POST['submit'])) {
     $sender_city = $_POST['contact_city'];
   }
   $sender_message = $_POST['contact_message'];
+  /*Checkboxes*/
   if (isset($_POST['check_option1'])) {
-    $check_option1 = 'Dupla Cidadania Portuguesa';
+    $check_option1 = get_field('acf-checkbox1');
   }
   if (isset($_POST['check_option2'])) {
-    $check_options2 = 'Assessoria para emissão de Passaporte Brasileiro';
+    $check_option2 = get_field('acf-checkbox2');
   }
   if (isset($_POST['check_option3'])) {
-    $check_option3 = 'Análise Burocrática';
+    $check_option3 = get_field('acf-checkbox3');
   }
   if (isset($_POST['check_option4'])) {
-    $check_option4 = 'Estudo e Análise do Mercado';
+    $check_option4 = get_field('acf-checkbox4');
   }
   if (isset($_POST['check_option5'])) {
-    $check_option5 = 'Planejamento Logístico';
+    $check_option5 = get_field('acf-checkbox5');
   }
   if (isset($_POST['check_option6'])) {
-    $check_option6 = 'Prospecção Internacional';
+    $check_option6 = get_field('acf-checkbox6');
   }
+  if (isset($_POST['check_option7'])) {
+    $check_option7 = get_field('acf-checkbox7');
+  }
+  if (isset($_POST['check_option8'])) {
+    $check_option8 = get_field('acf-checkbox8');
+  }
+  if (isset($_POST['check_option9'])) {
+    $check_option9 = get_field('acf-checkbox9');
+  }
+  if (isset($_POST['check_option10'])) {
+    $check_option10 = get_field('acf-checkbox10');
+  }
+  /*Radios*/
   if (isset($_POST['radio_option1'])) {
     $radio_option = $_POST['radio_option1'];
   }
@@ -66,6 +81,21 @@ if (isset($_POST['submit'])) {
             else {
               if (isset($_POST['radio_option7'])) {
                 $radio_option = $_POST['radio_option7'];
+              }
+              else {
+                if (isset($_POST['radio_option8'])) {
+                  $radio_option = $_POST['radio_option8'];
+                }
+                else {
+                  if (isset($_POST['radio_option9'])) {
+                    $radio_option = $_POST['radio_option9'];
+                  }
+                  else {
+                    if (isset($_POST['radio_option10'])) {
+                      $radio_option = $_POST['radio_option10'];
+                    }
+                  }
+                }
               }
             }
           }
@@ -103,6 +133,18 @@ if (isset($_POST['submit'])) {
   }
   if (isset($check_option6)) {
     $message .= '   - ' . $check_option6 . "\n";
+  }
+  if (isset($check_option7)) {
+    $message .= '   - ' . $check_option7 . "\n";
+  }
+  if (isset($check_option8)) {
+    $message .= '   - ' . $check_option8 . "\n";
+  }
+  if (isset($check_option9)) {
+    $message .= '   - ' . $check_option9 . "\n";
+  }
+  if (isset($check_option10)) {
+    $message .= '   - ' . $check_option10 . "\n";
   }
   $message .= 'Como chegou até nós: ' . $radio_option;
   
@@ -274,10 +316,94 @@ if (isset($_POST['submit'])) {
           <div class="questionary">
             <p>Algum dos nossos serviços te disperta mais interesse?</p>
             <div class="option1">
-              <div>
+              <?php
+              if ( strlen(get_field('acf-checkbox1')) != 0 ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option1" id='check_options1'>
+                  <label for='check_options1'>
+                    <?php echo the_field('acf-checkbox1'); ?>
+                  </label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox2')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option2" id='check_options2'>
+                  <label for='check_options2'><?php echo the_field('acf-checkbox2'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox3')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option3" id='check_options3'>
+                  <label for='check_options3'><?php echo the_field('acf-checkbox3'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox4')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option4" id='check_options4'>
+                  <label for='check_options4'><?php echo the_field('acf-checkbox4'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox5')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option5" id='check_options5'>
+                  <label for='check_options5'><?php echo the_field('acf-checkbox5'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox6')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option6" id='check_options6'>
+                  <label for='check_options6'><?php echo the_field('acf-checkbox6'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox7')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option7" id='check_options7'>
+                  <label for='check_options7'><?php echo the_field('acf-checkbox7'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox8')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option8" id='check_options8'>
+                  <label for='check_options8'><?php echo the_field('acf-checkbox8'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox9')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option9" id='check_options9'>
+                  <label for='check_options9'><?php echo the_field('acf-checkbox9'); ?></label>
+                </div>
+                <?php
+              }
+              if ( strlen(get_field('acf-checkbox10')) != '0' ) {
+                ?>
+                <div>
+                  <input type="checkbox" name="check_option10" id='check_options10'>
+                  <label for='check_options10'><?php echo the_field('acf-checkbox10'); ?></label>
+                </div>
+                <?php
+              }
+              ?>
+              <!-- <div>
                 <input type="checkbox" name="check_option1" id='como chegou até nós'>
                 <label>Dupla Cidadania Portuguesa</label>
-              </div>
+               </div>
               <div>
                 <input type="checkbox" name="check_option2" id='como chegou até nós'>
                 <label>Assessoria para emissão de Passaporte Brasileiro</label>
@@ -297,15 +423,98 @@ if (isset($_POST['submit'])) {
               <div>
                 <input type="checkbox" name="check_option6" id='como chegou até nós'>
                 <label>Prospecção Internacional</label>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="option_questionary">
             <p>Como chegou até nós?</p>
             <div class="option2">
-              <div>
-                <input type="radio" name="radio_option1" value="Pesquisando na como chegou até nós"/>
-                <label>Pesquisando na como chegou até nós</label>
+              <?php
+              if (strlen(get_field('acf-radio1')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option1" value="<?php echo the_field('acf-radio1'); ?>"/>
+                  <label><?php echo the_field('acf-radio1'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio2')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option2" value="<?php echo the_field('acf-radio2'); ?>"/>
+                  <label><?php echo the_field('acf-radio2'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio3')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option3" value="<?php echo the_field('acf-radio3'); ?>"/>
+                  <label><?php echo the_field('acf-radio3'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio4')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option4" value="<?php echo the_field('acf-radio4'); ?>"/>
+                  <label><?php echo the_field('acf-radio4'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio5')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option5" value="<?php echo the_field('acf-radio5'); ?>"/>
+                  <label><?php echo the_field('acf-radio5'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio6')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option6" value="<?php echo the_field('acf-radio6'); ?>"/>
+                  <label><?php echo the_field('acf-radio6'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio7')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option7" value="<?php echo the_field('acf-radio7'); ?>"/>
+                  <label><?php echo the_field('acf-radio7'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio8')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option8" value="<?php echo the_field('acf-radio8'); ?>"/>
+                  <label><?php echo the_field('acf-radio8'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio9')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option9" value="<?php echo the_field('acf-radio9'); ?>"/>
+                  <label><?php echo the_field('acf-radio9'); ?></label>
+                </div>
+                <?php
+              }
+              if (strlen(get_field('acf-radio10')) != 0) {
+                ?>
+                <div>
+                  <input type="radio" name="radio_option10" value="<?php echo the_field('acf-radio10'); ?>"/>
+                  <label><?php echo the_field('acf-radio10'); ?></label>
+                </div>
+                <?php
+              }
+              ?>
+              
+              <!-- <div>
+                <input type="radio" name="radio_option1" value="Pesquisando"/>
+                <label>Pesquisando</label>
               </div>
               <div>
                 <input type="radio" name="radio_option2" value="Instagram"/>
@@ -330,7 +539,7 @@ if (isset($_POST['submit'])) {
               <div>
                 <input type="radio" name="radio_option7" value="Outros"/>
                 <label>Outros</label>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="yes_privacity">
