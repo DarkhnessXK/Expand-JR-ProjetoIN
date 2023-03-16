@@ -193,7 +193,6 @@ main{
     align-items: center;
     flex-direction: column;
     gap: 1.5rem;
-    min-width: 350px;
     height: 35rem; 
 
    
@@ -239,8 +238,12 @@ main{
     align-items: center;
     flex-direction: column;
     min-width: 350px;
-    height: 56rem; 
+    /* height: 56rem;  */
    
+}
+
+.bloco2 > h1 {
+    white-space: nowrap;
 }
 
 .parent {
@@ -285,12 +288,33 @@ textarea{
 */
 
 .playlist{
-    color: black;
-    width: 37rem;
-    height: 50rem;
-   padding-top: 1rem;
-   padding-left: 4rem;
-   background-color:  rgb(226, 227, 233) ;
+    /* background-color: rgb(226, 227, 233); */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 500px;
+    padding: 1rem 2rem;
+}
+
+@media screen and (max-width: 510px) {
+    .bloco2 {
+        min-width: auto;
+        width: auto;
+    }
+
+    .playlist {
+        width: 100%;
+    }
+
+    .botao {
+        width: 65%;
+    }
+}
+
+.answer_div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
 }
 
 
@@ -299,26 +323,21 @@ textarea{
   
 }
 #contact_name, #contact_telephone, #contact_email, #contact_city {
-   width: 30rem;
    height: 30px;
-   margin-left: 1px;
 
 }
 #contact_message{
-    width: 30rem;
     height: 8rem;
-   
 }
 .botao{
-    width: 20rem;
+    width: 60%;
     height: 3rem;
     color: #ffff;
-    margin-left: 80px;
-    margin-top: 20px;
     background-color: #0076C1;
     border: 1px solid royalblue ;
     border-radius: 8px;
     background-size: cover;
+    align-self: center;
 }
 
 
@@ -353,23 +372,23 @@ legend{
 /* <!-- Ceckbox --!>  */
 .questionary{
     font-family: 'Barlow', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
+.option_questionary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 /* <!-- Checkbox_radio --!>  */
-.option_questionary{
-    font-family: 'Barlow', sans-serif;
-    padding-top: 10px;
-}
-
-.option_questionary{
-    font-family: 'Roboto', sans-serif;
-     
-}
 
 .option1{
     font-family: 'Barlow', sans-serif;
-    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 .option1 > p > span > span {
@@ -384,7 +403,6 @@ legend{
 
 .option2{
     font-family: 'Barlow', sans-serif;
-    margin-top: 5px;    
 }
 
 .option2 > p > span > span {
@@ -398,8 +416,6 @@ legend{
 }
 /* <!-- Politica de Privacidade --!>  */
 .yes_privacity{
-    margin-top: 7px;
-    margin-right: 30px;
     background-color: rgba(0,0,0,0.1)
 }
 
@@ -494,9 +510,13 @@ min-width: 10px;
 height: 30px;
 }
 }
-@media screen and (max-width: 6400px) {
-    .playlist{ 
-    min-width: 10px;
-    height: 30px;
+
+@media screen and (max-width: 380px) {
+    .step-wizard {
+        padding: 0 1rem;
+    }
+    
+    .client_journey_text {
+        font-size: 16px;
     }
 }
