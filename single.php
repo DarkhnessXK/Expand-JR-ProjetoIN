@@ -20,9 +20,24 @@ wpb_set_post_views(get_the_ID());
         <h2 class="single-title">
           <?php the_title(); ?>
         </h2>
-        <div class="image-blog-single-div">
-          <img src="<?php the_field('image-blog'); ?>" class="single-page-blog-image">
-        </div>
+
+        <?php 
+            $img_src = get_field('image-blog');
+            if($img_src != ""){
+              ?>
+              <div class="image-blog-single-div">
+                <img src="<?php echo $img_src; ?>" class="single-page-blog-image">
+              </div>
+              <?php
+            }else{
+              ?>
+              <div class="image-blog-single-div">
+              <img src="<?php echo IMAGES_DIR . '/default-image.png' ?>" class="single-page-blog-image">
+              </div>
+              <?php
+            }
+          ?>
+
         <div class="single-post-content">
           <?php the_content(); ?>
         </div>
