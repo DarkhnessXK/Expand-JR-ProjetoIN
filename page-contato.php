@@ -269,7 +269,7 @@ if (isset($_POST['submit'])) {
           </div>
           <div class='input-div'>
             <label for="message">Qual a sua principal necessidade?</label>
-            <input class="cor" type="text" id="contact_message" name="contact_message" placeholder="Conte para nós a sua necessidade" required>
+            <textarea class="cor" type="text" id="contact_message" name="contact_message" placeholder="Conte para nós a sua necessidade" required></textarea>
           </div>
           <div class="questionary">
             <p>Algum dos nossos serviços te disperta mais interesse?</p>
