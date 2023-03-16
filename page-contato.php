@@ -151,161 +151,62 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
     <div class="bloco2">
        <h1>Fale Conosco</h1>
          <div class="parent">
-          <?php
-
-          echo "teste \n teste";
-          if (isset($_POST['submit'])) {
-            $to = $email;
-            $subject = 'Novo contato do site Expand Jr.';
           
-            /*Armazenando as informações do formulário nas variáveis*/
-            $sender_name = $_POST['contact_name'];
-            $sender_email = $_POST['contact_email'];
-            if ( strlen($_POST['contact_telephone']) != 0) {
-              $sender_telephone = $_POST['contact_telephone'];
-            }
-            if ( strlen($_POST['contact_city']) != 0 ) {
-              $sender_city = $_POST['contact_city'];
-            }
-            $sender_message = $_POST['contact_message'];
-            if (isset($_POST['check_option1'])) {
-              $check_option1 = 'Dupla Cidadania Portuguesa';
-            }
-            if (isset($_POST['check_option2'])) {
-              $check_options2 = 'Assessoria para emissão de Passaporte Brasileiro';
-            }
-            if (isset($_POST['check_option3'])) {
-              $check_option3 = 'Análise Burocrática';
-            }
-            if (isset($_POST['check_option4'])) {
-              $check_option4 = 'Estudo e Análise do Mercado';
-            }
-            if (isset($_POST['check_option5'])) {
-              $check_option5 = 'Planejamento Logístico';
-            }
-            if (isset($_POST['check_option6'])) {
-              $check_option6 = 'Prospecção Internacional';
-            }
-            if (isset($_POST['radio_option1'])) {
-              $radio_option = $_POST['radio_option1'];
-            }
-            else {
-              if (isset($_POST['radio_option2'])) {
-                $radio_option = $_POST['radio_option2'];
-              }
-              else {
-                if (isset($_POST['radio_option3'])) {
-                  $radio_option = $_POST['radio_option3'];
-                }
-                else {
-                  if (isset($_POST['radio_option4'])) {
-                    $radio_option = $_POST['radio_option4'];
-                  }
-                  else {
-                    if (isset($_POST['radio_option5'])) {
-                      $radio_option = $_POST['radio_option5'];
-                    }
-                    else {
-                      if (isset($_POST['radio_option6'])) {
-                        $radio_option = $_POST['radio_option6'];
-                      }
-                      else {
-                        if (isset($_POST['radio_option7'])) {
-                          $radio_option = $_POST['radio_option7'];
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            
-            /*Adicionando todas as informações disponíveis no corpo do email*/
-            $message = "INFORMAÇÕES DO REMETENTE: \n\n";
-            $message .= 'Nome: ' . $sender_name . "\n";
-            $message .= 'Email: ' . $sender_email . "\n";
-            if (isset($sender_telephone)) {
-              $message .= 'Telefone: ' . $sender_telephone . "\n";
-            }
-            if (isset($sender_city)) {
-              $message .= 'Cidade: '. $sender_city . "\n";
-            }
-            $message .= 'Principal necessidade: ' . $sender_message . "\n";
-            $message .= 'Serviços que despertam mais interesse: ' . "\n";
-            if (isset($check_option1)) {
-              $message .= '   - ' . $check_option1 . "\n";
-            }
-            if (isset($check_option2)) {
-              $message .= '   - ' . $check_option2 . "\n";
-            }
-            if (isset($check_option3)) {
-              $message .= '   - ' . $check_option3 . "\n";
-            }
-            if (isset($check_option4)) {
-              $message .= '   - ' . $check_option4 . "\n";
-            }
-            if (isset($check_option5)) {
-              $message .= '   - ' . $check_option5 . "\n";
-            }
-            if (isset($check_option6)) {
-              $message .= '   - ' . $check_option6 . "\n";
-            }
-            $message .= 'Como chegou até nós: ' . $radio_option;
-            
-            wp_mail($to, $subject, $message);
-          }
-          ?>
           <form action='' method="POST">
             <label for="name">Nome Completo</label>
             <input class="cor" type="text" name="contact_name" id="contact_name" placeholder='Nome'>
-
-            <label for="email">Email</label>
+          </div>  
+          <div class='answer_div'>
+            <label for='contact_email'>Email</label>
             <input class="cor" type="email" name="contact_email" id="contact_email" placeholder='Email' required>
-
-
-            <label for="telephone">Telefone</label>
+          </div>
+          <div class='answer_div'>
+            <label for='contact_telephone'>Telefone</label>
             <input class="cor" type="text" id="contact_telephone" name="contact_telephone" placeholder="Ex.: (xx) xxxxx-xxxx">
-
-            <label for="city">Cidade</label>
+          </div>
+          <div class='answer_div'>
+            <label for='contact_city'>Cidade</label>
             <input class="cor" type="text" id="contact_city" name="contact_city" placeholder="Cidade">
-
-
-            <label for="message">Qual a sua principal necessidade?</label>
+          </div>
+          <div class='answer_div'>
+            <label for='contact_message'>Qual a sua principal necessidade?</label>
             <input class="cor" type="text" id="contact_message" name="contact_message" placeholder="Conte para nós a sua necessidade" required>
+          </div>
 
             <div class="questionary">
               <legend>Algum dos nossos serviços te disperta mais interesse?</legend>
               <div class="option1">
-              <input type="checkbox" name="check_option1" id='como chegou até nós'>
+              <input type="checkbox" name="Dupla Cidadania Portuguesa" id='como chegou até nós'>
               <label>Dupla Cidadania Portuguesa</label><br/>
 
-              <input type="checkbox" name="check_option2" id='como chegou até nós'>
+              <input type="checkbox" name="Assessoria para emissão de Passaporte Brasileiro" id='como chegou até nós'>
               <label>Assessoria para emissão de Passaporte Brasileiro</label><br/>
 
-              <input type="checkbox" name="check_option3" id='como chegou até nós'>
+              <input type="checkbox" name="Análise Burocrática" id='como chegou até nós'>
               <label>Análise Burocrática</label><br/>
 
-              <input type="checkbox" name="check_option4" id='como chegou até nós'>
+              <input type="checkbox" name="Estudo e Análise do Mercado" id='como chegou até nós'>
               <label>Estudo e Análise do Mercado</label><br/>
 
-              <input type="checkbox" name="check_option5" id='como chegou até nós'>
+              <input type="checkbox" name="Planejamento Logístico" id='como chegou até nós'>
               <label>Planejamento Logístico</label><br/>
 
-              <input type="checkbox" name="check_option6" id='como chegou até nós'>
+              <input type="checkbox" name="Prospecção Internacional" id='como chegou até nós'>
               <label>Prospecção Internacional</label>
             </div>
-            </div>
+          </div>
+        </div>
 
             <div class="option_questionary">
               <legend>Como chegou até nós?</legend>
               <div class="option2">
-              <input type="radio" name="radio_option1" value="Pesquisando na como chegou até nós"/><label>Pesquisando na como chegou até nós</label><br/>
-              <input type="radio" name="radio_option2" value="Instagram"/><label>Instagram</label><br/>
-              <input type="radio" name="radio_option3" value="Linkedin"/><label>Linkedin</label><br/>
-              <input type="radio" name="radio_option4" value="Me indicaram voçês"/><label>Me indicaram voçês</label><br/>
-              <input type="radio" name="radio_option5" value="Evento"/><label>Evento</label><br/>
-              <input type="radio" name="radio_option6" value="Recebi um e-mail de voçês"/><label>Recebi um e-mail de voçês</label><br/>
-              <input type="radio" name="radio_option7" value="Outros"/><label>Outros</label>
+              <input type="radio" name="como_chegou_até_nós" value="internet"/><label>Pesquisando na como chegou até nós</label><br/>
+              <input type="radio" name="como_chegou_até_nós" value="instagram"/><label>Instagram</label><br/>
+              <input type="radio" name="como_chegou_até_nós" value="linkedin"/><label>Linkedin</label><br/>
+              <input type="radio" name="como_chegou_até_nós" value="indicacao"/><label>Me indicaram voçês</label><br/>
+              <input type="radio" name="como_chegou_até_nós" value="evento"/><label>Evento</label><br/>
+              <input type="radio" name="como_chegou_até_nós" value="email"/><label>Recebi um e-mail de voçês</label><br/>
+              <input type="radio" name="como_chegou_até_nós" value="outros"/><label>Outros</label>
             </div>
               </div>
             <div class="yes_privacity">
