@@ -61,6 +61,11 @@ function enqueue_expandjr_styles() {
         wp_enqueue_style('privacy-policy');
     }
 
+    if(is_category()) {
+        wp_register_style('category', STYLES_DIR . '/category.css', [], '1.0.0', false);
+        wp_enqueue_style('category');
+    }
+
     wp_register_style('single', STYLES_DIR . '/single.css', [], '1.0.0', false);
     wp_enqueue_style('single');
 }
