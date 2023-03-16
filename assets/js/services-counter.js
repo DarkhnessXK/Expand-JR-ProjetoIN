@@ -1,4 +1,4 @@
-let interval = 4000;
+let interval = 2000;
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

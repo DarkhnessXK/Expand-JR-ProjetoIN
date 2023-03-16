@@ -56,10 +56,15 @@ get_header();
           while($all_posts->have_posts()) {
             $all_posts->the_post();
             $string_searched = $_POST['search_bar_blog'];
+            if($string_searched == ""){
+              break;
+            }
             if (mb_strpos(strtolower(the_title('', '', false)), strtolower($string_searched)) !== false) {
               ?>
               <div class="blog-post-div">
-                <img src="<?php the_field('image-blog'); ?>" class="blog-image">
+                <div class="image-blog-div">
+                  <img src="<?php the_field('image-blog'); ?>" class="blog-image">
+                </div>
                 <div class="content-blog">
                   <h2 class="news-title">
                     <?php the_title(); ?>
@@ -68,7 +73,7 @@ get_header();
                     <?php the_category(); ?>
                   </h6>
                   <?php the_excerpt(); ?>
-                  <input type="button" href="" class="read-more-blog" value="LER MAIS">
+                  <a href="<?php echo get_permalink($post_id); ?>" class="read-more-blog">LER MAIS</a>
                 </div>
               </div>
               <?php

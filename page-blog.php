@@ -56,7 +56,7 @@ get_header();
           while($all_posts->have_posts()) {
             $all_posts->the_post();
             $string_searched = $_POST['search_bar_blog'];
-            if ($string_searched == '') {
+            if($string_searched == ""){
               break;
             }
             if (mb_strpos(strtolower(the_title('', '', false)), strtolower($string_searched)) !== false) {
@@ -73,7 +73,7 @@ get_header();
                     <?php the_category(); ?>
                   </h6>
                   <?php the_excerpt(); ?>
-                  <a href="<?php echo get_permalink($post_id); ?>" class="read-more-blog">LER MAIS</a>
+                  <input type="button" href="" class="read-more-blog" value="LER MAIS">
                 </div>
               </div>
               <?php
@@ -120,10 +120,6 @@ get_header();
         wp_reset_postdata();
         ?>
 
-
-      <?php endif; 
-      }
-      ?>
     </div>
   </div>
 
@@ -148,6 +144,9 @@ get_header();
       }
       ?>
   </div>
+    <?php endif; 
+      }
+    ?>
 </section>
 
 <?php $cel = get_option('zap_cadastro_telefone'); ?>
