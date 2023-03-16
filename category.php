@@ -89,7 +89,9 @@ get_header();
                 $post_id = get_the_ID();
                 ?>
                 <div class="blog-post-div">
-                    <img src="<?php the_field('image-blog'); ?>" class="blog-image">
+                    <div class="image-blog-div">
+                        <img src="<?php the_field('image-blog'); ?>" class="blog-image">
+                    </div>
                     <div class="content-blog">
                     <h2 class="news-title">
                         <?php the_title(); ?>
