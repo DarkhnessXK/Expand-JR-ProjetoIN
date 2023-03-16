@@ -1,6 +1,5 @@
 h2 {
     font-size: 2rem;
-    text-align: center;
 }
 
 .section-1-quem-somos{
@@ -32,7 +31,7 @@ h2 {
 
 main {
     font-family: 'Roboto', sans-serif;
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -44,7 +43,7 @@ main {
 .main_aside2_section {
     display: flex;
     gap: 3rem;
-    padding-top: 3.5em;
+    padding-top: 1.5em;
 }
 
 .main_aside2_section > div:first-child > img {
@@ -71,7 +70,7 @@ main {
 }
 
 .main_aside2_text > p {
-    line-height: 28px;
+    line-height: 35px;
     font-size: 18px;
 }
 
@@ -158,14 +157,14 @@ main {
 }
 
 .main_aside1_left_div p {
-    line-height: 28px;
+    line-height: 35px;
     font-size: 18px;
     float: left;
     width: 60%;
 }
 
 .main_aside1_right_div p {
-    line-height: 28px;
+    line-height: 35px;
     font-size: 18px;
     float: left;
     width: 60%;
@@ -191,6 +190,7 @@ main {
 }
 
 .main_values_div p{
+    line-height: 35px;
     text-align: center;
     font-size: 18px;
 }
