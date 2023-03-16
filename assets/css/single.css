@@ -34,21 +34,21 @@
 }
 
 .single-page-blog-image{
-    width: 40rem;
-    height: 20rem;
+    width: 100%;
+    height: 100%;
     padding-right: 2rem;
-    
-    
 }
-.image-blog-div{
-    max-width: 28rem;
-    max-height: 20rem;
+
+.image-blog-single-div{
+    max-width: 45%;
+    max-height: auto;
     object-fit: cover;
 }
 
 .section-2-single{
     display: flex;
     flex-direction: column;
+    gap: 1.5em;
 }
 
 .single-title{

@@ -17,13 +17,12 @@ wpb_set_post_views(get_the_ID());
       while (have_posts()):
         the_post(); ?>
 
-        <div class="image-blog-div">
-          <img src="<?php the_field('image-blog'); ?>" class="single-page-blog-image">
-        </div>
-
         <h2 class="single-title">
           <?php the_title(); ?>
         </h2>
+        <div class="image-blog-single-div">
+          <img src="<?php the_field('image-blog'); ?>" class="single-page-blog-image">
+        </div>
         <div class="single-post-content">
           <?php the_content(); ?>
         </div>

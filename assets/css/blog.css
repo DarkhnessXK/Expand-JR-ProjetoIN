@@ -87,6 +87,8 @@
 
 .image-blog-div{
     width: 100%;
+    max-width: 28rem;
+    max-height: 20rem;
     height: auto;
     
     object-fit: cover;
