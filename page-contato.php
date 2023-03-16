@@ -72,6 +72,7 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
         </div>
       </div>
     </div>
+    <div class='text_journey'>
     <p class='client_journey_text first_text'>
       Primeiro Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores illum quis error odio, corrupti doloribus iure voluptas temporibus ad reiciendis doloremque officia vero? Temporibus optio obcaecati itaque dolorum accusantium consequatur.
       Laudantium beatae voluptas esse corporis vero error repellat nostrum consequuntur ipsa. Corporis quidem laborum beatae molestias enim necessitatibus numquam natus delectus omnis, aspernatur fuga accusamus earum unde, aperiam saepe cumque!
@@ -97,6 +98,8 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
       Laborum doloremque qui impedit recusandae sunt fuga delectus possimus excepturi a distinctio maiores consequatur porro eveniet odit ab, est quisquam illo dicta magnam. Ipsum cum hic quod laboriosam, tempore accusantium!
       Sequi quas veniam quae aliquam, laudantium totam minima, soluta a rem sit ipsam perspiciatis, commodi corporis adipisci suscipit. Vero porro dicta mollitia a veritatis qui minus delectus amet tempora in?
     </p>
+    </div>
+    
 </section>
 
 
