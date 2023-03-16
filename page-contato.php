@@ -153,23 +153,25 @@ wp_mail($to, $subject, $message);
          <div class="parent">
           
           <form action='' method="POST">
-            <label for="name">Nome Completo</label>
-            <input class="cor" type="text" name="contact_name" id="contact_name" placeholder='Nome'>
+           <fieldset class="playlist">
+           
+         
+         <p>Nome Completo</p>
+         <input class="cor" type="text" name="contact_name" id="contact_name" placeholder='Nome'>
 
-            <label for="email">Email</label>
-            <input class="cor" type="email" name="contact_email" id="contact_email" placeholder='Email' required>
+         <p>Email</p>
+         <input class="cor" type="email" name="contact_email" id="contact_email" placeholder='Email' required>
+
+         <p>Telefone</label></p>
+         <input class="cor" type="text" id="contact_telephone" name="contact_telephone" placeholder="Ex.: (xx) xxxxx-xxxx">
+
+         <p>Cidade</label><p>
+          <input class="cor" type="text" id="contact_city" name="contact_city" placeholder="Cidade"></p>
 
 
-            <label for="telephone">Telefone</label>
-            <input class="cor" type="text" id="contact_telephone" name="contact_telephone" placeholder="Ex.: (xx) xxxxx-xxxx">
-
-            <label for="city">Cidade</label>
-            <input class="cor" type="text" id="contact_city" name="contact_city" placeholder="Cidade">
-
-
-            <label for="message">Qual a sua principal necessidade?</label>
+            <p>Qual a sua principal necessidade?</p>
             <input class="cor" type="text" id="contact_message" name="contact_message" placeholder="Conte para nós a sua necessidade" required>
-
+         
             <div class="questionary">
               <legend>Algum dos nossos serviços te disperta mais interesse?</legend>
               <div class="option1">
@@ -211,12 +213,20 @@ wp_mail($to, $subject, $message);
                 <a target="_blank" href="http://expandjr.local/privacy-policy/">Li e aceito as politicas de privacidade e termos de uso</a>
               </label>
             </div>
-            <input name='submit' type="submit" value="Enviar">
+            <input class="botao" name='submit' type="submit" value="Enviar">
           </form>
-</div>
-      </div>
-   </div>
+           </div>
+        </div>
+     </div>
   </div>
+
+
+
+
+
+          </fieldset>
+            
+        
 </main>
 <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=<?php echo $cel; ?>" target="_blank">
   <img src="<?php echo IMAGES_DIR . '/icon-whatsapp-48.png'; ?>" alt="Ícone do Whatsapp">
