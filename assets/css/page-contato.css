@@ -94,6 +94,7 @@ main{
 .client_journey_text {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+    line-height: 35px;
 }
 
 .first_class {
@@ -208,7 +209,7 @@ main{
 .div_contact_info {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 .div_contact_info > div {
@@ -219,23 +220,44 @@ main{
 
 .div_contact_info > div > div {
     width: 33px;
+    height: 33px;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.div-iframe{
+    padding-top:2rem;
 }
 
 .c_phone_div img {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 25px;
+}
+
+.div-border-phone{
+    background-color: lightgrey;
+    border-radius: 8px;
+}
+
+.div-border-email{
+    background-color: lightgrey;
+    border-radius: 8px;
+}
+
+.div-border-adress{
+    background-color: lightgrey;
+    border-radius: 8px;
 }
 
 .c_email_div img {
-    width: 30px;
-    height: 24px;
+    width: 21px;
+    height: 18px;
 }
 
 .c_address_div img {
-    width: 21px;
-    height: 30px;
+    width: 16px;
+    height: 19px;
 }
 
 .bloco2{
@@ -251,6 +273,7 @@ main{
 
 .bloco2 > h1 {
     white-space: nowrap;
+    font-size: 1.5rem;
 }
 
 .contact-page-form {
@@ -331,6 +354,20 @@ textarea{
     }
 }
 
+@media screen and (max-width: 1000px) {
+    iframe{
+        width: 20rem;
+        height: 25rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    iframe{
+        width: 20rem;
+        height: 20rem;
+    }
+}
+
 .answer_div {
     display: flex;
     flex-direction: column;
@@ -350,15 +387,19 @@ textarea{
     height: 8rem;
 }
 .botao{
-    width: 60%;
+    width: 25%;
     height: 3rem;
     color: #ffff;
     background-color: #0076C1;
     border: 1px solid royalblue ;
-    border-radius: 8px;
+    border-radius: 24px;
     background-size: cover;
     align-self: center;
+<<<<<<< HEAD
     cursor: pointer;
+=======
+    font-size: 1.2rem;
+>>>>>>> e84ae03e2b645c5932f09db5c22693fdce060b3e
 }
 
 

@@ -247,6 +247,7 @@ p{
     flex-direction: column;
     gap: 2.5em;
     width: 50%;
+    align-items: center;
 }
 
 .services-right-cards{
@@ -287,8 +288,25 @@ p{
     flex-direction: column;
     align-items: center;
     gap: 0.75em;
+    width: 50%;
     cursor: pointer;
 }
+
+.services-left-cards-div h2 {
+    cursor: default;
+}
+
+@media (max-height: 665px) {
+    .services-modal-container{
+        width: 325px;
+        max-height: 80%;
+        overflow-y: scroll;
+    }
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* make scrollbar transparent */
+    }
+  }
 
 .services-right-cards-div{
     display: flex;
