@@ -94,6 +94,7 @@ main{
 .client_journey_text {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+    line-height: 35px;
 }
 
 .first_class {
@@ -338,14 +339,15 @@ textarea{
     height: 8rem;
 }
 .botao{
-    width: 60%;
+    width: 35%;
     height: 3rem;
     color: #ffff;
     background-color: #0076C1;
     border: 1px solid royalblue ;
-    border-radius: 8px;
+    border-radius: 24px;
     background-size: cover;
     align-self: center;
+    font-size: 1.2rem;
 }
 
 
