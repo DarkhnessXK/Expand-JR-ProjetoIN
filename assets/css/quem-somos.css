@@ -202,6 +202,10 @@ main {
         align-items: center;
     }
 
+    .main_aside2_section {
+        padding-top: 1.5em;
+    }
+    
     .main_aside1_left_div, .main_aside1_right_div{
         flex-basis: 0;
     }
@@ -237,8 +241,25 @@ main {
     .main_aside2_text h2{
         display: none;
     }
+
+    .main_aside2_section > img {
+        width: 100%;
+    }
 }
 
+@media screen and (max-width: 500px) {
+    main {
+        padding: 1rem 2rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 390px) {
+    main {
+        padding: 1rem;
+    }
+}
 @media screen and (max-width: 1250px){
     .main_aside1_left_div, .main_aside1_right_div{
         justify-content: center;
