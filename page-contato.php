@@ -291,7 +291,7 @@ if (isset($_POST['submit'])) {
 
     
   <div class="bloco2">
-       <h1>Fale Conosco</h1>
+       <h1>Formulario de Contato</h1>
          <form class='contact-page-form' action='' method="POST">
           <div class='input-div'>
             <label for="name">Nome Completo</label>
@@ -311,7 +311,7 @@ if (isset($_POST['submit'])) {
           </div>
           <div class='input-div'>
             <label for="message">Qual a sua principal necessidade?</label>
-            <input class="cor" type="text" id="contact_message" name="contact_message" placeholder="Conte para nós a sua necessidade" required>
+            <textarea class="cor" type="text" id="contact_message" name="contact_message" placeholder="Conte para nós a sua necessidade" required></textarea>
           </div>
           <div class="questionary">
             <p>Algum dos nossos serviços te disperta mais interesse?</p>
