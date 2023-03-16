@@ -150,6 +150,7 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
 
     
     <div class="bloco2">
+      <div class="extra">
       <h1>Fale Conosco</h1>
       <form action='' method="POST">
         <div class="playlist">
@@ -171,7 +172,7 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
           </div>
           <div class='answer_div'>
             <label for='contact_message'>Qual a sua principal necessidade?</label>
-            <input class="cor" type="text" id="contact_message" name="contact_message" placeholder="Conte para nós a sua necessidade" required>
+            <textarea class="cor" type="text" id="contact_message" name="contact_message" placeholder="Conte para nós a sua necessidade" required></textarea>
           </div>
 
         <div class="questionary">
@@ -247,6 +248,7 @@ $endereco = urlencode(get_option('enjr_cadastro_endereco'));
     </div>
       </div>
    </div>
+  </div>
   </div>
 </main>
 <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=<?php echo $cel; ?>" target="_blank">
