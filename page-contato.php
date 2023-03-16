@@ -235,7 +235,6 @@ wp_mail($to, $subject, $message);
               <label>Outros</label>
             </div>
         </div>
-          </div>
         <div class="yes_privacity">
           <input type="checkbox" name="politica_priv" id='politica_priv' required>
           <label for='politica_priv'>
@@ -243,11 +242,9 @@ wp_mail($to, $subject, $message);
           </label>
         </div>
         <input class="botao" name='submit' type="submit" value="Enviar">
-          </div>
       </form>
-        </div>
      </div>
-  </div>
+</div>
 
 
 
