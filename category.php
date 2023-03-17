@@ -51,7 +51,7 @@ get_header();
       <?php
       if (isset($_POST['submit'])) {
         $args = array(
-          'category_name' => 'post-blog',
+          'category_name' => get_queried_object()->slug,
           'posts_per_page' => -1 // this will retrive all the post that is published 
           );
         $all_posts = new WP_Query($args);
