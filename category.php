@@ -50,7 +50,11 @@ get_header();
     <div class="blog-width-div">
       <?php
       if (isset($_POST['submit'])) {
-        $all_posts = new WP_Query(array('category_name' => get_queried_object()->slug));
+        $args = array(
+          'category_name' => 'post-blog',
+          'posts_per_page' => -1 // this will retrive all the post that is published 
+          );
+        $all_posts = new WP_Query($args);
         $existe_algum = false;
         if ($all_posts->have_posts()) {
           while($all_posts->have_posts()) {
